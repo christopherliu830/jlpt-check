@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChakraProvider, Container } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { PageContainer } from './components/PageContainer/PageContainer';

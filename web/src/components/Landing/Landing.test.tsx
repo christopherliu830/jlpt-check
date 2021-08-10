@@ -6,7 +6,6 @@ import { Landing } from './Landing';
 import { setupIntersectionObserverMock } from '../../../test/setupIntersectionObserver';
 
 import '@testing-library/jest-dom/extend-expect';
-import { create } from 'eslint/lib/rules/*';
 
 describe('Landing', () => {
   beforeAll(() => {

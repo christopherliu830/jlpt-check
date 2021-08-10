@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideFade, TransitionProps } from '@chakra-ui/react';
+import { SlideFade } from '@chakra-ui/react';
 import { useInView } from 'react-intersection-observer';
 
 interface FadeInViewProps {
