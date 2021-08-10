@@ -23,7 +23,7 @@ export function Navbar(): React.ReactElement {
     >
       <Logo fontSize="4xl" onClick={handleLogoClick}/>
       <Spacer />
-      <Link to="/assessment">Test</Link>
+      <Link to="/quiz">Test</Link>
       <Link to="/practice">Practice</Link>
       <Link to="/about">About</Link>
     </Flex>

@@ -14,7 +14,7 @@ export function Landing(): React.ReactElement {
   }
 
   const handleAnimationDone = () => {
-    if (leaving) history.push('/assessment');
+    if (leaving) history.push('/quiz');
   }
 
   return (
