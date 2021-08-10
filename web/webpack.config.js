@@ -20,7 +20,9 @@ const config = {
     devServer: {
         open: true,
         host: 'localhost',
+        historyApiFallback: true,
     },
+    devtool: "source-map",
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
@@ -63,7 +65,6 @@ module.exports = () => {
         config.mode = 'production';
         
         config.plugins.push(new MiniCssExtractPlugin());
-        
         
         config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
         
