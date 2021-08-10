@@ -22,7 +22,7 @@ describe('Landing', () => {
     expect(getByRole('button')).toBeInTheDocument();
   })
 
-  it('changes page on button press', () => {
+  it('changes page on button press', (done) => {
     const history = createMemoryHistory();
     const { getByRole } = render(
       <Router history={history}>
@@ -31,7 +31,10 @@ describe('Landing', () => {
     );
     expect(getByRole('button')).toBeInTheDocument();
     getByRole('button').click();
-    expect(history.location.pathname).toEqual('/assessment');
+    setTimeout(() => {
+      expect(history.location.pathname).toEqual('/assessment');
+      done();
+    }, 500)
   })
 
 })

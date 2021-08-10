@@ -3,7 +3,7 @@ import { Text, TextProps } from '@chakra-ui/react';
 
 export function Logo(props: TextProps): React.ReactElement {
   return (
-    <Text {...props}>
+    <Text {...props} cursor="pointer">
       <b>JLPT</b>Check
     </Text>
   );
