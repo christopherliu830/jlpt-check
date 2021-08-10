@@ -1,0 +1,23 @@
+{
+  "name": "jlpt-check",
+  "version": "0.1.0",
+  "description": "JLPT Check",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web": "cd web && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lletter/jlpt-check.git"
+  },
+  "author": {
+    "name": "Christopher Liu",
+    "email": "mail@chrisliu.app"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lletter/jlpt-check/issues"
+  },
+  "homepage": "https://github.com/lletter/jlpt-check#readme"
+}
