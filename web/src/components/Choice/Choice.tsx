@@ -1,21 +1,77 @@
-import { Box, BoxProps, Text } from '@chakra-ui/layout';
 import React from 'react';
+import { Box, BoxProps } from '@chakra-ui/layout';
+import { 
+  Flex,
+  FlexProps,
+  IconProps as ChakraIconProps,
+  Icon as ChakraIcon,
+  StylesProvider,
+  useMultiStyleConfig,
+  useStyles,
+} from '@chakra-ui/react';
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
+export interface IconProps extends Omit<FontAwesomeIconProps, keyof ChakraIconProps>, ChakraIconProps {}
+const Icon = (props: IconProps): React.ReactElement => (
+  <ChakraIcon as={FontAwesomeIcon} {...props} />
+);
 
 
 export interface ChoiceProps extends BoxProps {
   fullWidth?: boolean;
+  variant?: string;
 }
 
 export function Choice({
   fullWidth = false,
+  variant = 'base',
+  children,
   ...props
 }: ChoiceProps): React.ReactElement {
+  const styles = useMultiStyleConfig('Choice', { variant });
   return (
-    <Box 
-      bg="violet.100"
+    <Flex
+      __css={styles.container}
+      role="group"
       w={fullWidth ? '100%' : 'auto'}
       {...props}
     >
-    </Box>
+      <StylesProvider value={styles}>
+        { children }
+      </StylesProvider>
+    </Flex>
+  )
+}
+
+export interface ChoiceHeaderProps extends FlexProps {
+  icon?: IconProp;
+}
+
+export function ChoiceHeader({
+  icon,
+  children,
+  ...props
+}: ChoiceHeaderProps): React.ReactElement {
+  const styles = useStyles();
+
+  return (
+    <Flex
+      __css={styles.header}
+      {...props}
+    >
+      <Icon icon={icon} margin="0 8px" alignSelf="center" />
+      { children }
+    </Flex>
+  )
+}
+
+export function ChoiceBody(props: BoxProps): React.ReactElement {
+  const styles = useStyles();
+  return (
+    <Box
+      __css={styles.body}
+      {...props}
+    />
   )
 }

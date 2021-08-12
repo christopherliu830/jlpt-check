@@ -1,5 +1,6 @@
 /* Object */
 export const violet = {
+  25: '#f6f7ff',
   50: '#ecefff',
   100: '#cacfe9',
   200: '#a9aed6',

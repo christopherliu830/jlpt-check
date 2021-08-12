@@ -26,21 +26,15 @@ export function Landing(): React.ReactElement {
           alignItems="center"
           justifyContent="space-around"
         >
-          <FadeInView open={!leaving} reverse={false}>
+          <FadeInView open={!leaving}>
             <Logo fontSize="6xl" />
-            <FadeInView delay={0.5}>
+            <FadeInView>
               <Text fontSize="xl" color="gray.600">
                 A diagnostic quiz for Japanese learners.
               </Text>
             </FadeInView>
           </FadeInView>
-          <SlideFade
-            in={!leaving}
-            initial={true}
-            offsetY="-8px"
-            reverse
-            onAnimationComplete={handleAnimationDone}
-          >
+          <FadeInView open={!leaving} onAnimationComplete={handleAnimationDone} delay={0.5}>
             <Button
               size="lg"
               margin="24px"
@@ -48,7 +42,7 @@ export function Landing(): React.ReactElement {
             >
               Start A Test
             </Button>
-          </SlideFade>
+          </FadeInView>
         </Flex>
         <Center margin="24px">
           <Text color="gray.400" marginTop="auto">
