@@ -1,3 +1,3 @@
-import { Quiz } from '../components/Quiz/Quiz';
+import { Quiz } from '../src/components/Quiz/Quiz';
 
 export default Quiz;
