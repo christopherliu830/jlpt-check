@@ -3,18 +3,18 @@ import { Button, Center, Container, Flex, SlideFade, Text } from '@chakra-ui/rea
 
 import { Logo } from '../Logo/Logo';
 import { FadeInView } from '../FadeInView/FadeInView';
-import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 export function Landing(): React.ReactElement {
   const [ leaving, setLeaving ] = useState(false);
-  const history = useHistory();
+  const router = useRouter();
 
   const handleStartTest = () => {
     setLeaving(true);
   }
 
   const handleAnimationDone = () => {
-    if (leaving) history.push('/quiz');
+    if (leaving) router.push('/quiz');
   }
 
   return (

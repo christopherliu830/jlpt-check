@@ -3,8 +3,7 @@ import React, { useReducer, useState } from 'react';
 import { Center, Text, Container } from '@chakra-ui/layout';
 import { FadeInView } from '../FadeInView/FadeInView';
 import { WrittenChoice, ListeningChoice, MultipleChoice } from './QuizChoice';
-import { Button, Fade, Flex } from '@chakra-ui/react';
-import { useHistory } from 'react-router';
+import { Button } from '@chakra-ui/react';
 
 type QuizState = Record<string, boolean>;
 
@@ -18,14 +17,13 @@ function quizReducer(state: QuizState, action: { type: string }) {
 export function Quiz(): React.ReactElement {
   const [ state, dispatch ] = useReducer(quizReducer, {});
   const [ leaving, setLeaving ] = useState(false);
-  const history = useHistory();
 
   const handleLeave = () => {
     setLeaving(true);
   }
 
   const handleAnimationDone = () => {
-    if (leaving) history.push('/');
+    if (leaving) { }
   }
 
   return (
@@ -46,7 +44,7 @@ export function Quiz(): React.ReactElement {
           selected={state.multiple}
           onClick={() => dispatch({ type: 'multiple' })}
         />
-        <Button boxShadow="sm" margin="36px 0" isFullWidth onClick={handleLeave}>Start</Button>
+        <Button boxShadow="sm" margin="36px 0" width="full" onClick={handleLeave}>Start</Button>
       </FadeInView>
     </Container>
   ) 

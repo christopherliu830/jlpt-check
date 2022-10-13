@@ -20,10 +20,9 @@ export const Choice: StyleConfig = {
   baseStyle: ({ colorScheme: c }) => ({
     container: {
       alignItems: 'stretch',
-      boxShadow: 'sm',
+      boxShadow: 'md',
       boxSizing: 'content-box',
       borderRadius: '12px',
-      border: 'solid 3px',
       borderColor: `${c}.100`,
       color: `${c}.700`,
       display: 'flex',

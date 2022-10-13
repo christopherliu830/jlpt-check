@@ -1,18 +1,17 @@
 import React from 'react';
 import { Flex, Spacer, useBreakpoint, useBreakpointValue } from '@chakra-ui/react';
-import { Link } from './Link/Link';
-import { useHistory } from 'react-router';
+import { useRouter } from 'next/router';
 
 import { Logo } from '../Logo/Logo';
 
 export function Navbar(): React.ReactElement {
-  const history = useHistory();
+  const router = useRouter();
   const collapsed = useBreakpointValue({base: true, md: false });
   const bp = useBreakpoint();
   console.log(bp, collapsed);
 
   const handleLogoClick = () => {
-    history.push('/')
+    router.push('/');
   }
 
   return (
@@ -28,9 +27,6 @@ export function Navbar(): React.ReactElement {
       {!collapsed && 
         <>
           <Spacer />
-          <Link to="/quiz">Test</Link>
-          <Link to="/practice">Practice</Link>
-          <Link to="/about">About</Link>
         </>
       }
     </Flex>
