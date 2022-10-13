@@ -46,7 +46,7 @@ export function Landing(): React.ReactElement {
         </Flex>
         <Center margin="24px">
           <Text color="gray.400" marginTop="auto">
-            Christopher Liu and Aarif Razak
+            Christopher Liu
           </Text>
         </Center>
       </Container>

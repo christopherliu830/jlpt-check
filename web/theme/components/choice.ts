@@ -14,7 +14,6 @@ interface StyleConfig {
   }
 }
 
-
 export const Choice: StyleConfig = {
   parts: ['container', 'header', 'body'],
   baseStyle: ({ colorScheme: c }) => ({
@@ -30,7 +29,6 @@ export const Choice: StyleConfig = {
       overflow: 'hidden',
       userSelect: 'none',
       margin: '18px',
-      height: '120px',
     },
     header: {
       alignItems: 'center',
@@ -43,7 +41,6 @@ export const Choice: StyleConfig = {
       fontSize: 'xl',
       fontWeight: 'bold',
       justifyContent: 'center',
-      minWidth: '220px',
       padding: '12px',
       position: 'relative',
       transition: 'background var(--chakra-transition-duration-normal)',

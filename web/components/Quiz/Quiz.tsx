@@ -14,7 +14,7 @@ function quizReducer(state: QuizState, action: { type: string }) {
   };
 }
 
-export function Quiz(): React.ReactElement {
+export function Quiz() {
   const [ state, dispatch ] = useReducer(quizReducer, {});
   const [ leaving, setLeaving ] = useState(false);
 

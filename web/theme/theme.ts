@@ -5,6 +5,7 @@ import { violet } from './colors';
 import { Checkbox } from './components/checkbox';
 import { Choice } from './components/choice';
 import { Container } from './components/container';
+import { MultipleChoice } from './components/multiple-choice';
 
 
 export const theme = extendTheme({
@@ -15,5 +16,6 @@ export const theme = extendTheme({
     Checkbox,
     Choice,
     Container,
+    MultipleChoice
   }
 })
