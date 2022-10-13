@@ -7,8 +7,6 @@ import { Logo } from '../Logo/Logo';
 export function Navbar(): React.ReactElement {
   const router = useRouter();
   const collapsed = useBreakpointValue({base: true, md: false });
-  const bp = useBreakpoint();
-  console.log(bp, collapsed);
 
   const handleLogoClick = () => {
     router.push('/');

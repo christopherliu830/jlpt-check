@@ -1,0 +1,30 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Exercise {
+  id          Int       @id @default(autoincrement())
+  difficulty  Float
+  prompt      String
+  content     Json?
+  directive   Directive @relation(fields: [directiveId], references: [id])
+  directiveId Int
+}
+
+model Directive {
+  id        Int           @id @default(autoincrement())
+  prompt    String
+  type      DirectiveType
+  exercises Exercise[]
+}
+
+enum DirectiveType {
+  MULTIPLE_CHOICE
+  SHORT_ANSWER
+  LISTENING
+}
