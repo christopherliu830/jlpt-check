@@ -1,17 +1,17 @@
 import { Theme, StyleObjectOrFn } from '@chakra-ui/react';
 
-type StyleInterpolation = StyleObjectOrFn
+type StyleInterpolation = StyleObjectOrFn;
 
 interface StyleConfig {
-  parts?: string[],
-  baseStyle: StyleInterpolation
-  sizes?: { [size: string]: StyleInterpolation }
-  variants: { [variant: string]: StyleInterpolation }
+  parts?: string[];
+  baseStyle: StyleInterpolation;
+  sizes?: { [size: string]: StyleInterpolation };
+  variants: { [variant: string]: StyleInterpolation };
   defaultProps?: {
-    variant?: string,
-    size?: string,
-    colorScheme?: string,
-  }
+    variant?: string;
+    size?: string;
+    colorScheme?: string;
+  };
 }
 
 export const Choice: StyleConfig = {
@@ -49,7 +49,7 @@ export const Choice: StyleConfig = {
         bg: `${c}.50`,
       },
       _groupActive: {
-        bg: `${c}.100`
+        bg: `${c}.100`,
       },
     },
     body: {
@@ -60,27 +60,33 @@ export const Choice: StyleConfig = {
       display: 'flex',
       flex: '2 1 100%',
       transition: 'background var(--chakra-transition-duration-normal)',
-    }
+    },
   }),
   variants: {
-    selected: ({ colorScheme: c}) => ({
+    selected: ({ colorScheme: c }) => ({
       container: {
         borderColor: `${c}.400`,
       },
       header: {
-        boxShadow: 'inner',
+        boxShadow: '0 0 8px 0 rgba(0, 0, 0, 0.2)',
+        zIndex: 1,
         bg: `${c}.200`,
         _groupHover: {
           bg: `${c}.300`,
-        }
+        },
+        _groupActive: {
+          bg: `${c}.400`,
+        },
       },
       body: {
+        boxShadow: 'inner',
         bg: `${c}.100`,
-        color: `${c}.800`
-      }
-    })
+        color: `${c}.800`,
+        transition: 'all var(--chakra-transition-duration-normal)',
+      },
+    }),
   },
   defaultProps: {
     colorScheme: 'violet',
-  }
-}
+  },
+};

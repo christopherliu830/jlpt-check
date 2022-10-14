@@ -22,6 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 prompt: '去年より<u>利益</u>がわずかに増えた。',
                 content: {
                   choices: ['りし', 'りそく', 'りえき', 'りじゅん'],
+                  options: { multiple: false },
                   correct: 2,
                 },
               },
@@ -30,6 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 prompt: '橋本選手の活躍で、なんとかピンチ<u>逃れた</u>。',
                 content: {
                   choices: ['のがれた', 'はなれた', 'それた', 'まぬがれた'],
+                  options: { multiple: false },
                   correct: 0,
                 },
               },
