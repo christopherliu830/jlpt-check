@@ -71,12 +71,13 @@ export default function Sun({ show }: { show: boolean }) {
         const [x1, y1, x2, y2] = getPoints(i);
         return (
           <motion.line
+            key={i}
             x1={x1}
             y1={y1}
             x2={x2}
             y2={y2}
             animate={sunAnimation}
-            initial={{ pathLength: 0 }}
+            initial={{ pathLength: 0, opacity: 0 }}
             stroke={SunTheme.stroke}
             strokeWidth={SunTheme.strokeWidth}
             strokeLinecap="round"

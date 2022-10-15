@@ -22,12 +22,13 @@ function Question() {
     fetchQuestion();
   }, []);
 
-  const handleSubmit = () => {
+  const handleSubmit = (answers: string[]) => {
     if (result) {
       setResult(undefined);
       fetchQuestion();
     } else {
-      setResult('success');
+      if (answers[0] === exercise![0].content.choices[exercise![0].content.correct]) setResult('success');
+      else setResult('fail');
     }
   };
 

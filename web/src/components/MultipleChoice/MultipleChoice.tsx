@@ -9,31 +9,34 @@ import SanitizedHTML from '../SanitizedHTML/SanitizedHTML';
 
 export type MultipleChoiceProps = {
   exercise: MultipleChoiceExercise;
-  onSubmit: (selected: number[]) => void;
+  onSubmit: (selected: string[]) => void;
 };
 
 function MultipleChoice({ exercise, onSubmit }: MultipleChoiceProps) {
-  const [selected, setSelected] = useState<Record<number, boolean>>({});
+  const [selected, setSelected] = useState(new Set<number>());
   const styles = useMultiStyleConfig('MultipleChoice');
 
   const { options, choices } = exercise.content;
 
   const handleSelect = (index: number) => {
-    // Clear all options
-    if (!options['multiple']) {
-      setSelected({});
-    }
+    setSelected((old) => {
+      const copy = new Set(old);
+      // Clear all options
+      if (!options['multiple']) {
+        copy.clear();
+      }
 
-    setSelected((old) => ({ ...old, [index]: !selected[index] }));
+      if (copy.has(index)) {
+        copy.delete(index);
+      } else {
+        copy.add(index);
+      }
+      return copy;
+    });
   };
 
   const handleSubmit = () => {
-    onSubmit &&
-      onSubmit(
-        Object.entries(selected)
-          .filter(([_, selected]) => selected)
-          .map((entry) => Number(entry))
-      );
+    onSubmit && onSubmit(Array.from(selected.values()).map((x) => choices[x]));
   };
 
   return (
@@ -47,7 +50,7 @@ function MultipleChoice({ exercise, onSubmit }: MultipleChoiceProps) {
           </Center>
         </Box>
         {choices.map((choice, idx) => (
-          <Choice key={idx} selected={selected[idx]} onClick={() => handleSelect(idx)} __css={styles.choice}>
+          <Choice key={idx} selected={selected.has(idx)} onClick={() => handleSelect(idx)} __css={styles.choice}>
             <ChoiceHeader flex="0 0 10%">{idx + 1}</ChoiceHeader>
             <ChoiceBody>{choice?.toString()}</ChoiceBody>
           </Choice>
