@@ -1,5 +1,4 @@
 import React, { useReducer, useState } from 'react';
-
 import { Center, Text, Container } from '@chakra-ui/layout';
 import { FadeInView } from '../FadeInView/FadeInView';
 import { WrittenChoice, ListeningChoice, MultipleChoice } from './QuizChoice';

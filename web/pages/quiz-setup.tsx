@@ -1,3 +1,3 @@
-import { Quiz } from '../src/components/Quiz/Quiz';
+import { Quiz } from '../src/components/Quiz/QuizSetup';
 
 export default Quiz;
