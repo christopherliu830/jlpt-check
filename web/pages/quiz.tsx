@@ -1,20 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-
-import { Center, Container, Text } from '@chakra-ui/react';
-import type { Directive, Exercise } from '@prisma/client';
-
+import { Container, Text } from '@chakra-ui/react';
 import MultipleChoice from '../src/components/MultipleChoice/MultipleChoice';
 import { MultipleChoiceExercise } from './api/exercise';
 import { QuizResponse } from '../src/components/Quiz/QuizResponse';
-import { handleWebpackExtenalForEdgeRuntime } from 'next/dist/build/webpack/plugins/middleware-plugin';
 
 function Question() {
   const [exercise, setExercise] = useState<MultipleChoiceExercise[] | undefined>();
   const [result, setResult] = useState<string | undefined>(undefined);
-  const router = useRouter();
 
-  useEffect(() => {
+  const fetchQuestion = async () => {
     (async () => {
       const response = await fetch('/api/exercise', {
         method: 'POST',
@@ -22,11 +16,16 @@ function Question() {
       const data = (await response.json()) as MultipleChoiceExercise[];
       setExercise(data);
     })();
+  };
+
+  useEffect(() => {
+    fetchQuestion();
   }, []);
 
   const handleSubmit = () => {
     if (result) {
       setResult(undefined);
+      fetchQuestion();
     } else {
       setResult('success');
     }

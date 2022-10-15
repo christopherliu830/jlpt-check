@@ -1,6 +1,6 @@
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 
-const helpers = createMultiStyleConfigHelpers(['container', 'iconbox']);
+const helpers = createMultiStyleConfigHelpers(['container', 'iconbox', 'iconbackground']);
 
 export const QuizResponse = helpers.defineMultiStyleConfig({
   baseStyle: {
@@ -12,6 +12,12 @@ export const QuizResponse = helpers.defineMultiStyleConfig({
       justifyContent: 'center',
       alignItems: 'center',
       display: 'flex',
+    },
+    iconbackground: {
+      bg: 'white',
+      shadow: 'md',
+      pos: 'absolute',
+      borderRadius: '50%',
     },
     iconbox: {
       color: 'green',

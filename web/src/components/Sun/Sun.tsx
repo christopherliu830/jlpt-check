@@ -14,6 +14,7 @@ export default function Sun({ show }: { show: boolean }) {
     const y1 = SunTheme.offset * Math.sin(2 * Math.PI * (i / 6)) + 150;
     const x2 = (SunTheme.offset + SunTheme.width) * Math.cos(2 * Math.PI * (i / 6)) + 150;
     const y2 = (SunTheme.offset + SunTheme.width) * Math.sin(2 * Math.PI * (i / 6)) + 150;
+
     if (sunPhase === 'in') {
       return [x1, y1, x2, y2];
     } else {
@@ -38,6 +39,7 @@ export default function Sun({ show }: { show: boolean }) {
       },
     });
   };
+
   const exit = async () => {
     setSunPhase('out');
     await sunAnimation.start({
