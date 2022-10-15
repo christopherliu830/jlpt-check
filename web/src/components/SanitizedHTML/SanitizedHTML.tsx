@@ -6,10 +6,10 @@ const defaultOptions: DOMPurify.Config = {
 };
 
 const sanitize = (dirty: string, options?: any) => ({
-  // Technically toString isn't needed here but TypeScript isn't picking it up the correct return type.
-  __html: DOMPurify.sanitize(dirty, { ...defaultOptions, ...options, RETURN_TRUSTED_TYPE: false }).toString(),
+  __html: DOMPurify.sanitize(dirty, { ...defaultOptions, ...options, RETURN_TRUSTED_TYPE: false }),
 });
 
 export default function SanitizedHTML({ html, options }: { html: string; options?: any }) {
+  // @ts-ignore Sanitize returns string correctly.
   return <div dangerouslySetInnerHTML={sanitize(html, options)} />;
 }

@@ -1,21 +1,8 @@
-import { Theme, StyleObjectOrFn } from '@chakra-ui/react';
+import { createMultiStyleConfigHelpers, StyleFunctionProps, getToken } from '@chakra-ui/react';
 
-type StyleInterpolation = StyleObjectOrFn;
+const helpers = createMultiStyleConfigHelpers(['container', 'header', 'body']);
 
-interface StyleConfig {
-  parts?: string[];
-  baseStyle: StyleInterpolation;
-  sizes?: { [size: string]: StyleInterpolation };
-  variants: { [variant: string]: StyleInterpolation };
-  defaultProps?: {
-    variant?: string;
-    size?: string;
-    colorScheme?: string;
-  };
-}
-
-export const Choice: StyleConfig = {
-  parts: ['container', 'header', 'body'],
+export const Choice = helpers.defineMultiStyleConfig({
   baseStyle: ({ colorScheme: c }) => ({
     container: {
       alignItems: 'stretch',
@@ -43,14 +30,7 @@ export const Choice: StyleConfig = {
       justifyContent: 'center',
       padding: '12px',
       position: 'relative',
-      transition: 'background var(--chakra-transition-duration-normal)',
       w: '100%',
-      _groupHover: {
-        bg: `${c}.50`,
-      },
-      _groupActive: {
-        bg: `${c}.100`,
-      },
     },
     body: {
       alignItems: 'center',
@@ -59,7 +39,6 @@ export const Choice: StyleConfig = {
       color: `${c}.600`,
       display: 'flex',
       flex: '2 1 100%',
-      transition: 'background var(--chakra-transition-duration-normal)',
     },
   }),
   variants: {
@@ -70,23 +49,81 @@ export const Choice: StyleConfig = {
       header: {
         boxShadow: '0 0 8px 0 rgba(0, 0, 0, 0.2)',
         zIndex: 1,
-        bg: `${c}.200`,
-        _groupHover: {
-          bg: `${c}.300`,
-        },
-        _groupActive: {
-          bg: `${c}.400`,
-        },
       },
       body: {
         boxShadow: 'inner',
         bg: `${c}.100`,
         color: `${c}.800`,
-        transition: 'all var(--chakra-transition-duration-normal)',
       },
     }),
   },
   defaultProps: {
     colorScheme: 'violet',
   },
+});
+
+export const animateBody = (theme: Record<string, any>, { colorScheme }: StyleFunctionProps) => {
+  // helper function to get the rgba from color level.
+  const color = (level: number) => getToken('colors', `${colorScheme}.${level}`)(theme);
+
+  return {
+    variants: {
+      ['selected-base']: {
+        background: color(100),
+        boxShadow: 'inset 0 0 8px 0 rgba(0, 0, 0, 0.2)',
+      },
+      ['selected-active']: {
+        background: color(300),
+        transition: { duration: 0 },
+        initial: 'inset 0 0 0 0 black',
+        boxShadow: 'inset 0 0 8px 0 rgba(0, 0, 0, 0.2)',
+      },
+      ['selected-hover']: {
+        background: color(200),
+        transition: { duration: 0.2 },
+        boxShadow: 'inset 0 0 8px 0 rgba(0, 0, 0, 0.2)',
+      },
+      ['unselected-hover']: {
+        background: color(50),
+        transition: { duration: 0.2 },
+        boxShadow: 'inset 0 0 0 0',
+      },
+      ['unselected-base']: {
+        background: color(25),
+        boxShadow: 'inset 0 0 0 0',
+      },
+      ['unselected-active']: {
+        background: color(300),
+        transition: { duration: 0 },
+        boxShadow: 'inset 0 0 4px 0 rgba(0, 0, 0, 0.2)',
+      },
+    },
+  };
+};
+
+export const animateHeader = (theme: Record<string, any>, { colorScheme }: StyleFunctionProps) => {
+  // helper function to get the rgba from color level.
+  const color = (level: number) => getToken('colors', `${colorScheme}.${level}`)(theme);
+
+  return {
+    variants: {
+      ['selected-base']: {
+        background: color(200),
+      },
+      ['selected-hover']: {
+        background: color(200),
+      },
+      ['selected-active']: {
+        background: color(200),
+        transition: { duration: 0 },
+      },
+      ['unselected-hover']: {
+        background: color(100),
+      },
+      ['unselected-active']: {
+        background: color(200),
+        transition: { duration: 0 },
+      },
+    },
+  };
 };

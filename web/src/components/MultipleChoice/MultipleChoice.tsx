@@ -47,7 +47,7 @@ function MultipleChoice({ exercise, onSubmit }: MultipleChoiceProps) {
           </Center>
         </Box>
         {choices.map((choice, idx) => (
-          <Choice key={idx} selected={selected[idx]} onMouseDown={() => handleSelect(idx)} __css={styles.choice}>
+          <Choice key={idx} selected={selected[idx]} onClick={() => handleSelect(idx)} __css={styles.choice}>
             <ChoiceHeader flex="0 0 10%">{idx + 1}</ChoiceHeader>
             <ChoiceBody>{choice?.toString()}</ChoiceBody>
           </Choice>
