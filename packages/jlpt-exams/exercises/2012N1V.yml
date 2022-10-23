@@ -52,7 +52,7 @@
 - directive: fill
   exercises:
   - difficulty: 5
-    prompt: 物置の隅で、ほこり<space/>になっている古い人形を見つけた。
+    prompt: 物置の隅で、ほこり<blank-space></blank-space>になっている古い人形を見つけた。
     choices:
     - ぐるみ
     - がらみ
@@ -60,7 +60,7 @@
     - ずくめ
     correct: 2
   - difficulty: 5
-    prompt: 木村さんとは交通の趣味があるので、いつも会話が<space/>。
+    prompt: 木村さんとは交通の趣味があるので、いつも会話が<blank-space></blank-space>。
     choices:
     - 舞う
     - 弾む
@@ -68,7 +68,7 @@
     - 跳ねる
     correct: 1
   - difficulty: 5
-    prompt: 地域の<space/>に合った医療のシステムが求められている。
+    prompt: 地域の<blank-space></blank-space>に合った医療のシステムが求められている。
     choices:
     - 実情
     - 実況
@@ -76,7 +76,7 @@
     - 実在
     correct: 0
   - difficulty: 5
-    prompt: この選手は、十年に一人の<space/>だと言われている。
+    prompt: この選手は、十年に一人の<blank-space></blank-space>だと言われている。
     choices:
     - 玄人
     - 大家
@@ -84,7 +84,7 @@
     - 逸材
     correct: 3
   - difficulty: 5
-    prompt: 書類に<space/>があった場合、申請は受理されません。
+    prompt: 書類に<blank-space></blank-space>があった場合、申請は受理されません。
     choices:
     - 不隠
     - 不当
@@ -92,7 +92,7 @@
     - 不順
     correct: 2
   - difficulty: 5
-    prompt: 約300年前の絵画の<space/>が終わり、来月から公開される予定だ。
+    prompt: 約300年前の絵画の<blank-space></blank-space>が終わり、来月から公開される予定だ。
     choices:
     - 回復
     - 修復
@@ -100,7 +100,7 @@
     - 復興
     correct: 1
   - difficulty: 4.5
-    prompt: 経済だけでなく、法律にも詳しいのが彼の<space/>だ。
+    prompt: 経済だけでなく、法律にも詳しいのが彼の<blank-space></blank-space>だ。
     choices:
     - 深み
     - 強み

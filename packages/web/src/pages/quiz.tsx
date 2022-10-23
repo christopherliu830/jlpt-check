@@ -4,6 +4,8 @@ import MultipleChoice from 'components/MultipleChoice/MultipleChoice';
 import { fetchExercise } from 'api/exercise';
 import { QuizResponse } from 'components/Quiz/QuizResponse';
 import { useQuery } from 'react-query';
+import { ExerciseText } from 'components/ExerciseText/ExerciseText';
+import { ExerciseProvider } from 'components/ExerciseProvider/ExerciseProvider';
 
 function Question() {
   const [result, setResult] = useState<string | undefined>(undefined);
@@ -31,12 +33,14 @@ function Question() {
   }
 
   return (
-    <Container maxW="2xl" centerContent pos="relative">
-      <Text fontSize="2xl" mt={12}>
-        {exercise.directive.prompt}
-      </Text>
-      <MultipleChoice exercise={exercise} onSubmit={handleSubmit} />
-      <QuizResponse response={result} onTimeout={() => setResult(undefined)} />
+    <Container maxW="4xl" centerContent pos="relative">
+      <ExerciseProvider exercise={exercise}>
+        <Text fontSize="2xl" mt={12}>
+          <ExerciseText>{exercise.directive.prompt}</ExerciseText>
+        </Text>
+        <MultipleChoice exercise={exercise} onSubmit={handleSubmit} />
+        <QuizResponse response={result} onTimeout={() => setResult(undefined)} />
+      </ExerciseProvider>
     </Container>
   );
 }

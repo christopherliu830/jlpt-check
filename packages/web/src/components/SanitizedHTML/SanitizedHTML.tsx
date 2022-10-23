@@ -10,6 +10,7 @@ type UntrustedConfig = DOMPurify.Config & {
 
 const defaultOptions: UntrustedConfig = {
   ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'u', 'ruby', 'rbc', 'rb', 'rtc', 'rt'],
+  ADD_TAGS: ['blank-space'],
   ALLOWED_ATTR: ['href'],
   RETURN_TRUSTED_TYPE: false,
 };
@@ -21,6 +22,6 @@ const sanitize = (dirty: string, options?: UntrustedConfig) => {
   };
 };
 
-export default function SanitizedHTML({ html, options }: { html: string; options?: UntrustedConfig }) {
+export function SanitizedHTML({ html, options }: { html: string; options?: UntrustedConfig }) {
   return <div dangerouslySetInnerHTML={sanitize(html, options)} />;
 }

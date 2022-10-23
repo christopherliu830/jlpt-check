@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, chakra, Flex, Icon, ScaleFade, shouldForwardProp, Text, useMultiStyleConfig } from '@chakra-ui/react';
 import { faCheckCircle, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -51,8 +52,9 @@ export function QuizResponse({ response, onTimeout }: { response?: string; onTim
         as={motion.div}
         animate={animation}
         initial={{ scale: 0, opacity: 0 }}
-        // @ts-ignore
-        transition={{ duration: 0.5, ease: 'backInOut' }}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore Needs ts-ignore so chakra can forward props correctly
+        transition={{ duration: 0.2, ease: 'backInOut' }}
       >
         <Icon __css={styles.iconbox} color={color} as={FontAwesomeIcon} icon={faIcon} size="6x" />
       </ChakraBox>

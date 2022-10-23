@@ -1,7 +1,7 @@
 - directive: fill
   exercises:
   - difficulty: 5 
-    prompt: 人気作家A氏の講演会が無料<space/>、多くのファンが詰めかけた。
+    prompt: 人気作家A氏の講演会が無料<blank-space></blank-space>、多くのファンが詰めかけた。
     choices:
     - にして
     - にあって
@@ -9,7 +9,7 @@
     - とあって
     correct: 3
   - difficulty: 5
-    prompt: 都会から田舎に移り住んだ人の話を聞く<space/>、「田舎は人を癒す力を持っている」 とつくづく感じる。
+    prompt: 都会から田舎に移り住んだ人の話を聞く<blank-space></blank-space>、「田舎は人を癒す力を持っている」 とつくづく感じる。
     choices:
     - につけ
     - なり
@@ -17,7 +17,7 @@
     - にしてみると
     correct: 0
   - difficulty: 5
-    prompt: この鍋は、いため物に、揚げ物に<space/>何にでも使えて便利です。
+    prompt: この鍋は、いため物に、揚げ物に<blank-space></blank-space>何にでも使えて便利です。
     choices:
     - は
     - と
@@ -25,7 +25,7 @@
     - か
     correct: 1
   - difficulty: 4.5
-    prompt:  プリンターの調子が悪くなり、製造会社に電話で問い合わせたら、向こうの担当者に、あれこれ質問に答え<space/>あげく、対応できないと言われた。
+    prompt:  プリンターの調子が悪くなり、製造会社に電話で問い合わせたら、向こうの担当者に、あれこれ質問に答え<blank-space></blank-space>あげく、対応できないと言われた。
     choices:
     - させた
     - させられる
@@ -33,7 +33,7 @@
     - させられた
     correct: 3
   - difficulty: 5
-    prompt: その日、私はホームに入ってきた電車に飛び乗った。ところが、電車は反対方向に走り始めた()。私は電車の行き先を確かめなかったことを後悔した。
+    prompt: その日、私はホームに入ってきた電車に飛び乗った。ところが、電車は反対方向に走り始めた<blank-space></blank-space>。私は電車の行き先を確かめなかったことを後悔した。
     choices:
     - ではない
     - ではないか
@@ -44,7 +44,7 @@
     prompt: |
       （インタビューで）
       A「お店で一番気をつけていることは何ですか」。
-      B「衛生管理です。お客様に食事を<space/>衛生面の管理には、何よりも注意しております。」
+      B「衛生管理です。お客様に食事を<blank-space></blank-space>衛生面の管理には、何よりも注意しております。」
     choices:
     - お出しになる以上
     - お出しになるうえ
@@ -52,7 +52,7 @@
     - お出しするうえ
     correct: 2
   - difficulty: 4.5
-    prompt: 留学するまで、私は自分が見ている世界がすべてだと思っていた。実はそれが世界のほんの小さな一部分<space/>気付いていなかった。
+    prompt: 留学するまで、私は自分が見ている世界がすべてだと思っていた。実はそれが世界のほんの小さな一部分<blank-space></blank-space>気付いていなかった。
     choices:
     - でないことにしか
     - でしかないことに
@@ -63,7 +63,7 @@
     prompt: >
       （パソコンを使いながら）
       A「ねえ、この前教えた計算機能、使ってみた？」
-      B「うん。今まであんなに時間をかけてたのが<space/>簡単に計算できたよ。」
+      B「うん。今まであんなに時間をかけてたのが<blank-space></blank-space>簡単に計算できたよ。」
       A「でしょ。パソコンのことならまかせてよ。」
     choices:
     - ばかばかしい思いをするもので
@@ -77,7 +77,7 @@
       <ruby>山中<rt>やまだ</rt></ruby>「あ、<ruby>木村<rt>きむら</rt></ruby>先生でいらっしゃいますか。
       AB出版の<ruby>山中<rt>やまだ</rt></ruby>,でざいますが、いまから\
       原稿をいただきに上がってもよろしいでしょうか。」
-      <ruby>木村<rt>きむら</rt></ruby>「すみません。まだできていないんです。あと三日<space/>。」"
+      <ruby>木村<rt>きむら</rt></ruby>「すみません。まだできていないんです。あと三日<blank-space></blank-space>。」"
     choices:
     - 待っておいでになります。
     - お待ち申しあげております。
@@ -87,7 +87,7 @@
   - difficulty: 5
     prompt: |
       （宇宙飛行士　<ruby>山<rt>やま</rt>中<rt>だ</ruby><ruby>太<rt>た</rt>郎<rt>ろう</ruby>さんへのインタビューで）
-      <ruby>山<rt>やま</rt>中<rt>だ</ruby>「実は、初めから宇宙飛行士になる<space/>、そうじゃないんです。大学を出たら、医者になろうと思っていましたから。」
+      <ruby>山<rt>やま</rt>中<rt>だ</ruby>「実は、初めから宇宙飛行士になる<blank-space></blank-space>、そうじゃないんです。大学を出たら、医者になろうと思っていましたから。」
       記者「では、何がきっかけで、宇宙飛行士になりたいと思ったんですか。」
     choices:
     - つもりだったかっていうと
@@ -99,7 +99,7 @@
 - directive: ordered fill
   exercises:
   - difficulty: 5
-    prompt: 大学入試では、試験当日初めてその大学に行き、迷ってしまった<space/><space/><space/><space/>事前に見学しておくとよい。
+    prompt: 大学入試では、試験当日初めてその大学に行き、迷ってしまった<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>事前に見学しておくとよい。
     choices:
     - ない
     - という
@@ -107,7 +107,7 @@
     - ことの
     correct: [1, 3, 0, 2]
   - difficulty: 5
-    prompt: 趣味を持つのは良いことだと思いますが、家庭を犠牲<space/><space/><space/><space/>、それはちょっと問題です。
+    prompt: 趣味を持つのは良いことだと思いますが、家庭を犠牲<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>、それはちょっと問題です。
     choices:
     - となる
     - まで
@@ -115,7 +115,7 @@
     - にして
     correct: [3, 1, 0, 2]
   - difficulty: 5
-    prompt: 管理職になをったら、たとえ<space/><space/><space/><space/>部下の失敗も引き受けるというくらいの覚悟がなくてはならない。
+    prompt: 管理職になをったら、たとえ<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>部下の失敗も引き受けるというくらいの覚悟がなくてはならない。
     choices:
     - だとして
     - がなくても
@@ -123,7 +123,7 @@
     - 自分の責任
     correct: [2, 1, 3, 0]
   - difficulty: 5
-    prompt: <space/><space/><space/><space/>小さな<ruby>町<rt>まち</rt>工<rt>こう</rt>場<rt>ば</rt></ruby>だった。
+    prompt: <blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>小さな<ruby>町<rt>まち</rt>工<rt>こう</rt>場<rt>ば</rt></ruby>だった。
     choices:
     - もともとは
     - 我が社だが
@@ -139,7 +139,7 @@
         秋<rt>あき</rt>\
       </ruby>\
       さん。役作りに悩んでいる\
-      <space/><space/><space/><space/>という。"
+      <blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>という。"
     choices:
     - と
     - そうでもない

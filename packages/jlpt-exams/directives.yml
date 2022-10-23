@@ -13,7 +13,7 @@
   type: 1
 
 - key: fill
-  prompt: Select the option that best fits in the indicated <space/>.
+  prompt: Select the option that best fits in the <blank-space></blank-space>.
   type: 0
 
 - key: meaning
@@ -25,5 +25,5 @@
   type: 0
 
 - key: ordered fill
-  prompt: Order the following choices in the best order to fill in the <space/>s.
+  prompt: Order the following choices in the best order to fill in the <blank-space></blank-space>s.
   type: 2

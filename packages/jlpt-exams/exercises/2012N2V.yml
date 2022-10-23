@@ -99,7 +99,7 @@
 - directive: fill
   exercises:
     - difficulty: 4
-      prompt: 彼は医学<space/>ではかない知られた存在だ。
+      prompt: 彼は医学<blank-space></blank-space>ではかない知られた存在だ。
       choices:
       - 界
       - 帯
@@ -107,7 +107,7 @@
       - 区
       correct: 0
     - difficulty: 4
-      prompt: 決勝戦で負けて、<space/>優勝に終わった。
+      prompt: 決勝戦で負けて、<blank-space></blank-space>優勝に終わった。
       choices:
       - 後
       - 準
@@ -115,7 +115,7 @@
       - 副
       correct: 1
     - difficulty: 4
-      prompt: <space/>段階では詳細は決まっていないらしい。
+      prompt: <blank-space></blank-space>段階では詳細は決まっていないらしい。
       choices:
       - 現
       - 直
@@ -123,7 +123,7 @@
       - 当
       correct: 0
     - difficulty: 4
-      prompt: 今回の大阪の訪問は<space/>公式に行われた。
+      prompt: 今回の大阪の訪問は<blank-space></blank-space>公式に行われた。
       choices:
       - 不
       - 未
@@ -131,7 +131,7 @@
       - 非
       correct: 3
     - difficulty: 4
-      prompt: わが社の今年の<space/>売上は、昨年を上回った。
+      prompt: わが社の今年の<blank-space></blank-space>売上は、昨年を上回った。
       choices:
       - 集
       - 総
@@ -142,7 +142,7 @@
 - directive: fill
   exercises:
     - difficulty: 4
-      prompt: さまざまなデータを<space/>した結果、事故の原因が明らかになった。
+      prompt: さまざまなデータを<blank-space></blank-space>した結果、事故の原因が明らかになった。
       choices:
       - 視察
       - 検査
@@ -152,7 +152,7 @@
     - difficulty: 4
       prompt: "
         <ruby>街<rt>まち</rt></ruby>\
-        を<space/>していたら、\
+        を<blank-space></blank-space>していたら、\
         <ruby>\
           山<rt>やま</rt>\
           本<rt>もと</rt>\
@@ -165,7 +165,7 @@
       - ぶらぶら
       correct: 3
     - difficulty: 4
-      prompt: 祭りの日は町が<space/>にあふれている。
+      prompt: 祭りの日は町が<blank-space></blank-space>にあふれている。
       choices:
       - <ruby>活<rt>かっ</rt>気<rt>き</rt></ruby>
       - <ruby>活<rt>かっ</rt>発<rt>ぱつ</rt></ruby>
@@ -173,7 +173,7 @@
       - <ruby>活<rt>かつ</rt>動<rt>どう</rt></ruby>
       correct: 0
     - difficulty: 4
-      prompt: コピー機に紙が<space/>、出てこない。
+      prompt: コピー機に紙が<blank-space></blank-space>、出てこない。
       choices:
       - もぐって
       - つまって
@@ -181,7 +181,7 @@
       - うまって
       correct: 1
     - difficulty: 4
-      prompt: この小説は今の時代を<space/>した作品だ。
+      prompt: この小説は今の時代を<blank-space></blank-space>した作品だ。
       choices:
       - 反映
       - 放映
@@ -189,7 +189,7 @@
       - 採用
       correct: 0
     - difficulty: 4
-      prompt: <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんは長い間<space/>窓の外を見ていた。
+      prompt: <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんは長い間<blank-space></blank-space>窓の外を見ていた。
       choices:
       - ぼんやり
       - ふんわり
@@ -270,8 +270,8 @@
     - difficulty: 4
       prompt: <ruby>利<rt>えき</rt>益<rt>り</rt></ruby>
       choices:
-      - ジョギングは健康の<u><ruby>利<rt>えき</rt>益<rt>り</rt></ruby></u>になる。
-      - この値段で売ったら、店の<u><ruby>利<rt>えき</rt>益<rt>り</rt></ruby></u>ははとんどない。
-      - かぜ薬を飲んだが、<u><ruby>利益<rt>り</rt><rt>えき</rt></ruby></u>が感じられない。
-      - バスの<u><ruby>利益<rt>り</rt><rt>えき</rt></ruby></u>は、新幹緻よりも料金が安いことだ。
+      - ジョギングは健康の<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>になる。
+      - この値段で売ったら、店の<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>ははとんどない。
+      - かぜ薬を飲んだが、<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>が感じられない。
+      - バスの<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>は、新幹緻よりも料金が安いことだ。
       correct: 1
