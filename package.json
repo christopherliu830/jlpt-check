@@ -19,11 +19,5 @@
   "bugs": {
     "url": "https://github.com/lletter/jlpt-check/issues"
   },
-  "homepage": "https://github.com/lletter/jlpt-check#readme",
-  "devDependencies": {
-    "prisma": "^4.5.0"
-  },
-  "dependencies": {
-    "@prisma/client": "^4.5.0"
-  }
+  "homepage": "https://github.com/lletter/jlpt-check#readme"
 }

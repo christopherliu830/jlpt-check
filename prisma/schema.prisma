@@ -12,7 +12,8 @@ model Exercise {
   id          Int       @id @default(autoincrement())
   difficulty  Float
   prompt      String
-  content     Json?
+  choices     String[]
+  correct     Int[]
   directive   Directive @relation(fields: [directiveId], references: [id])
   directiveId Int
 }
@@ -25,7 +26,9 @@ model Directive {
 }
 
 enum DirectiveType {
-  MULTIPLE_CHOICE
+  SELECT
+  SELECT_OR_FILL
+  ORDERED_SELECT
   SHORT_ANSWER
   LISTENING
 }

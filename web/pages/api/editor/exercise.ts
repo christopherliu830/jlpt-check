@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { DirectiveType } from '@prisma/client';
-import { prisma } from '../../../src/utils/prisma';
+import { prisma, DirectiveType } from '../../../src/utils/prisma';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -12,27 +11,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await prisma.directive.create({
       data: {
         prompt: 'Select the correct reading from the underlined word',
-        type: DirectiveType.MULTIPLE_CHOICE,
+        type: DirectiveType.SELECT,
         exercises: {
           createMany: {
             data: [
               {
                 difficulty: 5,
                 prompt: '去年より<u>利益</u>がわずかに増えた。',
-                content: {
-                  choices: ['りし', 'りそく', 'りえき', 'りじゅん'],
-                  options: { multiple: false },
-                  correct: 2,
-                },
+                choices: ['りし', 'りそく', 'りえき', 'りじゅん'],
+                correct: 2,
               },
               {
                 difficulty: 5,
                 prompt: '橋本選手の活躍で、なんとかピンチ<u>逃れた</u>。',
-                content: {
-                  choices: ['のがれた', 'はなれた', 'それた', 'まぬがれた'],
-                  options: { multiple: false },
-                  correct: 0,
-                },
+                choices: ['のがれた', 'はなれた', 'それた', 'まぬがれた'],
+                correct: 0,
               },
             ],
           },

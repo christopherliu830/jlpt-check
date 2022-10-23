@@ -12,7 +12,6 @@
     "@chakra-ui/react": "^2.3.5",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@prisma/client": "^4.4.0",
     "dompurify": "^2.4.0",
     "framer-motion": "^7.5.3",
     "next": "12.3.1",
@@ -29,7 +28,6 @@
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
-    "prisma": "^4.4.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   }

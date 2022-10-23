@@ -144,7 +144,7 @@
       - 無
       - 非
       correct: 3
-    - difficulty:
+    - difficulty: 4
       prompt: わが社の今年の<space/>売上は、昨年を上回った。
       choices:
       - 集
