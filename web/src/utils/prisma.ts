@@ -1,5 +1,5 @@
-import { PrismaClient } from '../../../prisma/generated/client';
-export * from '../../../prisma/generated/client';
+import { PrismaClient } from '@prisma/client';
+export * from '@prisma/client';
 
 declare global {
   // allow global `var` declarations

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import assert from 'assert';
 import yaml from 'js-yaml';
-import { PrismaClient, DirectiveType } from '../prisma/generated/client/index.js'; 
+import { PrismaClient, DirectiveType } from '@prisma/client'; 
 
 const prisma = new PrismaClient();
 

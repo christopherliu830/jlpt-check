@@ -3,9 +3,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-generator client {
+generator exam_client {
   provider = "prisma-client-js"
-  output   = "./generated/client"
+  output   = "../exams/node_modules"
+}
+
+generator web_client {
+  provider = "prisma-client-js"
+  output   = "../web/node_modules"
 }
 
 model Exercise {

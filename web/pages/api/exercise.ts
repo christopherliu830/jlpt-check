@@ -1,15 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { prisma } from '../../src/utils/prisma';
-import { Directive, Exercise } from '@prisma/client';
+import { prisma, Directive, Exercise } from 'src/utils/prisma';
 
 export type MultipleChoiceExercise = Exercise & {
   directive: Directive;
-  content: {
-    options: { multiple: boolean };
-    choices: string[];
-    correct: number;
-  };
+  choices: string[];
+  correct: number[];
 };
+
+export async function fetchExercise() {
+  const response = await fetch('/api/exercise', {
+    method: 'POST',
+  });
+  const data = (await response.json()) as MultipleChoiceExercise[];
+  return data;
+}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
