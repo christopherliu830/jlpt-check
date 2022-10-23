@@ -1,15 +1,26 @@
+import React from 'react';
 import * as DOMPurify from 'dompurify';
 
-const defaultOptions: DOMPurify.Config = {
-  ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'u'],
-  ALLOWED_ATTR: ['href'],
+// Need this to make typescript select the correct overload.
+type UntrustedConfig = DOMPurify.Config & {
+  RETURN_TRUSTED_TYPE: false;
+  RETURN_DOM_FRAGMENT?: false | undefined;
+  RETURN_DOM?: false | undefined;
 };
 
-const sanitize = (dirty: string, options?: any) => ({
-  __html: DOMPurify.sanitize(dirty, { ...defaultOptions, ...options, RETURN_TRUSTED_TYPE: false }),
-});
+const defaultOptions: UntrustedConfig = {
+  ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'u', 'ruby', 'rbc', 'rb', 'rtc', 'rt'],
+  ALLOWED_ATTR: ['href'],
+  RETURN_TRUSTED_TYPE: false,
+};
 
-export default function SanitizedHTML({ html, options }: { html: string; options?: any }) {
-  // @ts-ignore Sanitize returns string correctly.
+const sanitize = (dirty: string, options?: UntrustedConfig) => {
+  const opts: UntrustedConfig = { ...defaultOptions, ...options };
+  return {
+    __html: DOMPurify.sanitize(dirty, opts),
+  };
+};
+
+export default function SanitizedHTML({ html, options }: { html: string; options?: UntrustedConfig }) {
   return <div dangerouslySetInnerHTML={sanitize(html, options)} />;
 }
