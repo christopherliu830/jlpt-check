@@ -1,0 +1,23 @@
+{
+  "name": "@lletter/jlpt-prisma",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "generate": "yarn prisma generate",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@lletter/jlpt-exams": "*",
+    "@prisma/client": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.3",
+    "prisma": "^4.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "prisma": {
+    "seed": "ts-node ./prisma/migrate.ts"
+  }
+}

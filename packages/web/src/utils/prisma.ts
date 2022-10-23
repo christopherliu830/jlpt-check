@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client';
-export * from '@prisma/client';
+import { PrismaClient } from '@lletter/jlpt-prisma';
+export * from '@lletter/jlpt-prisma';
 
 declare global {
   // allow global `var` declarations

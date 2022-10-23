@@ -1,0 +1,9 @@
+{
+  "name": "@lletter/jlpt-exams",
+  "version": "0.1.0",
+  "main": "exams.ts",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "js-yaml": "^4.1.0"
+  }
+}
