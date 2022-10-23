@@ -8,7 +8,7 @@ import { useQuery } from 'react-query';
 function Question() {
   const [result, setResult] = useState<string | undefined>(undefined);
 
-  const { data: exercises, refetch } = useQuery(['quiz'], fetchExercise);
+  const { data: exercises, refetch } = useQuery(['quiz'], fetchExercise, { refetchOnWindowFocus: false });
 
   if (!(exercises && exercises[0])) {
     return <></>;

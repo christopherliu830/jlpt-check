@@ -1,5 +1,6 @@
 import yaml from 'js-yaml';
 import fs from 'fs';
+import path from 'path';
 
 type Exercise = {
   difficulty: number;
@@ -20,13 +21,14 @@ type Directive = {
   exercises?: Exercise[];
 };
 
-const exercisePath = fs.readdirSync('exercises');
+const exercisePath = path.join(__dirname, 'exercises');
+const exerciseFiles = fs.readdirSync(exercisePath);
 
 // Build Directives
-const directives = yaml.load(fs.readFileSync('directives.yml', 'utf-8')) as Directive[];
+const directives = yaml.load(fs.readFileSync(path.join(__dirname, './directives.yml'), 'utf-8')) as Directive[];
 
-for (const fileName of exercisePath) {
-  const groupedExercises = yaml.load(fs.readFileSync(`exercises/${fileName}`, 'utf-8'));
+for (const fileName of exerciseFiles) {
+  const groupedExercises = yaml.load(fs.readFileSync(path.join(exercisePath, fileName), 'utf-8'));
   for (const group of groupedExercises as GroupedExercises[]) {
     const directive = directives.find((d) => d.key === group.directive);
     if (!directive) {

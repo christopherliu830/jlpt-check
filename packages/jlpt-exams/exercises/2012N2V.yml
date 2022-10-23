@@ -60,22 +60,14 @@
       - 極しい
       correct: 1
     - difficulty: 4
-      prompt: >
-        <ruby>
-          <rbc>
-            <rb>携</rb>
-            <rb>帯</rb>
-            <rb>電</rb>
-            <rb>話</rb>
-          </rbc>
-          <rtc>
-            <rt>けい</rt>
-            <rt>たい</rt>
-            <rt>でん</rt>
-            <rt>わ</rt>
-          </rtc>
-        </ruby>
-        に友達の電話番号を<u>とうろく</u>した。
+      prompt: "
+        <ruby>\
+          携<rt>けい</rt>\
+          帯<rt>たい</rt>\
+          電<rt>でん</rt>\
+          話<rt>わ</rt>\
+        </ruby>\
+        に友達の電話番号を<u>とうろく</u>した。"
       choices:
       - 登録
       - 登緑
@@ -83,18 +75,12 @@
       - 答緑
       correct: 0
     - difficulty: 4
-      prompt: >
-        <ruby>
-          <rbc>
-            <rb>岡</rb>
-            <rb>田</rb>
-          </rbc>
-          <rtc>
-            <rt>おか</rt>
-            <rt>だ</rt>
-          </rtc>
-        </ruby>
-        さんを話題の映画に<u>さそった</u>。
+      prompt: "
+        <ruby>\
+          岡<rt>おか</rt>\
+          田<rt>だ</rt>\
+        </ruby>\
+        さんを話題の映画に<u>さそった</u>。"
       choices:
       - 招った
       - 勧った
@@ -164,20 +150,14 @@
       - 分析
       correct: 3
     - difficulty: 4
-      prompt: >
-        <ruby><rb>街</rb><rt>まち</rt></ruby>
-        を<space/>していたら、
-        <ruby>
-          <rbc>
-            <rb>山</rb>
-            <rb>本</rb>
-          </rbc>
-          <rtc>
-            <rt>やま</rt>
-            <rt>もと</rt>
-          </rtc>
-        </ruby>
-        さんに会った。
+      prompt: "
+        <ruby>街<rt>まち</rt></ruby>\
+        を<space/>していたら、\
+        <ruby>\
+          山<rt>やま</rt>\
+          本<rt>もと</rt>\
+        </ruby>\
+        さんに会った。"
       choices:
       - ぐらぐら
       - がらがら
@@ -187,50 +167,10 @@
     - difficulty: 4
       prompt: 祭りの日は町が<space/>にあふれている。
       choices:
-      - >
-        <ruby>
-          <rbc>
-            <rb>活</rb>
-            <rb>気</rb>
-          </rbc>
-          <rtc>
-            <rt>かっ</rt>
-            <rt>き</rt>
-          </rtc>
-        </ruby>
-      - >
-        <ruby>
-          <rbc>
-            <rb>活</rb>
-            <rb>発</rb>
-          </rbc>
-          <rtc>
-            <rt>かっ</rt>
-            <rt>ぱつ</rt>
-          </rtc>
-        </ruby>
-      - >
-        <ruby>
-          <rbc>
-            <rb>活</rb>
-            <rb>躍</rb>
-          </rbc>
-          <rtc>
-            <rt>かつ</rt>
-            <rt>やく</rt>
-          </rtc>
-        </ruby>
-      - >
-        <ruby>
-          <rbc>
-            <rb>活</rb>
-            <rb>動</rb>
-          </rbc>
-          <rtc>
-            <rt>かつ</rt>
-            <rt>どう</rt>
-          </rtc>
-        </ruby>
+      - <ruby>活<rt>かっ</rt>気<rt>き</rt></ruby>
+      - <ruby>活<rt>かっ</rt>発<rt>ぱつ</rt></ruby>
+      - <ruby>活<rt>かつ</rt>躍<rt>やく</rt></ruby>
+      - <ruby>活<rt>かつ</rt>動<rt>どう</rt></ruby>
       correct: 0
     - difficulty: 4
       prompt: コピー機に紙が<space/>、出てこない。
@@ -249,18 +189,7 @@
       - 採用
       correct: 0
     - difficulty: 4
-      prompt: >
-        <ruby>
-          <rbc>
-            <rb>田</rb>
-            <rb>中</rb>
-          </rbc>
-          <rtc>
-            <rt>た</rt>
-            <rt>なか</rt>
-          </rtc>
-        </ruby>
-        さんは長い間<space/>窓の外を見ていた。
+      prompt: <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんは長い間<space/>窓の外を見ていた。
       choices:
       - ぼんやり
       - ふんわり
@@ -273,60 +202,14 @@
     - difficulty: 4
       prompt: この<u>ブーム</u>は長くは続かないだろう。
       choices:
-      - >
-        <ruby>
-          <rbc>
-            <rb>効</rb>
-            <rb>果</rb>
-          </rbc>
-          <rtc>
-            <rt>こう</rt>
-            <rt>か</rt>
-          </rtc>
-        </ruby>
-      - >
-        <ruby>
-          <rbc>
-            <rb>状</rb>
-            <rb>態</rb>
-          </rbc>
-          <rtc>
-            <rt>じょう</rt>
-            <rt>たい</rt>
-          </rtc>
-        </ruby>
-      - >
-        <ruby>
-          <rbc>
-            <rb>流</rb>
-            <rb>行</rb>
-          </rbc>
-          <rtc>
-            <rt>りゅう</rt>
-            <rt>こう</rt>
-          </rtc>
-        </ruby>
-      - >
-        <ruby>
-          <rbc>
-            <rb>緊</rb>
-            <rb>張</rb>
-          </rbc>
-          <rtc>
-            <rt>きん</rt>
-            <rt>ちょう</rt>
-          </rtc>
-        </ruby>
+      - <ruby>効<rt>こう</rt>果<rt>か</rt></ruby>
+      - <ruby>状<rt>じょう</rt>態<rt>たい</rt></ruby>
+      - <ruby>流<rt>りゅう</rt>行<rt>こう</rt></ruby>
+      - <ruby>緊<rt>きん</rt>張<rt>ちょう</rt></ruby>
       correct: 2
     - difficulty: 4
       prompt: >
-        この作業は<u>
-        <ruby>
-          <rbc><rb>慎</rb><rb>重</rb></rbc>
-          <rtc><rt>しん</rt><rt>ちょう</rt></rtc>
-        </ruby>
-        に</u>
-        やってください。
+        この作業は<u><ruby>慎<rt>しん</rt>重<rt>ちょう</rt></ruby>に</u>やってください。
       choices:
       - 急いで
       - 絶対忘れずに
@@ -385,46 +268,10 @@
       - 先週のテストは自信がなかったが、<u>せめて</u>５０点は取れた。
       correct: 2
     - difficulty: 4
-      prompt: >
-        <ruby>
-          <rbc><rb>利</rb><rb>益</rb></rbc>
-          <rtc><rt>り</rt><rt>えき</rt></rtc>
-        </ruby>
+      prompt: <ruby>利<rt>えき</rt>益<rt>り</rt></ruby>
       choices:
-      - >
-        ジョギングは健康の
-        <u>
-          <ruby>
-            <rbc><rb>利</rb><rb>益</rb></rbc>
-            <rtc><rt>り</rt><rt>えき</rt></rtc>
-          </ruby>
-        </u>
-        になる。
-      - >
-        この値段で売ったら、店の
-        <u>
-          <ruby>
-            <rbc><rb>利</rb><rb>益</rb></rbc>
-            <rtc><rt>り</rt><rt>えき</rt></rtc>
-          </ruby>
-        </u>
-        ははとんどない。
-      - >
-        かぜ薬を飲んだが、
-        <u>
-          <ruby>
-            <rbc><rb>利</rb><rb>益</rb></rbc>
-            <rtc><rt>り</rt><rt>えき</rt></rtc>
-          </ruby>
-        </u>
-        が感じられない。
-      - >
-        バスの
-        <u>
-          <ruby>
-            <rbc><rb>利</rb><rb>益</rb></rbc>
-            <rtc><rt>り</rt><rt>えき</rt></rtc>
-          </ruby>
-        </u>
-        は、新幹緻よりも料金が安いことだ。
+      - ジョギングは健康の<u><ruby>利<rt>えき</rt>益<rt>り</rt></ruby></u>になる。
+      - この値段で売ったら、店の<u><ruby>利<rt>えき</rt>益<rt>り</rt></ruby></u>ははとんどない。
+      - かぜ薬を飲んだが、<u><ruby>利益<rt>り</rt><rt>えき</rt></ruby></u>が感じられない。
+      - バスの<u><ruby>利益<rt>り</rt><rt>えき</rt></ruby></u>は、新幹緻よりも料金が安いことだ。
       correct: 1

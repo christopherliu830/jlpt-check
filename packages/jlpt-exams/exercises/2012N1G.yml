@@ -60,7 +60,7 @@
     - にしかないことで
     correct: 1
   - difficulty: 5
-    prompt: |
+    prompt: >
       （パソコンを使いながら）
       A「ねえ、この前教えた計算機能、使ってみた？」
       B「うん。今まであんなに時間をかけてたのが<space/>簡単に計算できたよ。」
@@ -72,14 +72,12 @@
     - ばかばかしくおもえるくらい
     correct: 3
   - difficulty: 5
-    prompt: >
+    prompt: "
       （電話で）
-
-      <ruby><rb>山中</rb><rt>やまだ</rt></ruby>「あ、<ruby><rb>木村</rb><rt>きむら</rt></ruby>先生でいらっしゃいますか。
-      AB出版の<ruby><rb>山中</rb><rt>やまだ</rt></ruby>,でざいますが、いまから
+      <ruby>山中<rt>やまだ</rt></ruby>「あ、<ruby>木村<rt>きむら</rt></ruby>先生でいらっしゃいますか。
+      AB出版の<ruby>山中<rt>やまだ</rt></ruby>,でざいますが、いまから\
       原稿をいただきに上がってもよろしいでしょうか。」
-
-      <ruby><rb>木村</rb><rt>きむら</rt></ruby>「すみません。まだできていないんです。あと三日<space/>。」
+      <ruby>木村<rt>きむら</rt></ruby>「すみません。まだできていないんです。あと三日<space/>。」"
     choices:
     - 待っておいでになります。
     - お待ち申しあげております。
@@ -87,12 +85,9 @@
     - 待っていただくわけにわいきませんか。
     correct: 3
   - difficulty: 5
-    prompt: >
-      （宇宙飛行士　<ruby><rb>山中</rb><rt>やまだ</rt></ruby><ruby><rb>太郎</rb><rt>たろう</rt></ruby>さんへのインタビューで）
-
-      <ruby><rb>山中</rb><rt>やまだ</rt></ruby>「実は、初めから宇宙飛行士になる<space/>、そうじゃないんです。大学
-      を出たら、医者になろうと思っていましたから。」
-
+    prompt: |
+      （宇宙飛行士　<ruby>山<rt>やま</rt>中<rt>だ</ruby><ruby>太<rt>た</rt>郎<rt>ろう</ruby>さんへのインタビューで）
+      <ruby>山<rt>やま</rt>中<rt>だ</ruby>「実は、初めから宇宙飛行士になる<space/>、そうじゃないんです。大学を出たら、医者になろうと思っていましたから。」
       記者「では、何がきっかけで、宇宙飛行士になりたいと思ったんですか。」
     choices:
     - つもりだったかっていうと
@@ -128,21 +123,7 @@
     - 自分の責任
     correct: [2, 1, 3, 0]
   - difficulty: 5
-    prompt: >
-      <space/><space/><space/><space/>小さな
-      <ruby>
-        <rbc>
-          <rb>町</rb>
-          <rb>工</rb>
-          <rb>場</rb>
-        </rbc>
-        <rtc>
-          <rt>まち</rt>
-          <rt>こう</rt>
-          <rt>ば</rt>
-        </rtc>
-      </ruby>
-      だった。
+    prompt: <space/><space/><space/><space/>小さな<ruby>町<rt>まち</rt>工<rt>こう</rt>場<rt>ば</rt></ruby>だった。
     choices:
     - もともとは
     - 我が社だが
@@ -150,22 +131,15 @@
     - 一流企業と言われる
     correct: [2, 3, 1 ,0]
   - difficulty: 5
-    prompt: >
-      新番組でこれまでにない役柄を演じる俳優の
-      <ruby>
-        <rbc>
-          <rb>上</rb>
-          <rb>田</rb>
-          <rb>秋</rb>
-        </rbc>
-        <rtc>
-          <rt>うえ</rt>
-          <rt>だ</rt>
-          <rt>あき</rt>
-        </rtc>
-      </ruby>
-      さん。役作りに悩んでいる
-      <space/><space/><space/><space/>という。
+    prompt: "
+      新番組でこれまでにない役柄を演じる俳優の\
+      <ruby>\
+        上<rt>うえ</rt>\
+        田<rt>だ</rt>\
+        秋<rt>あき</rt>\
+      </ruby>\
+      さん。役作りに悩んでいる\
+      <space/><space/><space/><space/>という。"
     choices:
     - と
     - そうでもない

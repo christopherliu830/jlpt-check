@@ -12,12 +12,7 @@
     correct: 2
   - difficulty: 4
     prompt: >
-      あれこれ
-      <ruby>
-        <rb>悩</rb>
-        <rt>なや</rt>
-      </ruby>
-      んだ<space/>、ABC大学を志望校に決めた。
+      あれこれ<ruby>悩<rt>なや</ruby>んだ<space/>、ABC大学を志望校に決めた。
     choices:
     - さきに
     - すえに
@@ -33,47 +28,27 @@
     - しかあるまい
     correct: 3
   - difficulty: 4
-    prompt: >
-      <ruby>
-        <rbc>
-          <rb>山</rb>
-          <rb>田</rb>
-          <rb>監</rb>
-          <rb>督</rb>
-        </rbc>
-        <rtc>
-          <rt>やま</rt>
-          <rt>だ</rt>
-          <rt>かん</rt>
-          <rt>とく</rt>
-        </rtc>
-      </ruby>
-      の、「
-      <ruby><rb>私</rb><rt>わたくし</rt></ruby>
-      、
-      <ruby>
-        <rbc>
-          <rb>山</rb>
-          <rb>田</rb>
-        </rbc>
-        <rtc>
-          <rt>やま</rt>
-          <rt>だ</rt>
-        </rtc>
-      </ruby>
-      は、５０年ぶりにふるさとに戻って<space/>。」というあいさつに、
-      会場からは大きな
-      <ruby>
-        <rbc>
-          <rb>拍</rb>
-          <rb>手</rb>
-        </rbc>
-        <rtc>
-          <rt>はく</rt>
-          <rt>しゅ</rt>
-        </rtc>
-      </ruby>
-      が起こった。
+    prompt: "
+      <ruby>\
+        山<rt>やま</rt>\
+        田<rt>だ</rt>\
+        監<rt>かん</rt>\
+        督<rt>とく</rt>\
+      </ruby>\
+      の、「\
+        <ruby>私<rt>わたくし</ruby>\
+      、\
+      <ruby>\
+        山<rt>やま</rt>\
+        田<rt>だ</rt>\
+      </ruby>\
+      は、５０年ぶりにふるさとに戻って<space/>。」というあいさつに、\
+      会場からは大きな\
+      <ruby>\
+        拍<rt>はく</rt>\
+        手<rt>しゅ</rt>\
+      </ruby>\
+      が起こった。"
     choices:
     - まいりました
     - いらっしゃいました
@@ -89,19 +64,13 @@
     - かりに
     correct: 2
   - difficulty: 4
-    prompt: >
-      今年も卒業生を送り出した。次に会うときには、彼らも
-      <ruby>
-        <rbc>
-          <rb>立</rb>
-          <rb>派</rb>
-        </rbc>
-        <rtc>
-          <rt>りっ</rt>
-          <rt>ぱ</rt>
-        </rtc>
-      </ruby>
-      大人に<space/>。
+    prompt: "
+      今年も卒業生を送り出した。次に会うときには、彼らも\
+      <ruby>\
+        立<rt>りっ</rt>\
+        派<rt>ぱ</rt>\
+      </ruby>\
+      大人に<space/>。"
     choices:
     - なるだろう
     - なっただろう
@@ -149,20 +118,14 @@
 - directive: ordered fill
   exercises:
     - difficulty: 4
-      prompt: >
-        不調だった
-        <ruby>
-          <rbc>
-            <rb>山</rb>
-            <rb>田</rb>
-          </rbc>
-          <rtc>
-            <rt>やま</rt>
-            <rt>だ</rt>
-          </rtc>
-        </ruby>
-        選手がついにゴールを決めた。彼に<space/><space/><space/><space/>
-        相当あったはずだ。
+      prompt: "
+        不調だった\
+        <ruby>\
+          山<rt>やま</rt>\
+          田<rt>だ</rt>\
+        </ruby>\
+        選手がついにゴールを決めた。彼に<space/><space/><space/><space/>\
+        相当あったはずだ。"
       choices:
       - したら 
       - という
@@ -170,21 +133,15 @@
       - 「もし、またミスをしたら」
       correct: [3, 2, 1, 0]
     - difficulty: 4
-      prompt: >
-        「これは地元ではよく知られた料理で、このすっぱさがおいしい。ただ
-        <space/><space/><space/><space/>
-        増えていることだね。」と
-        <ruby>
-          <rbc>
-            <rb>田</rb>
-            <rb>中</rb>
-          </rbc>
-          <rtc>
-            <rt>た</rt>
-            <rt>なか</rt>
-          </rtc>
-        </ruby>
-        さんは語る。
+      prompt: "
+        「これは地元ではよく知られた料理で、このすっぱさがおいしい。ただ\
+        <space/><space/><space/><space/>\
+        増えていることだね。」と\
+        <ruby>\
+          田<rt>た</rt>\
+          中<rt>なか</rt>\
+        </ruby>\
+        さんは語る。"
       choices:
       - なんていう
       - 残念なのは
@@ -192,9 +149,9 @@
       - すっぱいのが苦手だ
       correct: [2, 3, 0, 1]
     - difficulty: 4
-      prompt: >
-        忘れられないプレゼントは、小学生のときに両親が買ってくれた自転車です。苦しい生活の中、
-        <space/><space/><space/><space/>涙が出ます。
+      prompt: "
+        忘れられないプレゼントは、小学生のときに両親が買ってくれた自転車です。苦しい生活の中、\
+        <space/><space/><space/><space/>涙が出ます。"
       choices:
       - それだけで
       - どんな思いで
@@ -210,19 +167,13 @@
       - とおもうことは
       correct: [1, 3, 2, 0]
     - difficulty: 4
-      prompt: >
-        国民の、政府<space/><space/><space/><space/>政治家は指導力を
-        <ruby>
-          <rbc>
-            <rb>発</rb>
-            <rb>揮</rb>
-          </rbc>
-          <rtc>
-            <rt>はっ</rt>
-            <rt>き</rt>
-          </rtc>
-        </ruby>
-        できるのだ。
+      prompt: "
+        国民の、政府<space/><space/><space/><space/>政治家は指導力を\
+        <ruby>\
+            発<rt>はっ</rt>\
+            揮<rt>き</rt>\
+        </ruby>\
+        できるのだ。"
       choices:
       - 初めて
       - に対する
