@@ -1,0 +1,29 @@
+# DIRECTIVE TYPES
+# 0 - Multiple Choice w/o alternate fillin
+# 1 - Multiple Choice w/ alternate fillin
+# 2 - Ordered Selection
+#
+
+- key: reading
+  prompt: Select the correct reading from the underlined word.
+  type: 1
+
+- key: kanji
+  prompt: Select the correct best kanji representation of the underlined word.
+  type: 1
+
+- key: fill
+  prompt: Select the option that best fits in the indicated <space/>.
+  type: 0
+
+- key: meaning
+  prompt: Select the choice closest in meaning to the underlined word.
+  type: 0
+
+- key: usage
+  prompt: Given the following word, select the best usage from the following options.
+  type: 0
+
+- key: ordered fill
+  prompt: Order the following choices in the best order to fill in the <space/>s.
+  type: 2

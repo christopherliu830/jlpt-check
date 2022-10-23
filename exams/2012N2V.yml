@@ -1,0 +1,430 @@
+- directive: reading
+  exercises:
+    - difficulty: 4
+      prompt:  ずっと好調だったのに、最後の試合で<u>敗れて</u>しまった。
+      choices:
+      - たおれて
+      - やぶれて
+      - みだれて
+      - つぶれて
+      correct: 1
+    - difficulty: 4
+      prompt: この仕事には高い語学力が要求される。
+      choices:
+      - ようきゅ
+      - よっきゅう
+      - ようきゅう
+      - よっきゅ
+      correct: 2
+    - difficulty: 4
+      prompt: 友達の合格をみんなで<u>祝った</u>。
+      choices:
+      - いわった
+      - いのった
+      - うらなった
+      - ねがった
+      correct: 0
+    - difficulty: 4
+      prompt: 寒かったら、エアコンの温度を<u>調節</u>してください。
+      choices:
+      - ちょうさい
+      - ちょうせい
+      - ちょうさつ
+      - ちょうせつ
+      correct: 3
+    - difficulty: 4
+      prompt: この書類を<u>至急</u>コピーしてください。
+      choices:
+      - しっきゅう
+      - ちっきゅう
+      - しきゅう
+      - ちきゅう
+      correct: 2
+
+- directive: kanji
+  exercises:
+    - difficulty: 4
+      prompt: ハトは平和の<u>しょうちょう</u>だといわれている。
+      choices:
+      - 像徴
+      - 象微
+      - 象徴
+      - 像微
+      correct: 2
+    - difficulty: 4
+      prompt: 退院しても、しばらくの間、<u>はげしい</u>運動はしないでください。
+      choices:
+      - 険しい
+      - 激しい
+      - 暴しい
+      - 極しい
+      correct: 1
+    - difficulty: 4
+      prompt: >
+        <ruby>
+          <rbc>
+            <rb>携</rb>
+            <rb>帯</rb>
+            <rb>電</rb>
+            <rb>話</rb>
+          </rbc>
+          <rtc>
+            <rt>けい</rt>
+            <rt>たい</rt>
+            <rt>でん</rt>
+            <rt>わ</rt>
+          </rtc>
+        </ruby>
+        に友達の電話番号を<u>とうろく</u>した。
+      choices:
+      - 登録
+      - 登緑
+      - 答録
+      - 答緑
+      correct: 0
+    - difficulty: 4
+      prompt: >
+        <ruby>
+          <rbc>
+            <rb>岡</rb>
+            <rb>田</rb>
+          </rbc>
+          <rtc>
+            <rt>おか</rt>
+            <rt>だ</rt>
+          </rtc>
+        </ruby>
+        さんを話題の映画に<u>さそった</u>。
+      choices:
+      - 招った
+      - 勧った
+      - 請った
+      - 誘った
+      correct: 3
+    - difficulty: 4
+      prompt: 待ち合わせの時間を６時に<u>へんこう</u>してもらった。
+      choices:
+      - 変改
+      - 変更
+      - 変換
+      - 変替 
+      correct: 1
+  
+- directive: fill
+  exercises:
+    - difficulty: 4
+      prompt: 彼は医学<space/>ではかない知られた存在だ。
+      choices:
+      - 界
+      - 帯
+      - 域
+      - 区
+      correct: 0
+    - difficulty: 4
+      prompt: 決勝戦で負けて、<space/>優勝に終わった。
+      choices:
+      - 後
+      - 準
+      - 次
+      - 副
+      correct: 1
+    - difficulty: 4
+      prompt: <space/>段階では詳細は決まっていないらしい。
+      choices:
+      - 現
+      - 直
+      - 近
+      - 当
+      correct: 0
+    - difficulty: 4
+      prompt: 今回の大阪の訪問は<space/>公式に行われた。
+      choices:
+      - 不
+      - 未
+      - 無
+      - 非
+      correct: 3
+    - difficulty:
+      prompt: わが社の今年の<space/>売上は、昨年を上回った。
+      choices:
+      - 集
+      - 総
+      - 合
+      - 満
+      correct: 1
+
+- directive: fill
+  exercises:
+    - difficulty: 4
+      prompt: さまざまなデータを<space/>した結果、事故の原因が明らかになった。
+      choices:
+      - 視察
+      - 検査
+      - 発明
+      - 分析
+      correct: 3
+    - difficulty: 4
+      prompt: >
+        <ruby><rb>街</rb><rt>まち</rt></ruby>
+        を<space/>していたら、
+        <ruby>
+          <rbc>
+            <rb>山</rb>
+            <rb>本</rb>
+          </rbc>
+          <rtc>
+            <rt>やま</rt>
+            <rt>もと</rt>
+          </rtc>
+        </ruby>
+        さんに会った。
+      choices:
+      - ぐらぐら
+      - がらがら
+      - ばらばら
+      - ぶらぶら
+      correct: 3
+    - difficulty: 4
+      prompt: 祭りの日は町が<space/>にあふれている。
+      choices:
+      - >
+        <ruby>
+          <rbc>
+            <rb>活</rb>
+            <rb>気</rb>
+          </rbc>
+          <rtc>
+            <rt>かっ</rt>
+            <rt>き</rt>
+          </rtc>
+        </ruby>
+      - >
+        <ruby>
+          <rbc>
+            <rb>活</rb>
+            <rb>発</rb>
+          </rbc>
+          <rtc>
+            <rt>かっ</rt>
+            <rt>ぱつ</rt>
+          </rtc>
+        </ruby>
+      - >
+        <ruby>
+          <rbc>
+            <rb>活</rb>
+            <rb>躍</rb>
+          </rbc>
+          <rtc>
+            <rt>かつ</rt>
+            <rt>やく</rt>
+          </rtc>
+        </ruby>
+      - >
+        <ruby>
+          <rbc>
+            <rb>活</rb>
+            <rb>動</rb>
+          </rbc>
+          <rtc>
+            <rt>かつ</rt>
+            <rt>どう</rt>
+          </rtc>
+        </ruby>
+      correct: 0
+    - difficulty: 4
+      prompt: コピー機に紙が<space/>、出てこない。
+      choices:
+      - もぐって
+      - つまって
+      - しずんで
+      - うまって
+      correct: 1
+    - difficulty: 4
+      prompt: この小説は今の時代を<space/>した作品だ。
+      choices:
+      - 反映
+      - 放映
+      - 引用 
+      - 採用
+      correct: 0
+    - difficulty: 4
+      prompt: >
+        <ruby>
+          <rbc>
+            <rb>田</rb>
+            <rb>中</rb>
+          </rbc>
+          <rtc>
+            <rt>た</rt>
+            <rt>なか</rt>
+          </rtc>
+        </ruby>
+        さんは長い間<space/>窓の外を見ていた。
+      choices:
+      - ぼんやり
+      - ふんわり
+      - うっすら
+      - しっとり
+      correct: 0
+
+- directive: meaning
+  exercises:
+    - difficulty: 4
+      prompt: この<u>ブーム</u>は長くは続かないだろう。
+      choices:
+      - >
+        <ruby>
+          <rbc>
+            <rb>効</rb>
+            <rb>果</rb>
+          </rbc>
+          <rtc>
+            <rt>こう</rt>
+            <rt>か</rt>
+          </rtc>
+        </ruby>
+      - >
+        <ruby>
+          <rbc>
+            <rb>状</rb>
+            <rb>態</rb>
+          </rbc>
+          <rtc>
+            <rt>じょう</rt>
+            <rt>たい</rt>
+          </rtc>
+        </ruby>
+      - >
+        <ruby>
+          <rbc>
+            <rb>流</rb>
+            <rb>行</rb>
+          </rbc>
+          <rtc>
+            <rt>りゅう</rt>
+            <rt>こう</rt>
+          </rtc>
+        </ruby>
+      - >
+        <ruby>
+          <rbc>
+            <rb>緊</rb>
+            <rb>張</rb>
+          </rbc>
+          <rtc>
+            <rt>きん</rt>
+            <rt>ちょう</rt>
+          </rtc>
+        </ruby>
+      correct: 2
+    - difficulty: 4
+      prompt: >
+        この作業は<u>
+        <ruby>
+          <rbc><rb>慎</rb><rb>重</rb></rbc>
+          <rtc><rt>しん</rt><rt>ちょう</rt></rtc>
+        </ruby>
+        に</u>
+        やってください。
+      choices:
+      - 急いで
+      - 絶対忘れずに
+      - 静かに
+      - 十分注意して
+      correct: 3
+    - difficulty: 4
+      prompt: シャツが<u>ちぢんで</u>しまった。
+      choices:
+      - 小さくなって
+      - 古くなって
+      - 汚れて
+      - 破れて
+      correct: 0
+    - difficulty: 4
+      prompt: 宿題のレポートは<u>ほぼ</u>終わった。
+      choices:
+      - すべて
+      - すぐに
+      - だいたい
+      - やっと
+      correct: 2
+    - difficulty: 4
+      prompt: 来週は天気が<u>回復する</u>そうだ。
+      choices:
+      - あまり変わらない
+      - 変わりやすい
+      - よくなる
+      - 悪くなる
+      correct: 2
+
+- directive: usage
+  exercises:
+    - difficulty: 4
+      prompt: 方針
+      choices:
+      - 台風の<u>方針</u>がそれたので、特に被害は出なかった。
+      - 私の今年の<u>方針</u>は漢字を６００字覚えることだ。
+      - この料理を作る<u>方針</u>を教えてくだきい。
+      - 教育に関する政府の<u>方針</u>が大きく変わった。
+      correct: 3
+    - difficulty: 4
+      prompt: 範囲
+      choices:
+      - この町は川によって二つの<u>範囲</u>に分かれている。
+      - この会社は新しい<u>範囲</u>に進出した。
+      - 明日は広い<u>範囲</u>で強い雨が降るでしょう。
+      - 家から駅までの<u>範囲</u>は２キロぐらいだ。
+      correct: 2
+    - difficulty: 4
+      prompt: せめて
+      choices:
+      - その店のセーターは<u>せめて</u>１万円はするだろう。
+      - 今からタクシーに乗っても、<u>せめて</u>１０時には着けない。
+      - 京都に行くなら、<u>せめて</u>１泊はしたい。
+      - 先週のテストは自信がなかったが、<u>せめて</u>５０点は取れた。
+      correct: 2
+    - difficulty: 4
+      prompt: >
+        <ruby>
+          <rbc><rb>利</rb><rb>益</rb></rbc>
+          <rtc><rt>り</rt><rt>えき</rt></rtc>
+        </ruby>
+      choices:
+      - >
+        ジョギングは健康の
+        <u>
+          <ruby>
+            <rbc><rb>利</rb><rb>益</rb></rbc>
+            <rtc><rt>り</rt><rt>えき</rt></rtc>
+          </ruby>
+        </u>
+        になる。
+      - >
+        この値段で売ったら、店の
+        <u>
+          <ruby>
+            <rbc><rb>利</rb><rb>益</rb></rbc>
+            <rtc><rt>り</rt><rt>えき</rt></rtc>
+          </ruby>
+        </u>
+        ははとんどない。
+      - >
+        かぜ薬を飲んだが、
+        <u>
+          <ruby>
+            <rbc><rb>利</rb><rb>益</rb></rbc>
+            <rtc><rt>り</rt><rt>えき</rt></rtc>
+          </ruby>
+        </u>
+        が感じられない。
+      - >
+        バスの
+        <u>
+          <ruby>
+            <rbc><rb>利</rb><rb>益</rb></rbc>
+            <rtc><rt>り</rt><rt>えき</rt></rtc>
+          </ruby>
+        </u>
+        は、新幹緻よりも料金が安いことだ。
+      correct: 1

@@ -1,0 +1,211 @@
+- directive: reading
+  exercises:
+  - difficulty: 5
+    prompt: 去年より<u>利益</u>がわずかに増えた。
+    choices:
+    - りし
+    - りそく
+    - りえき
+    - りじゅん
+    correct: 2
+  - difficulty: 5
+    prompt: 橋本選手の活躍で、なんとかピンチ<u>逃れた</u>。
+    choices:
+    - のがれた
+    - はなれた
+    - それた
+    - まぬがれた
+    correct: 0
+  - difficulty: 5
+    prompt: 子どものおもちゃは、安全性を<u>考慮</u>して選ぶようにしている。
+    choices:
+    - こうろ
+    - こうりょ
+    - こうろう
+    - こうりょう
+    correct: 1
+  - difficulty: 5
+    prompt: この辺りは視界を<u>遮る</u>物が何もない。
+    choices:
+    - さまだける
+    - さえぎる
+    - せばめる
+    - へだてる
+    correct: 1
+  - difficulty: 5
+    prompt: この説は科学的な<u>根拠</u>に乏しい。
+    choices:
+    - こんしょ
+    - こんじょ
+    - こんきょ
+    - こんぎょ
+    correct: 2
+  - difficulty: 5
+    prompt: 何事も初めが<u>肝心</u>だ。
+    choices:
+    - たんしん
+    - かんしん
+    - たんじん
+    - かんじん
+    correct: 3
+
+- directive: fill
+  exercises:
+  - difficulty: 5
+    prompt: 物置の隅で、ほこり<space/>になっている古い人形を見つけた。
+    choices:
+    - ぐるみ
+    - がらみ
+    - まみれ
+    - ずくめ
+    correct: 2
+  - difficulty: 5
+    prompt: 木村さんとは交通の趣味があるので、いつも会話が<space/>。
+    choices:
+    - 舞う
+    - 弾む
+    - 転がる
+    - 跳ねる
+    correct: 1
+  - difficulty: 5
+    prompt: 地域の<space/>に合った医療のシステムが求められている。
+    choices:
+    - 実情
+    - 実況
+    - 実権
+    - 実在
+    correct: 0
+  - difficulty: 5
+    prompt: この選手は、十年に一人の<space/>だと言われている。
+    choices:
+    - 玄人
+    - 大家
+    - 巨匠
+    - 逸材
+    correct: 3
+  - difficulty: 5
+    prompt: 書類に<space/>があった場合、申請は受理されません。
+    choices:
+    - 不隠
+    - 不当
+    - 不備
+    - 不順
+    correct: 2
+  - difficulty: 5
+    prompt: 約300年前の絵画の<space/>が終わり、来月から公開される予定だ。
+    choices:
+    - 回復
+    - 修復
+    - 復旧
+    - 復興
+    correct: 1
+  - difficulty: 4.5
+    prompt: 経済だけでなく、法律にも詳しいのが彼の<space/>だ。
+    choices:
+    - 深み
+    - 強み
+    - 高み
+    - 重み
+    correct: 1
+
+- directive: meaning
+  exercises:
+  - difficulty: 5
+    prompt: この映画は<u>画期的な</u>手法で制作された。
+    content:
+      choices:
+      - 広く知られている
+      - 最近ではめずらしい
+      - 非常に時間がかかる
+      - 今までになく新しい
+      correct: 3
+  - difficulty: 5
+    prompt: あの企業は海外市場への進出を<u>もくろんで</u>いる。
+    choices:
+    - 計画して
+    - 果たして
+    - 開始して
+    - あきらめて
+    correct: 0
+  - difficulty: 5
+    prompt: 問題を解決するために、もう少し<u>手がかり</u>が欲しい。
+    choices:
+    - イメージ
+    - サポート
+    - チャンス
+    - ヒント
+    correct: 3
+  - difficulty: 5
+    prompt: あの人の話しは<u>にわかには</u>信じられない。
+    choices:
+    - すぐには
+    - 完全には
+    - すなおには
+    - 簡単には
+    correct: 0
+  - difficulty: 5
+    prompt: この鍋は<u>重宝している</u>。
+    choices:
+    - 以前より直上がりしている
+    - 形が気に入っている
+    - 評価が高まっている
+    - 便利で役に立っている。
+    correct: 3
+  - difficulty: 5
+    prompt: 仲村さんは仕事に対していつもシビアだ。
+    choices:
+    - 弱気だ
+    - 厳しい
+    - 柔軟だ
+    - 注意深い
+    correct: 1
+
+- directive: usage
+  exercises:
+  - difficulty: 5
+    prompt: 連携
+    choices:
+    - 学校は地域と<u>連携</u>して生徒の安全を守っている。
+    - 複数の社員で一台のプリンターを<u>連携</u>して使っている。
+    - 最近の株価は、為替レートと<u>連携</u>して上下している。
+    - 登山のときには、必ず地図を<u>連携</u>してください。
+    correct: 0
+  - difficulty: 5
+    prompt: 不服
+    choices:
+    - 彼の失礼な熱度は、そこにいた人々の不服を買った。
+    - カラオケで思い切り歌って、日ごろの不服を晴らそう。
+    - 審判の決定に<u>不服</u>を唱えることはできない。
+    - この部署で、お客様からの<u>不服</u>を受け付けています。
+    correct: 2
+  - difficulty: 4.5
+    prompt: かなう
+    choices:
+    - 苦労が<u>かない</u>、彼は俳優として成功をおさめた。
+    - 天気予報が<u>かない</u>、今日は一日中快晴だった。
+    - 準備を重ねてきたイベントが無事<u>かなった</u>。
+    - 自分の店を持つという夢が、とうとう<u>かなった</u>。
+    correct: 3
+  - difficulty: 5
+    prompt: 目覚ましい
+    choices:
+    - あの新人選手は<u>目覚ましい</u>成長を見せている。
+    - 上の階で<u>目覚ましい</u>ほどの大きな物音がした。
+    - この赤はとても<u>目覚ましい</u>色で人目をひくね。
+    - 夕べ速く寝たので、今朝はとても<u>目覚ましい</u>。
+    correct: 0
+  - difficulty: 5
+    prompt: ほどける
+    choices:
+    - ねじが<u>ほどけて</u>、いすがぐらぐらしている。
+    - 靴のひもが<u>ほどけない</u>ようにしっかり結んだ。
+    - シャツのボタンが<u>ほどけて</u>いるから、とめた方がいいよ。
+    - グラスに浮かぶ氷がみるみるうちに<u>ほどけた</u>。
+    correct: 1
+  - difficulty: 5
+    prompt: 赴任
+    choices:
+    - 明日から三日間東京へ<u>赴任</u>しなければならない。
+    - 新入社員の研修では、実際に売り場にも<u>赴任</u>してもらう。
+    - 部長が海外の支社に<u>赴任</u>するので、みんなで送別会を開いた。
+    - 田中氏が新しい社長に<u>赴任</u>することが発表されました。
