@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Text } from '@chakra-ui/react';
-import MultipleChoice from 'src/components/MultipleChoice/MultipleChoice';
-import { fetchExercise } from './api/exercise';
-import { QuizResponse } from 'src/components/Quiz/QuizResponse';
+import MultipleChoice from 'components/MultipleChoice/MultipleChoice';
+import { fetchExercise } from 'api/exercise';
+import { QuizResponse } from 'components/Quiz/QuizResponse';
 import { useQuery } from 'react-query';
 
 function Question() {

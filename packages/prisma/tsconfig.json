@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "./dist",
     "baseUrl": "./src",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "declaration": true
   },
-  "exclude": ["./prisma", "./dist"]
+  "include": ["src/**/*"],
+  "exclude": ["./prisma", "./dist", "node_modules"]
 }

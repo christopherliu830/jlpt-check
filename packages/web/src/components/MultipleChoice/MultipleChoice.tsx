@@ -1,11 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { Box, Button, Center, Container, Text, useMultiStyleConfig } from '@chakra-ui/react';
-import { Choice, ChoiceBody, ChoiceHeader } from '../Choice/Choice';
-import { Prisma } from '@prisma/client';
-import { MultipleChoiceExercise } from '../../../pages/api/exercise';
+import { Choice, ChoiceBody, ChoiceHeader } from 'components/Choice/Choice';
+import { MultipleChoiceExercise } from 'api/exercise';
 
-import SanitizedHTML from '../SanitizedHTML/SanitizedHTML';
+import SanitizedHTML from 'components/SanitizedHTML/SanitizedHTML';
 
 export type MultipleChoiceProps = {
   exercise: MultipleChoiceExercise;
@@ -16,13 +15,13 @@ function MultipleChoice({ exercise, onSubmit }: MultipleChoiceProps) {
   const [selected, setSelected] = useState(new Set<number>());
   const styles = useMultiStyleConfig('MultipleChoice');
 
-  const { options, choices } = exercise.content;
+  const { choices, correct } = exercise;
 
   const handleSelect = (index: number) => {
     setSelected((old) => {
       const copy = new Set(old);
       // Clear all options
-      if (!options['multiple']) {
+      if (correct.length !== 1) {
         copy.clear();
       }
 
