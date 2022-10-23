@@ -69,31 +69,31 @@ export const animateBody = (theme: Record<string, any>, { colorScheme }: StyleFu
   return {
     variants: {
       ['selected-base']: {
-        background: color(100),
+        backgroundColor: color(100),
         boxShadow: 'inset 0 0 8px 0 rgba(0, 0, 0, 0.2)',
       },
       ['selected-active']: {
-        background: color(300),
+        backgroundColor: color(300),
         transition: { duration: 0 },
         initial: 'inset 0 0 0 0 black',
         boxShadow: 'inset 0 0 8px 0 rgba(0, 0, 0, 0.2)',
       },
       ['selected-hover']: {
-        background: color(200),
+        backgroundColor: color(200),
         transition: { duration: 0.2 },
         boxShadow: 'inset 0 0 8px 0 rgba(0, 0, 0, 0.2)',
       },
       ['unselected-hover']: {
-        background: color(50),
+        backgroundColor: color(50),
         transition: { duration: 0.2 },
         boxShadow: 'inset 0 0 0 0',
       },
       ['unselected-base']: {
-        background: color(25),
+        backgroundColor: color(25),
         boxShadow: 'inset 0 0 0 0',
       },
       ['unselected-active']: {
-        background: color(300),
+        backgroundColor: color(300),
         transition: { duration: 0 },
         boxShadow: 'inset 0 0 4px 0 rgba(0, 0, 0, 0.2)',
       },
@@ -108,20 +108,20 @@ export const animateHeader = (theme: Record<string, any>, { colorScheme }: Style
   return {
     variants: {
       ['selected-base']: {
-        background: color(200),
+        backgroundColor: color(200),
       },
       ['selected-hover']: {
-        background: color(200),
+        backgroundColor: color(200),
       },
       ['selected-active']: {
-        background: color(200),
+        backgroundColor: color(200),
         transition: { duration: 0 },
       },
       ['unselected-hover']: {
-        background: color(100),
+        backgroundColor: color(100),
       },
       ['unselected-active']: {
-        background: color(200),
+        backgroundColor: color(200),
         transition: { duration: 0 },
       },
     },
