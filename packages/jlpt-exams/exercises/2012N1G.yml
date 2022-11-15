@@ -41,7 +41,7 @@
     - のではないか
     correct: 1
   - difficulty: 5
-    prompt: |
+    prompt: |-
       （インタビューで）
       A「お店で一番気をつけていることは何ですか」。
       B「衛生管理です。お客様に食事を<blank-space></blank-space>衛生面の管理には、何よりも注意しております。」
@@ -72,11 +72,13 @@
     - ばかばかしくおもえるくらい
     correct: 3
   - difficulty: 5
-    prompt: "
+    prompt: "\
       （電話で）
-      <ruby>山中<rt>やまだ</rt></ruby>「あ、<ruby>木村<rt>きむら</rt></ruby>先生でいらっしゃいますか。
+
+      <ruby>山中<rt>やまだ</rt></ruby>「あ、<ruby>木村<rt>きむら</rt></ruby>先生でいらっしゃいますか。\
       AB出版の<ruby>山中<rt>やまだ</rt></ruby>,でざいますが、いまから\
       原稿をいただきに上がってもよろしいでしょうか。」
+
       <ruby>木村<rt>きむら</rt></ruby>「すみません。まだできていないんです。あと三日<blank-space></blank-space>。」"
     choices:
     - 待っておいでになります。
@@ -85,7 +87,7 @@
     - 待っていただくわけにわいきませんか。
     correct: 3
   - difficulty: 5
-    prompt: |
+    prompt: |-
       （宇宙飛行士　<ruby>山<rt>やま</rt>中<rt>だ</ruby><ruby>太<rt>た</rt>郎<rt>ろう</ruby>さんへのインタビューで）
       <ruby>山<rt>やま</rt>中<rt>だ</ruby>「実は、初めから宇宙飛行士になる<blank-space></blank-space>、そうじゃないんです。大学を出たら、医者になろうと思っていましたから。」
       記者「では、何がきっかけで、宇宙飛行士になりたいと思ったんですか。」
@@ -131,7 +133,7 @@
     - 一流企業と言われる
     correct: [2, 3, 1 ,0]
   - difficulty: 5
-    prompt: "
+    prompt: "\
       新番組でこれまでにない役柄を演じる俳優の\
       <ruby>\
         上<rt>うえ</rt>\

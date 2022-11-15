@@ -1,0 +1,212 @@
+- directive: fill
+  exercises: 
+    - difficulty: 1
+      prompt: <ruby>日<rt>に</rt>本<rt>ほん</rt></ruby><blank-space></blank-space>ラーメンは おいしいです。
+      choices:
+      - に
+      - の
+      - を
+      - へ
+      correct: 1
+    - difficulty: 1
+      prompt: わたしには きょうだいが <ruby>二人<rt>ふたり</rt></ruby> います。<ruby>弟<rt>おとうと</rt></ruby><blank-space></blank-space><ruby>妹<rt>いもうと</rt></ruby>です。
+      choices:
+      - は
+      - も
+      - と
+      - か
+      correct: 2
+    - difficulty: 1
+      prompt: |-
+        <ruby>山<rt>やま</rt>下<rt>した</rt></ruby>「<ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さん<blank-space></blank-space>きのう どこかに <ruby>出<rt>で</rt></ruby>かけましたか。」
+        <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>「いいえ、いえに いました。」
+      choices:
+      - で
+      - は
+      - を
+      - に
+      correct: 1
+    - difficulty: 1
+      prompt: |-
+        （タクシーで）
+        A「つぎの かどを <ruby>右<rt>みぎ</rt></ruby><blank-space></blank-space>まがって ください。」
+        B「わかりました。」
+      choices:
+      - が
+      - や
+      - か
+      - に
+      correct: 3
+    - difficulty: 1
+      prompt: きのう、わたしは ひとり <blank-space></blank-space> えいがを <ruby>見<rt>み</rt></ruby>に <ruby>行<rt>い</rt></ruby>きました。
+      choices:
+      - が
+      - を
+      - で
+      - は
+      correct: 2
+    - difficulty: 1
+      prompt: |-
+        <ruby>山<rt>やま</rt>下<rt>した</rt></ruby>「<ruby>今日<rt>きょう</rt></ruby> パーティーが ありますから、<ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さん<blank-space></blank-space><ruby>来<rt>き</rt></ruby>て ください。」
+        <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>「ありがとうございます。」
+      choices:
+      - に
+      - も
+      - や
+      - で
+      correct: 1
+    - difficulty: 1
+      prompt: |-
+        <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>「この ぼうしは <ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>さん<blank-space></blank-space>ですか。」
+        <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>「はい。」
+      choices:
+      - や
+      - は
+      - の
+      - か
+      correct: 2
+    - difficulty: 1
+      prompt: <ruby>駅<rt>えき</rt></ruby>まで タクシーで １０００<ruby>円<rt>えん</rt></ruby><blank-space></blank-space>です。
+      choices:
+      - ぐらい
+      - など
+      - ごろ
+      - も
+      correct: 0
+    - difficulty: 1
+      prompt: |-
+        A「さようなら。」
+        B「さようなら。また<blank-space></blank-space>。」
+      choices:
+      - おととい
+      - <ruby>今日<rt>きょう</rt></ruby>
+      - <ruby>来<rt>らい</rt>週<rt>しゅう</rt></ruby>
+      - <ruby>今<rt>こん</rt>月<rt>げつ</rt></ruby>
+      correct: 2
+    - difficulty: 1
+      prompt: わたしの <ruby>母<rt>はは</rt></ruby>は ５０さいです。<ruby>父<rt>ちち</rt></ruby>は ５５さいです。<ruby>母<rt>はは</rt></ruby>は <ruby>父<rt>ちち</rt></ruby><blank-space></blank-space>５さい わかいです。
+      choices:
+      - から
+      - まで
+      - より
+      - のほうが
+      correct: 2
+    - difficulty: 1
+      prompt: |-
+        <ruby>子<rt>こ</rt></ruby>ども「いただきます。」
+        <ruby>母<rt>はは</rt></ruby>「あ、<ruby>食<rt>た</rt></ruby>べる<blank-space></blank-space><ruby>手<rt>て</rt></ruby>を あらいましょう。」
+      choices:
+      - まえに
+      - のまえに
+      - あとに
+      - のあとに
+      correct: 0
+    - difficulty: 1
+      prompt: |-
+        A「<ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>でも <ruby>雪<rt>ゆき</rt></ruby>が ふりますか。」
+        B「ええ、ふりますよ。でも、きょねんは あまり<blank-space></blank-space>。」
+      choices:
+      - ふりませんでした
+      - ふりません
+      - ふりました
+      - ふります
+      correct: 0
+    - difficulty: 1
+      prompt: |-
+        （<ruby>川<rt>かわ</rt></ruby>で）
+        A「<ruby>見<rt>み</rt></ruby>て ください。<ruby>小<rt>ちい</rt></ruby>さな <ruby>魚<rt>さかな</rt></ruby>が たくさん<blank-space></blank-space>よ。」
+        B「ほんとうですね。３０ぴきくらい いますね。」
+      choices:
+      - およぎます
+      - およぎません
+      - およぎました
+      - およいで います
+      correct: 3
+    - difficulty: 1
+      prompt: |-
+        <ruby>中<rt>なか</rt>川<rt>がわ</rt></ruby>「<ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>さんの その カメラは いいですね。どこでかいましたか。」
+        <ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>「いえ、これは <ruby>兄<rt>あに</rt></ruby>に<blank-space></blank-space>。」
+      choices:
+      - あげました
+      - もらいました
+      - うりました
+      - かいました
+      correct: 1
+    - difficulty: 1
+      prompt: たまごりょうりの じょうずな <ruby>作<rt>つく</rt></ruby>りかたを<blank-space></blank-space><ruby>読<rt>よ</rt></ruby>みました。
+      choices:
+      - <ruby>何<rt>なに</rt></ruby>に
+      - <ruby>何<rt>なに</rt></ruby>も
+      - <ruby>何<rt>なに</rt></ruby>かへ
+      - <ruby>何<rt>なに</rt></ruby>かで
+      correct: 3
+    - difficulty: 1
+      prompt: |-
+        （<ruby>電<rt>でん</rt>話<rt>わ</rt></ruby>で）
+        <ruby>本<rt>ほん</rt>田<rt>だ</rt></ruby>「はい、<ruby>本<rt>ほん</rt>田<rt>だ</rt></ruby>です。」
+        <ruby>北<rt>きた</rt>山<rt>やま</rt></ruby>「あ、<ruby>北<rt>きた</rt>山<rt>やま</rt></ruby><ruby>花<rt>はな</rt>子<rt>こ</rt></ruby>です。すみません、<blank-space></blank-space>。」
+        <ruby>本<rt>ほん</rt>田<rt>だ</rt></ruby>「はい。ちょっと まって くださいね。」
+      choices:
+      - ひろこさんを おねがいします
+      - ひろこさんを ください
+      - ひろこさんと <ruby>話<rt>はな</rt></ruby>しますか
+      - ひろこさんと <ruby>話<rt>はな</rt></ruby>しませんか
+      correct: 0
+
+- directive: ordered fill
+  exercises:
+  - difficulty: 1
+    prompt: |-
+      （<ruby>店<rt>みせ</rt></ruby>で）
+      <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>「すみません。くだもの<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>か。」
+      <ruby>店<rt>みせ</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>「こちらです。」
+    choices:
+    - どこ
+    - あります
+    - は
+    - に
+    correct: [2, 0, 3, 1]
+  - difficulty: 1
+    prompt: |-
+      A「<ruby>山<rt>やま</rt>下<rt>した</rt></ruby>さんは？」
+      B「となりの へやで<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>しています。」
+    choices:
+    - れんしゅう
+    - の
+    - ギター
+    - を
+    correct: [2, 1, 0, 3]
+  - difficulty: 1
+    prompt: |-
+      A「<ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><ruby>行<rt>い</rt></ruby>って いますか。」
+      B「わたしは あるいて <ruby>行<rt>い</rt></ruby>って います。」
+    choices:
+    - で
+    - は
+    - へ
+    - <ruby>何<rt>なに</rt></ruby>
+    correct: [2, 1, 3, 0]
+  - difficulty: 1
+    prompt: |-
+      <ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>「ジョンさん、しゅくだいは ぜんぶ おわりましたか。」
+      ジョン「いいえ、まだです。ここ<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>、さいごの もんだいが むずかしいです。」
+    choices:
+    - は
+    - かんたんでした
+    - が
+    - まで
+    correct: [3, 0, 1, 2]
+  - difficulty: 1
+    prompt: |-
+      （<ruby>本<rt>ほん</rt>屋<rt>や</rt></ruby>で）
+      ヤン「わたしは この <ruby>本<rt>ほん</rt></ruby>を <ruby>買<rt>か</rt></ruby>います。アンナさんは どんな <ruby>本<rt>ほん</rt></ruby>が いいですか。」
+      アンナ「わたしは もう <ruby>少<rt>すこ</rt></ruby>し<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>が いいです。」
+    choices:
+    - <ruby>本<rt>ほん</rt></ruby>
+    - かんたんな
+    - が
+    - <ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>
+    correct: [3, 2, 1, 0]
+
+
+

@@ -60,7 +60,7 @@
       - 極しい
       correct: 1
     - difficulty: 4
-      prompt: "
+      prompt: "\
         <ruby>\
           携<rt>けい</rt>\
           帯<rt>たい</rt>\
@@ -75,7 +75,7 @@
       - 答緑
       correct: 0
     - difficulty: 4
-      prompt: "
+      prompt: "\
         <ruby>\
           岡<rt>おか</rt>\
           田<rt>だ</rt>\
@@ -149,14 +149,10 @@
       - 発明
       - 分析
       correct: 3
-    - difficulty: 4
-      prompt: "
-        <ruby>街<rt>まち</rt></ruby>\
-        を<blank-space></blank-space>していたら、\
-        <ruby>\
-          山<rt>やま</rt>\
-          本<rt>もと</rt>\
-        </ruby>\
+    - difficulty: 3.5
+      prompt: "\
+        <ruby>街<rt>まち</rt></ruby>を<blank-space></blank-space>していたら、\
+        <ruby>山<rt>やま</rt>本<rt>もと</rt></ruby>\
         さんに会った。"
       choices:
       - ぐらぐら

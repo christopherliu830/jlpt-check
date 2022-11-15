@@ -1,0 +1,286 @@
+- directive: reading
+  exercises:
+  - difficulty: 2
+    prompt: くつに <u>石</u>が 入って いました。
+    choices:
+    - いし
+    - すな
+    - くさ
+    - えだ
+    correct: 0
+  - difficulty: 2
+    prompt: にほんで いろいろな <u>経験</u>を しました。
+    choices:
+    - けいけん
+    - けいげん
+    - けけん
+    - けげん
+    correct: 0
+  - difficulty: 2
+    prompt: <u>店員</u>に トイレが どこに あるか 聞きました。
+    choices:
+    - てにん
+    - てんにん
+    - ていん
+    - てんいん
+    correct: 3
+  - difficulty: 2
+    prompt: きょうは <u>食堂</u>が こんで いました。
+    choices:
+    - しゅくど
+    - しょくどう
+    - しょくど
+    - しゅくどう
+    correct: 1
+  - difficulty: 2
+    prompt: この まどから <u>港</u>が 見えます。
+    choices:
+    - うみ
+    - みなと
+    - みずうみ
+    - いけ
+    correct: 1
+  - difficulty: 2
+    prompt: この <u>小説</u>は おもしろかったです。
+    choices:
+    - しょせつ
+    - しょぜつ
+    - しょうせつ
+    - しょうぜつ
+    correct: 2
+  - difficulty: 2
+    prompt: まいばん <u>日記</u>を 書いて います。
+    choices:
+    - にっき
+    - にちき
+    - にっきい
+    - にちきい
+    correct: 0
+  - difficulty: 2
+    prompt: <u>夕方</u>、雨が ふりました。
+    choices:
+    - ゆうほう
+    - ゆうがた
+    - ゆほう
+    - ゆがた
+    correct: 1
+  - difficulty: 2
+    prompt: もうすぐ <u>秋</u>ですね。
+    choices:
+    - ふゆ
+    - なつ
+    - はる
+    - あき
+    correct: 3
+
+- directive: kanji
+  exercises:
+  - difficulty: 2
+    prompt: すずきさんは <u>あおい</u> シャツを きて います。
+    choices:
+    - 青い
+    - 黒い
+    - 赤い
+    - 白い
+    correct: 0
+  - difficulty: 2
+    prompt: かいぎの <u>ばしょ</u>を おしえて ください。
+    choices:
+    - 揚⼾
+    - 場⼾
+    - 揚所
+    - 場所
+    correct: 3
+  - difficulty: 2
+    prompt: わたしの いえは えきから <u>あるいて</u> ５分です。
+    choices:
+    - 歨いて 
+    - 走いて
+    - 歩いて
+    - 𠀰いて
+    correct: 2
+  - difficulty: 2
+    prompt: ちかてつが できて <u>べんり</u>になりました。
+    choices:
+    - 使利 
+    - 便理 
+    - 使理 
+    - 便利
+    correct: 3
+  - difficulty: 2
+    prompt: とても <u>ねむかった</u>ので、コーヒーを 飲みました。
+    choices:
+    - 眼むかった
+    - 眼かった
+    - 眠むかった
+    - 眠かった
+    correct: 3
+  - difficulty: 2
+    prompt: きょうは <u>ゆき</u>が ふって います。
+    choices:
+    - 雪
+    - 電
+    - 雷
+    - 雲
+    correct: 0
+
+- directive: fill
+  exercises:
+  - difficulty: 2
+    prompt: けさ せんたくした ふくが まだ<blank-space></blank-space>いません。
+    choices:
+    - ひえて
+    - なおって
+    - ぬれて
+    - かわいて
+    correct: 3
+  - difficulty: 2
+    prompt: スミスさんは いつも<blank-space></blank-space>べんきょうして います。
+    choices:
+    - だいじに
+    - たいせつに
+    - ねっしんに
+    - まっすぐに
+    correct: 2
+  - difficulty: 2
+    prompt: わたしは にほんの まんがに<blank-space></blank-space>が あります。
+    choices:
+    - きぶん
+    - きょうみ
+    - こころ
+    - しゅみ
+    correct: 1
+  - difficulty: 2
+    prompt: わたし は テストの<blank-space></blank-space>を よく しりません。
+    choices:
+    - アイディア
+    - ルール
+    - あんない
+    - せつめい
+    correct: 1
+  - difficulty: 2
+    prompt: りょこうの にもつは もう<blank-space></blank-space>できましたか。
+    choices:
+    - やくそく
+    - りよう
+    - せわ
+    - ようい
+    correct: 3
+  - difficulty: 2
+    prompt: おとうとと<blank-space></blank-space>して 母に あげる プレゼントを えらびました。
+    choices:
+    - さんせい
+    - あいさつ
+    - そうだん
+    - へんじ
+    correct: 2
+  - difficulty: 2
+    prompt: この にもつを あそこに<blank-space></blank-space>ください。
+    choices:
+    - はこんで
+    - つたえて
+    - ひろって
+    - むかえて
+    correct: 0
+  - difficulty: 2
+    prompt: この きかいは つかいかたを まちがえると とても<blank-space></blank-space>です。
+    choices:
+    - けっこう
+    - きけん
+    - じゆう
+    - あんぜん
+    correct: 1
+  - difficulty: 2
+    prompt: 人口の 前には 車を<blank-space></blank-space>ください。
+    choices:
+    - やめないで
+    - しめないで
+    - とめないで
+    - きめないで
+    correct: 2
+
+- directive: meaning
+  exercises:
+  - difficulty: 2
+    prompt: <u>バスが しゅっぱつしました。</u>
+    choices:
+    - バスが とまりました。
+    - バスが つきました。
+    - バスが でました。
+    - バスが まがりました。
+    correct: 2
+  - difficulty: 2
+    prompt: <u>もっと ていねいに かいて ください。</u>
+    choices:
+    - もっと おおきく かいて ください。
+    - もっと きれいに かいて ください。
+    - もっと ふとく かいて ください。
+    - もっと かんたんに かいて ください。
+    correct: 1
+  - difficulty: 2
+    prompt: <u>あには えが うまいです。</u>
+    choices:
+    - あには えが じょうずです。
+    - あには えが きらいです。
+    - あには えが へたです。
+    - あには えが すきです。
+    correct: 0
+  - difficulty: 2
+    prompt: <u>きのうは ねぼう しました。</u>
+    choices:
+    - きのうは ねるのが おそく なって しまいました。
+    - きのうは はやく ねて しまいました。
+    - きのうは おきろのが おそく なって しまいました。
+    - きのうは はやく おきて しまいました。
+    correct: 2
+  - difficulty: 2
+    prompt: <u>たなかさんは 先生に ほめられました。
+    choices:
+    - 先生は たなかさんに 「気を つけてね」と 言いました。
+    - 先生は たなかさんに 「とても よかったですよ」と 言いました。
+    - 先生は たなかさんに 「ちょっと 休みましょう」と 言いました。
+    - 先生は たなかさんに 「たいへんですね」と 言いました。
+    correct: 1
+
+- directive: usage
+  exercises:
+  - difficulty: 2
+    prompt: るす
+    choices:
+    - さいきん いそがしくて、しごとが <u>るす</u>に なりません。
+    - あの デパートは きょうは <u>るす</u>です。
+    - この ひこうきには <u>るす</u>の せきが ありません。
+    - ともだちの いえに 行ったら <u>るす</u>でした。
+    correct: 3
+  - difficulty: 2
+    prompt: しんせつ
+    choices:
+    - この りょうりは からだに とても <u>しんせつ</u>ですよ。
+    - コンビニは 何でも 買えるので とても <u>しんせつ</u>です。
+    - この びょういんの おいしゃさんは とても <u>しんせつ</u>ですよ。
+    - わたしょの 母は にわの 花に とても <u>しんせつ</u>です。
+    correct: 2
+  - difficulty: 2
+    prompt: にがい
+    choices:
+    - かぜを ひいたので、けが <u>にがい</u>です。
+    - くらい みちを 一人で あるくのは </u>にがい</u>です。
+    - にもつが おもかったので、うでが <u>にがい</u>です。
+    - この くすりは とても </u>にがい</u>です。
+    correct: 3
+  - difficulty: 2
+    prompt: わる
+    choices:
+    - おさらを おとして、<u>わって</u> しまいました。
+    - しんぶんを <u>わって</u>、かばんに いれました。
+    - ようふくを <u>わって</u>、母に おこられました。
+    - この ジャムを 三本の びんに <u>わって</u> ください。
+    correct: 0
+  - difficulty: 2
+    prompt: ちこく
+    choices:
+    - あの とけいは ちょっと <u>ちこく</u>して います。
+    - じゅぎょうに <u>ちこく</u>して すみません。
+    - １０時の でんしゃに <u>ちｃこく</u>して しまいました。
+    - れんらくが <u>ちこう</u>して すみません。
+    correct: 1

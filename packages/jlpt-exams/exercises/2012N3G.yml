@@ -1,0 +1,188 @@
+- directive: fill
+  exercises:
+  - difficulty: 3
+    prompt: 今度の試合に<ruby>勝<rt>か</rt></ruby>てる<blank-space></blank-space>一生けんめいがんばります。
+    choices:
+    - ために
+    - ように
+    - ことに
+    - みたいに
+    correct: 1
+  - difficulty: 3
+    prompt: 今のわたしの安い<ruby>給<rt>きゅう</rt>料<rt>りょう</rt></ruby>では、何年<ruby>働<rt>はたら</rt></ruby>いても自分の家は<blank-space></blank-space>そうもない。
+    choices:
+    - 買い
+    - 買え
+    - 買う
+    - 買える
+    correct: 1
+  - difficulty: 3
+    prompt: "
+      A「最近、<ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>さん元気ないね。」
+      B「うん。<ruby>将<rt>しょう</rt>来<rt>らい</rt></ruby>の<blank-space></blank-space><ruby>悩<rt>なや</rt></ruby>んでるらしいよ。」"
+    choices:
+    - ほうに
+    - 場合に
+    - ほかで
+    - ことで
+    correct: 3
+  - difficulty: 3
+    prompt: |-
+      A「ねえ、<blank-space></blank-space>どんな人？」
+      B「とても親切でいい人だよ。」
+    choices:
+    - <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんが
+    - <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんで
+    - <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんって
+    - <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんでも
+    correct: 2
+  - difficulty: 3
+    prompt: |-
+      A「<ruby>沖<rt>おき</rt>縄<rt>なわ</rt></ruby>旅行はどうだった？」
+      B「海が青くて、料理もおいしくて、最高だったよ。」
+      A「いいなあ。わたしも<blank-space></blank-space>一度いってみたいなあ。」
+    choices:
+    - いつのまにか
+    - いつ
+    - いつでも
+    - いつか
+    correct: 3
+  - difficulty: 3
+    prompt: "\
+      （デパートでシャツを<ruby>選<rt>えら</rt></ruby>びながら）
+
+      <ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>「明るい色のシャツが<ruby>欲<rt>ほ</rt></ruby>しいんだけど……。」
+
+      <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>「だったら、これ<blank-space></blank-space>どう？\
+      <ruby>山<rt>や</rt>田<rt>まだ</rt></ruby>さんにすごく<ruby>似<rt>に</rt>合<rt>あ</rt></ruby>うとおもうよ。」"
+    choices:
+    - なんか
+    - ばかり
+    - へ
+    - に
+    correct: 0
+  - difficulty: 3
+    prompt: |-
+      （スーパーで）
+      母親「今、お<ruby>菓<rt>か</rt>子<rt>し</rt></ruby>を買った子がタケルくん？」
+      子ども「ちがうよ。あそこで<ruby>泣<rt>な</rt></ruby>いて、お<ruby>菓<rt>か</rt>子<rt>し</rt></ruby>を<blank-space></blank-space>子だよ。」
+    choices:
+    - <ruby>欲<rt>ほ</rt></ruby>しい
+    - <ruby>欲<rt>ほ</rt></ruby>しがっている
+    - <ruby>欲<rt>ほ</rt></ruby>しそうな
+    - <ruby>欲<rt>ほ</rt></ruby>しがってみる
+    correct: 1
+  - difficulty: 3
+    prompt: "\
+      学生「先生、ご<ruby>相<rt>そう</rt>談<rt>だん</rt></ruby>したいことがあるのですが、\
+      <ruby>授<rt>じゅ</rt>業<rt>ぎょう</rt></ruby>の後、先生の研究室に<blank-space></blank-space>\
+      よろしいでしょうか。」
+
+      先生「はい、いいですよ。」"
+    choices:
+    - 来られても
+    - いらっしゃっても
+    - うかがっても
+    - いかれても
+    correct: 2
+  - difficulty: 3
+    prompt: |-
+      A「<ruby>昨<rt>き</rt>日<rt>のう</rt></ruby>からずっと頭が<ruby>痛<rt>いた</rt></ruby>んですが、どこかいい<ruby>病<rt>びょう</rt>院<rt>いん</rt></ruby>をしりませんか。」
+      B「そうですねえ、ABC<ruby>病<rt>びょう</rt>院<rt>いん</rt></ruby>にいって<blank-space></blank-space>。」
+    choices:
+    - みさせてください
+    - みてもいいでしょうか
+    - みさせてほしいのですか
+    - みたらどうでしょう
+    correct: 3
+  - difficulty: 3
+    prompt: "\
+      このお<ruby>菓<rt>か</rt>子<rt>し</rt></ruby>は<ruby>小<rt>こ</rt>麦<rt>むぎ</rt>粉<rt>こ</rt></ruby>と<ruby>卵<rt>たまご</rt></ruby>と\
+      <ruby>砂<rt>さ</rt>糖<rt>とう</rt></ruby><blank-space></blank-space>できたいます。バターや<ruby>牛<rt>ぎゅう</rt>乳<rt>にゅう</rt></ruby>は\
+      使っていません。"
+    choices:
+    - ほどが
+    - ほどで
+    - だけが
+    - だけで
+    correct: 3
+  - difficulty: 3.5
+    prompt: "\
+      A「すみません、<ruby>山<rt>や</rt>田<rt>まだ</rt></ruby>さんはどこですか。」
+
+      B「<ruby>山<rt>や</rt>田<rt>まだ</rt></ruby>さんは<ruby>会<rt>かい</rt>議<rt>ぎ</rt>中<rt>ちゅう</rt></ruby>ですが、<ruby>会<rt>かい</rt>議<rt>ぎ</rt></ruby>\
+      は１１時半<blank-space></blank-space>終わると思いますよ。」"
+    choices:
+    - までは
+    - までには
+    - までも
+    - までにも
+    correct: 1
+  - difficulty: 3
+    prompt: |-
+      妹「今日は友だちと<ruby>晩<rt>ばん</rt></ruby>ご飯を食べてくるね。」
+      兄「わかった。９時<ruby>過<rt>す</rt></ruby>ぎる<blank-space></blank-space>、<ruby>迎<rt>むか</rt></ruby>えに行くから、電話しろよ。」
+    choices:
+      - らしいなら
+      - らしいのに
+      - ようなら
+      - ようなのに
+    correct: 2
+  - difficulty: 3
+    prompt: |-
+      弟「お父さん、どこにいるか知らない？」
+      兄「さっき<ruby>部<rt>へ</rt>屋<rt>や</rt></ruby>にいたけど、<ruby>忙<rt>いそが</rt></ruby>しそうだったよ。」
+      弟「そうか。じゃあ今日は<blank-space></blank-space>。進学のこと、<ruby>相<rt>そう</rt>談<rt>だん</rt></ruby>したかったんだけど。」
+    choices:
+    - 話しかけないほうがよさそうだな
+    - 話しかけなくてもよさそうだな
+    - 話しかけないいほうがいいそうだな
+    - 話しかけなくてもいいそうだな
+    correct: 0
+
+- directive: ordered fill
+  exercises:
+  - difficulty: 3
+    prompt: |-
+      A「週末、試合<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>んですか。」
+      B「すみません。」
+    choices:
+    - 何をやっていた
+    - <ruby>練<rt>れん</rt>習<rt>しゅう</rt></ruby>
+    - によって
+    - が
+    correct: [2, 3, 1, 0]
+  - difficulty: 3
+    prompt: "\
+      あの<ruby>美<rt>び</rt>術<rt>じゅつ</rt>館<rt>かん</rt></ruby>は曜日\
+      <blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>\
+      <ruby>窓<rt>まど</rt>口<rt>ぐち</rt></ruby>で<ruby>確<rt>かく</rt>認<rt>にん</rt></ruby>したほうがいいよ。"
+    choices:
+    - 閉まる時間
+    - <ruby>違<rt>ちが</rt></ruby>うから
+    - によって
+    - が
+    correct: [2, 0, 3, 1]
+  - difficulty: 3
+    prompt: "\
+      自分で野菜を作ってみて、おいしい野菜を<ruby>育<rt>そだ</rt></ruby>てる\
+      <blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>\
+      わかりました。"
+    choices:
+    - ことが
+    - <ruby>大<rt>たい</rt>変<rt>へん</rt></ruby>な
+    - ことか
+    - どんなに
+    correct: [0, 3, 1, 2]
+  - difficulty: 3
+    prompt: "\
+      A「今度のさよならパーティーで、みんなで歌う歌は、これでいいですか。」\
+      B「すみません。この歌は好きなんですが、少しむずかしいです\
+      <blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>\
+      してほしいです。」"
+    choices:
+    - の
+    - ほか
+    - に
+    - から
+    correct: [3, 1, 0, 2]

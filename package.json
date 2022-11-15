@@ -15,7 +15,8 @@
   },
   "author": {
     "name": "Christopher Liu",
-    "email": "mail@chrisliu.app"
+    "email": "chrisliu@lletter.net"
   },
-  "homepage": "https://github.com/lletter/jlpt-check#readme"
+  "homepage": "https://github.com/lletter/jlpt-check#readme",
+  "packageManager": "yarn@3.2.4"
 }

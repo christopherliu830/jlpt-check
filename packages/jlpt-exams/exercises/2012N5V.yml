@@ -1,0 +1,250 @@
+- directive: reading
+  exercises:
+  - difficulty: 1
+    prompt: <u>先通</u> デパートに かいものに いきました。 
+    choices:
+    - せんしゅ
+    - せんしゅう
+    - ぜんしゅ
+    - ぜんしゅう
+    correct: 1
+  - difficulty: 1
+    prompt: ごはんの <u>後</u>で さんぽします。
+    choices:
+    - つぎ
+    - うしろ
+    - まえ
+    - あと
+    correct: 3
+  - difficulty: 1
+    prompt: もう いちど <u>言って</u> ください。
+    choices:
+    - いって
+    - きって
+    - まって  
+    - たって
+  - difficulty: 1
+    prompt: ちかくに <u>山</u>が あります。
+    choices:
+    - かわ
+    - やま
+    - いけ 
+    - うみ 
+    correct: 1
+  - difficulty: 1
+    prompt: この ホテルは へやが <u>多い</u>です。
+    choices:
+    - すくない
+    - おおい
+    - せまい
+    - ひろい
+  - difficulty: 1
+    prompt: ともだちと いっしょに <u>学校</u>に いきます。
+    choices:
+    - かこう
+    - がこお 
+    - がっこう
+    - がっこお
+    correct: 2
+  - difficulty: 1
+    prompt: えんぴつ <u>六本</u> あります。
+    choices:
+    - ろくぼん
+    - ろくぽん
+    - ろっぼん
+    - ろっぽん
+    correct: 3
+  - difficulty: 1
+    prompt: この <u>新聞</u> はいくらですか。
+    choices:
+    - しんむん
+    - しんぶん
+    - しむん
+    - しぶん
+    correct: 1
+  - difficulty: 1
+    prompt: この カメラは <u>安い</u>です。
+    choices:
+    - たかい
+    - やすい
+    - おもい
+    - かるい
+    correct: 1
+  - difficulty: 1
+    prompt: かさは <u>外</u>にあります
+    choices:
+    - いえ
+    - なか
+    - そと
+    - にわ
+    correct: 2
+  - difficulty: 1
+    prompt: けさ <u>しゃわー</u>を あびました。
+    choices:
+    - シャワー
+    - シャウー
+    - ツャワー
+    - ツャウー
+    correct: 0
+  - difficulty: 1
+    prompt: コーヒーを <u>のみました</u>。
+    choices:
+    - 飯みました
+    - 飲みました
+    - 餃みました
+    - 炊みました
+    correct: 1
+  - difficulty:
+    prompt: あたらしい <u>くるま</u>を かいました。
+    choices:
+    - 卓
+    - 草
+    - 車
+    - 東
+    correct: 2
+  - difficulty: 1
+    prompt: この ぼうしは <u>１０００えん</u>です。
+    choices:
+    - １０００内
+    - １０００用
+    - １０００冊
+    - １０００円
+    correct: 3
+  - difficulty: 1
+    prompt: しゅくだいが <u>はんぶん</u> おわりました。
+    choices:
+    - 羊力
+    - 半力
+    - 羊分
+    - 半分
+    correct: 3
+  - difficulty: 1
+    prompt: わたしの うちに <u>きませんか</u>。
+    choices:
+    - 来ませんか
+    - 采ませんか
+    - 木ませんか
+    - 未ませんか
+    correct: 0
+  - difficulty: 1
+    prompt: きのう たなかさんと <u>あいました</u.。
+    choices:
+    - 見いました
+    - 書いました
+    - 会いました
+    - 話いました
+    correct: 2
+  - difficulty: 1
+    prompt: いもうとと <u>おなじ</u> ふくを かいました。
+    choices:
+    - 同じ
+    - 回じ
+    - 冋じ
+    - 固じ
+    correct: 0
+  - difficulty: 1
+    prompt: わたしの へやは この <blank-space></blank-space>の ２かいです。 
+    choices:
+    - エレベーター
+    - プール
+    - エアコン
+    - アパート
+    correct: 3
+  - difficulty: 1
+    prompt: おとうさんは ギターを じょうずに <blank-space></blank-space>。
+    choices:
+    - うたいます
+    - ききます
+    - ひきます
+    - あそびます
+    correct: 1
+  - difficulty: 1
+    prompt: テーブルに おさらと はしを <blank-space></blank-space> ください。
+    choices:
+    - ならべて
+    - とって
+    - たべて
+    - あらって
+    correct: 0
+  - difficulty: 1
+    prompt: けさ そうじを したから へやは <blank-space></blank-space>です。
+    choices:
+    - きれい
+    - きたない
+    - あかるい
+    - くらい
+    correct: 0
+  - difficulty: 1
+    prompt: きょうは ５００<blank-space></blank-space> およぎました。
+    choices:
+    - ど
+    - ばん
+    - メートル
+    - グラム
+    correct: 2
+  - difficulty: 1
+    prompt: えきから たいしかんまでの <blank-space></blank-space>を かいて ください。
+    choices:
+    - しゃしん
+    - ちず
+    - てがみ
+    - きっぷ
+    correct: 1
+  - difficulty: 1
+    prompt: うるさいから テレビを <blank-space></blank-space> ください。
+    choices:
+    - けして
+    - つけて
+    - しめて
+    - あけて
+    correct: 0
+  - difficulty: きょうは <blank-space></blank-space>が ふって います。
+    choices:
+    - くもり
+    - はれ
+    - かぜ
+    - ゆき
+    correct: 3
+
+- directive: meaning
+  exercises:
+  - difficulty: 1
+    prompt: <u>まいばん くにの かぞくに でんわします。</u>
+    choices:
+    - よるは ときどき くにの かぞくに でんわします。
+    - あさは ときどき くにの かぞくに でんわします。
+    - よるは いつも くにの かぞくに でんわします。
+    - あさは いつも くにの かぞくに でんわします。
+    correct: 2
+  - difficulty: 1
+    prompt: <u>この まちには ゆうめいな たてものが あります。
+    choices:
+    - この まちには ゆうめいな ビルが あります。
+    - この まちには ゆうめいな おちゃが あります。
+    - この まちには ゆうめいな ケーキが あります。
+    - この まちには ゆうめいな こうえんが あります。
+    correct: 0
+  - difficulty: 1
+    prompt: <u>その えいがは おもしろくなかったです。</u>
+    choices:
+    - その えいがは たのしかったです。
+    - その えいがは つまらなかったです。
+    - その えいがは むじかかったです。
+    - その えいがは ながかったです。
+    correct: 1
+  - difficulty: 1
+    prompt: <u>たんじょうびは ６がつ１５にちです。</u>
+    choices:
+    - ６がつ１５にちに けっこんしました。
+    - ６がつ１５にちに テストが はじまりました。
+    - ６がつ１５にちに うまれました。
+    - ６がつ１５にちに くにへ かえりました。
+    correct: 2
+  - difficulty: 1
+    prompt: <u>にねんまえに きょうとへ いきました。</u>
+    choices:
+    - きのう きょうとへ いきました。
+    - おととい きょうとへ いきました。
+    - きょねん きょうとへ いきました。
+    - おととし きょうとへ いきました。
+    correct: 3

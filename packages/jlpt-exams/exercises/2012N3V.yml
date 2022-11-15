@@ -1,0 +1,284 @@
+- directive: reading
+  exercises:
+  - difficulty: 3
+    prompt: 日本の<u>首都</u>はどこですか。
+    choices:
+    - しゅとう
+    - しゅうと
+    - しゅと
+    - しゅうとう
+    correct: 2
+  - difficulty: 3
+    prompt: <u>地球</u>は<ruby>太<rt>たい</rt>陽<rt></rt></ruby>のまわりを回っている。
+    choices:
+    - じきゅう
+    - ちきゅう
+    - じきゅ
+    - ちきゅ
+    correct: 1
+  - difficulty: 3
+    prompt: あの時計は<u>遅れて</u>ている。
+    choices:
+    - こわれて
+    - おくれて
+    - たおれて
+    - よごれて
+    correct: 1
+  - difficulty: 3
+    prompt: 二人で<u>協力</u>すれば、仕事も早く終わるだろう。
+    choices:
+    - きょりょく
+    - どりょく
+    - きょうりょく
+    - どうりょく
+    correct: 2
+  - difficulty: 3
+    prompt: 大学の<ruby>奨<rt>しょう</rt>学<rt>がく</rt>金<rt>きん</rt></ruby>に<u>応募</u>した。
+    choices:
+    - おうぼ
+    - おうも
+    - おうぼう
+    - おうもう
+    correct: 0
+  - difficulty: 3
+    prompt: 子どもの<u>疑問</u>に答えた。
+    choices:
+    - くもん
+    - きもん
+    - ぐもん
+    - ぎもん
+    correct: 3
+  - difficulty: 3
+    prompt: 試験の<ruby>成<rt>せい</rt>績<rt>せき</rt></ruby>が<u>発表</u>された。
+    choices:
+    - はつひょう
+    - はっぴょう
+    - はつひょ
+    - はっぴょ
+    correct: 1
+  - difficulty: 3
+    prompt: <u>単語</u>のリストは隣のページにあります。
+    choices:
+    - げいご
+    - けいご
+    - だんご
+    - たんご
+    correct: 3
+
+- directive: kanji
+  exercises:
+  - difficulty: 3
+    prompt: みんなで話し合って、問題を<u>かいけつ</u>した。
+    choices:
+    - 改決
+    - 改結
+    - 解決
+    - 解結
+    correct: 2
+  - difficulty: 3
+    prompt: "\
+      <ruby>山<rt>やま</rt>口<rt>ぐち</rt></ruby>さんに\
+      <ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>を\
+      <u>あんない</u>してもらった。"
+    choices:
+      - 安内
+      - 家内
+      - 室内
+      - 案内
+    correct: 3
+  - difficulty: 3
+    prompt: わたしは<u>けんこう</u>のために毎日走っています。
+    choices:
+    - 健康
+    - 建康
+    - 健庫
+    - 建庫
+    correct: 0
+  - difficulty: 3
+    prompt: 今年の夏は<u>きおん</u>が高かった。
+    choices:
+    - 気湿
+    - 気温
+    - 気湯
+    - 気混
+    correct: 1
+  - difficulty: 3
+    prompt: 頭が<u>いたい</u>ので、薬を飲んだ。
+    choices:
+    - 病い
+    - 痛い
+    - 疫い
+    - 症い
+    correct: 1
+  - difficulty: 3
+    prompt: このシャツは工場で<u>たいりょう</u>に作られている。
+    choices:
+    - 多量
+    - 多料
+    - 大量
+    - 大料
+    correct: 2
+  - difficulty: 3
+
+- directive: fill
+  exercises:
+  - difficulty: 3
+    prompt: "\
+      この\
+      <ruby>\
+        携<rt>けい</rt>\
+        帯<rt>たい</rt>\
+        電<rt>でん</rt>\
+        話<rt>わ</rt>\
+      </ruby>\
+      はボタン押しにくいという<blank-space></blank-space>を持つ利用者もいる。"
+    choices:
+    - <ruby>関<rt>かん</rt>心<rt>しん</rt></ruby>
+    - <ruby>不<rt>ふ</rt>満<rt>まん</rt></ruby>
+    - <ruby>目<rt>もく</rt>標<rt>ひょう</rt></ruby>
+    - <ruby>我<rt>が</rt>慢<rt>まん</rt></ruby>
+    correct: 1
+  - difficulty: 3 
+    prompt: "\
+      セミナーに<ruby>参<rt>さん</rt>加<rt>か</rt></ruby>したい人は、<blank-space></blank-space>に住所、\
+      氏名、<ruby>希<rt>き</rt>望<rt>ぼう</rt>日<rt>び</rt></ruby>を書いてください。"
+    choices:
+    - <ruby>証<rt>しょう</rt>明<rt>めい</rt>書<rt>しょ</rt></ruby>
+    - <ruby>領<rt>りょう</rt>収<rt>しゅう</rt>書<rt>しょ</rt></ruby>
+    - <ruby>申<rt>もうし</rt>込<rt>こみ</rt>書<rt>しょ</rt></ruby>
+    - <ruby>参<rt>さん</rt>考<rt>こう</rt>書<rt>しょ</rt></ruby>
+    correct: 2
+  - difficulty: 3
+    prompt: この<ruby>計<rt>けい</rt>算<rt>さん</rt></ruby>は<blank-space></blank-space>なので、コンピューターを使っても時間がかかる。
+    choices:
+    - <ruby>意<rt>い</rt>外<rt>がい</rt></ruby>
+    - <ruby>重<rt>じゅう</rt>大<rt>だい</rt></ruby>
+    - <ruby>複<rt>ふく</rt>雑<rt>ざつ</rt></ruby>
+    - <ruby>正<rt>せい</rt>常<rt>じょう</rt></ruby>
+    correct: 2
+  - difficulty: 3
+    prompt: このオレンジはアメリカ<blank-space></blank-space>です。
+    choices:
+    - <ruby>産<rt>さん</rt></ruby>
+    - <ruby>製<rt>せい</rt></ruby>
+    - <ruby>作<rt>さく</rt></ruby>
+    - <ruby>品<rt>ひん</rt></ruby>
+    correct: 0
+  - difficulty: 3
+    prompt: <ruby>優<rt>ゆう</rt>勝<rt>しょう</rt></ruby>した<ruby>選<rt>せん</rt>手<rt>しゅ</rt></ruby>に<blank-space></blank-space>をして記事を書いた。
+    choices:
+    - スピーチ
+    - インタビュー
+    - メッセージ
+    - コミュニケーション
+    correct: 1
+  - difficulty: 3
+    prompt: <ruby>全<rt>ぜん</rt>員<rt>いん</rt></ruby>が自分の意見を<blank-space></blank-space>したので、<ruby>会<rt>かい</rt>議<rt>ぎ</rt></ruby>がなかなか終わらなかった。
+    choices:
+    - <ruby>命<rt>めい</rt>令<rt>れい</rt></ruby>
+    - <ruby>返<rt>へん</rt>信<rt>しん</rt></ruby>
+    - <ruby>主<rt>しゅ</rt>張<rt>ちょう</rt></ruby>
+    - <ruby>注<rt>ちゅう</rt>文<rt>もん</rt></ruby>
+    correct: 2
+  - difficulty: 3
+    prompt: 朝から何も飲んでいないので、のどが<blank-space></blank-space>です。
+    choices:
+    - ぺらぺら
+    - からから
+    - ふらふら
+    - ぺこぺこ
+    correct: 1
+  - difficulty: 3
+    prompt: <ruby>将<rt>しょう</rt>来<rt>らい</rt></ruby>のために、お金を<blank-space></blank-space>います。
+    choices:
+    - ためて
+    - のせて
+    - かさねて
+    - くわえて
+    correct: 0
+
+- directive: meaning
+  exercises:
+  - difficulty: 3
+    prompt: わたしは<ruby>妻<rt>つま</rt></ruby>と<ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>に<u><ruby>通<rt>つう</rt>勤<rt>きん</rt></ruby>して</u>います。
+    choices:
+    - 仕事に行って
+    - 勉強に行って
+    - 買い物に行って
+    - <ruby>散<rt>さん</rt>歩<rt>ぽ</rt></ruby>に行って
+    correct: 0
+  - difficulty: 3
+    prompt: とても<u>おそろしい</u>経験をした。
+    choices:
+    - たのしい
+    - うれしい
+    - はずかしい
+    - こわい
+    correct: 3
+  - difficulty: 3
+    prompt: 先生に<u>わけ</u>を話した。
+    choices:
+    - アイディア
+    - ルール
+    - <ruby>理<rt>り</rt>由<rt>ゆう</rt></ruby>
+    - <ruby>秘<rt>ひ</rt>密<rt>みつ</rt></ruby>
+    correct: 2
+  - difficulty: 3
+    prompt: 最近、この川は水が<u>へった</u>気がする。
+    choices:
+    - 多くなった
+    - 少なくなった
+    - きれいになった
+    - きたなくなった
+    correct: 1
+  - difficulty: 3
+    prompt: <ruby>実<rt>じっ</rt>験<rt>けん</rt></ruby>がうまくいかなかったので、<u>やりなおした</u>。
+    choices:
+    - やり方を調べた
+    - やり方を教わった
+    - もう一度やった
+    - やるのを途中でやめた
+    correct: 2
+
+- directive: usage
+  exercises:
+  - difficulty: 3
+    prompt: ころぶ
+    choices: 
+    - 今日は<ruby>疲<rt>つか</rt></ruby>れたので、早めにベッドに<u>ころんだ</u>。
+    - 仕事が入ったので、旅行の計画がころんでしまった。
+    - 台風で<ruby>庭<rt>にわ</rt></ruby>の木がころんだ。
+    - <ruby>階<rt>かい</rt>段<rt>だん</rt></ruby>で<u>ころんで</u>けがをした。
+    correct: 3
+  - difficulty: 3
+    prompt: <ruby>指<rt>し</rt>示<rt>じ</rt></ruby>
+    choices:
+    - 「この<ruby>書<rt>しょ</rt>類<rt>るい</rt></ruby>、３０部コピーしておいて」と<ruby>秘<rt>ひ</rt>書<rt>しょ</rt></ruby>に<u><ruby>指<rt>し</rt>示<rt>じ</rt></ruby></u>した。
+    - 「この作文を見ていただけませんか」と先生に<u><ruby>指<rt>し</rt>示<rt>じ</rt></ruby></u>した。
+    - 「あした映画を見に行こうよ」と<ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>に<u><ruby>指<rt>し</rt>示<rt>じ</rt></ruby></u>した。
+    - 「トイレはどこにありますか」と店員に<u><ruby>指<rt>し</rt>示<rt>じ</rt></ruby></u>した。
+    correct: 0
+  - difficulty: 3
+    prompt: 見送る
+    choices:
+    - 毎日かならずメールを<u>見送る</u>ようにしている。
+    - 何ページか<u>見送って</u>みたが、むずかしくてわからなかった。
+    - 電車の恒から景色を<u>見送る</u>のが好きだ。
+    - 国に帰る友人を空港まで<u>見送った</u>。
+    correct: 3
+  - difficulty: 3
+    prompt: <ruby>植<rt>う</rt></ruby>える
+    choices:
+    - 近所の<ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>にはいろいろな花が<u>植えて</u>ある。
+    - ケーキにいちごやクリームをたくさん<u>植えた</u>。
+    - この空港は海に土を<u>植えて</u>作られた。
+    - 道に<ruby>電<rt>でん</rt>灯<rt>とう</rt></ruby>を<u>植えた</u>ので明るくなった。
+    correct: 0
+  - difficulty: 3
+    prompt: <ruby>正<rt>しょう</rt>直<rt>じき</rt></ruby>
+    choices:
+    - <ruby>小<rt>こ</rt>川<rt>がわ</rt></ruby>さんは<u><ruby>正<rt>しょう</rt>直<rt>じき</rt></ruby></u>な人で、決してうそは言いません。
+    - この<ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>の<u><ruby>正<rt>しょう</rt>直<rt>じき</rt></ruby></u>な使い方をこれから説明します。
+    - これは<u><ruby>正<rt>しょう</rt>直<rt>じき</rt></ruby></u>な話なのに、だれも信じてくれません。
+    - <u><ruby>正<rt>しょう</rt>直<rt>じき</rt></ruby></u>な<ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>は分かりませんが、１０キロぐらいだと思います。
+    correct: 0
