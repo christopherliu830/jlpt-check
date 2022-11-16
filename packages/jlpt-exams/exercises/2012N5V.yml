@@ -23,6 +23,7 @@
     - きって
     - まって  
     - たって
+    correct: 0
   - difficulty: 1
     prompt: ちかくに <u>山</u>が あります。
     choices:
@@ -38,6 +39,7 @@
     - おおい
     - せまい
     - ひろい
+    correct: 1
   - difficulty: 1
     prompt: ともだちと いっしょに <u>学校</u>に いきます。
     choices:
@@ -94,7 +96,7 @@
     - 餃みました
     - 炊みました
     correct: 1
-  - difficulty:
+  - difficulty: 1
     prompt: あたらしい <u>くるま</u>を かいました。
     choices:
     - 卓
@@ -198,7 +200,8 @@
     - しめて
     - あけて
     correct: 0
-  - difficulty: きょうは <blank-space></blank-space>が ふって います。
+  - difficulty: 1
+    prompt: きょうは <blank-space></blank-space>が ふって います。
     choices:
     - くもり
     - はれ
