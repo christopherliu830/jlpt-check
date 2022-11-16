@@ -122,7 +122,7 @@
         不調だった\
         <ruby>\
           山<rt>やま</rt>\
-          田<rt>だ</rt>\
+          中<rt>なか</rt>\
         </ruby>\
         選手がついにゴールを決めた。彼に<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>\
         相当あったはずだ。"
@@ -131,7 +131,7 @@
       - という
       - プレッシャーは 
       - 「もし、またミスをしたら」
-      correct: [3, 2, 1, 0]
+      correct: [0, 3, 1, 2]
     - difficulty: 4
       prompt: "\
         「これは地元ではよく知られた料理で、このすっぱさがおいしい。ただ\
