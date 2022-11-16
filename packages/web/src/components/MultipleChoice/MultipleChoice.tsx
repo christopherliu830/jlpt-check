@@ -2,13 +2,11 @@ import React from 'react';
 
 import { Box, Button, Center, Container, Text, useMultiStyleConfig } from '@chakra-ui/react';
 import { Choice, ChoiceBody, ChoiceHeader } from 'components/Choice/Choice';
-import { MultipleChoiceExercise } from 'api/exercise';
 
 import { ExerciseText } from 'components/ExerciseText/ExerciseText';
 import { useExercise } from 'components/ExerciseProvider/ExerciseProvider';
 
 export type MultipleChoiceProps = {
-  exercise: MultipleChoiceExercise;
   onSubmit: (selected: string[]) => void;
 };
 
@@ -46,12 +44,15 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
   return (
     <Container maxW="100%">
       <>
+        <Box __css={styles.directive}>
+          <Text as="div" fontSize="2xl" mt={12}>
+            <ExerciseText>{exercise.directive.prompt}</ExerciseText>
+          </Text>
+        </Box>
         <Box __css={styles.question}>
-          <Center margin="10%">
-            <Text as="div">
-              <ExerciseText fillBlanks>{exercise.prompt}</ExerciseText>
-            </Text>
-          </Center>
+          <Text as="div">
+            <ExerciseText fillBlanks>{exercise.prompt}</ExerciseText>
+          </Text>
         </Box>
         {choices.map((choice, idx) => (
           <Choice
@@ -60,7 +61,6 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
             onClick={() => handleSelect(idx)}
             __css={styles.choice}
           >
-            <ChoiceHeader flex="0 0 10%">{idx + 1}</ChoiceHeader>
             <ChoiceBody>
               <ExerciseText>{choice}</ExerciseText>
             </ChoiceBody>

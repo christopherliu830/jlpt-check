@@ -1,3 +1,5 @@
+import '@fontsource/atkinson-hyperlegible';
+
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { QueryClient, QueryClientProvider } from 'react-query';

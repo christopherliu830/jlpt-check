@@ -1,13 +1,9 @@
-import { Directive, Exercise } from 'utils/prisma';
-
-export type MultipleChoiceExercise = Exercise & {
-  directive: Directive;
-};
+import { Exercise } from 'utils/prisma';
 
 export async function fetchExercise() {
   const response = await fetch('/api/exercise', {
     method: 'POST',
   });
-  const data = (await response.json()) as MultipleChoiceExercise[];
+  const data = (await response.json()) as Exercise[];
   return data;
 }

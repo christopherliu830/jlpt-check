@@ -1,5 +1,9 @@
 import { PrismaClient } from '@lletter/jlpt-prisma';
-export * from '@lletter/jlpt-prisma';
+import { Directive, Exercise as PrismaExercise } from '@lletter/jlpt-prisma';
+
+export type Exercise = PrismaExercise & {
+  directive: Directive;
+};
 
 declare global {
   // allow global `var` declarations

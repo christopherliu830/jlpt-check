@@ -1431,6 +1431,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/atkinson-hyperlegible@npm:^4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/atkinson-hyperlegible@npm:4.5.10"
+  checksum: 416e8aeb39ee996319125f2159190e53d83f726eaf8f8b51f5294ca867f88978a61add1e71d85994d004837eca69ee76784a59e28189a51ad21aa226abfefef5
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:6.2.0":
   version: 6.2.0
   resolution: "@fortawesome/fontawesome-common-types@npm:6.2.0"
@@ -1547,6 +1554,7 @@ __metadata:
     "@emotion/core": ^11.0.0
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.10.4
+    "@fontsource/atkinson-hyperlegible": ^4.5.10
     "@fortawesome/fontawesome-svg-core": ^6.2.0
     "@fortawesome/free-solid-svg-icons": ^6.2.0
     "@fortawesome/react-fontawesome": ^0.2.0
