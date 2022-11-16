@@ -13,13 +13,12 @@ export const MultipleChoice = helpers.defineMultiStyleConfig({
       textAlign: 'center',
       fontSize: '3xl',
       margin: '32px',
-      whiteSpace: 'pre',
+      whiteSpace: 'pre-wrap',
       background: `rgba(0, 0, 0, gray.100)`,
     },
     choice: {
       marginLeft: 'auto',
       marginRight: 'auto',
-      maxWidth: '320px',
       '& > *': {
         justifyContent: 'center',
       },
