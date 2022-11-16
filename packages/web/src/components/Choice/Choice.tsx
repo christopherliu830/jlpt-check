@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Box, BoxProps } from '@chakra-ui/layout';
 import {
   Flex,
@@ -6,7 +6,6 @@ import {
   IconProps as ChakraIconProps,
   Icon as ChakraIcon,
   useMultiStyleConfig,
-  useToken,
   useTheme,
 } from '@chakra-ui/react';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';

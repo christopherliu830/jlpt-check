@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { prisma, DirectiveType } from '../../../src/utils/prisma';
+import { prisma, DirectiveType } from 'utils/prisma';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

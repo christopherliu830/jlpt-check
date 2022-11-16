@@ -1,4 +1,3 @@
-import { useStyleConfig } from '@chakra-ui/react';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { SunTheme } from '../../theme/components/sun';

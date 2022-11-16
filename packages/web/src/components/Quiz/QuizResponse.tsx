@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, chakra, Flex, Icon, ScaleFade, shouldForwardProp, Text, useMultiStyleConfig } from '@chakra-ui/react';
+import { chakra, Flex, Icon, shouldForwardProp, useMultiStyleConfig } from '@chakra-ui/react';
 import { faCheckCircle, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { isValidMotionProp, motion, TargetAndTransition, useAnimation } from 'framer-motion';
+import { isValidMotionProp, motion, TargetAndTransition } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Sun from '../Sun/Sun';
 

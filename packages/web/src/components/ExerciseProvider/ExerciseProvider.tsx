@@ -1,4 +1,3 @@
-import { useFocusEffect } from '@chakra-ui/react';
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { Exercise } from 'utils/prisma';
 

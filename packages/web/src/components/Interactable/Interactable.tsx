@@ -1,6 +1,5 @@
-import { Box } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-
+import { Box } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
 
 type Interaction = 'base' | 'hover' | 'active';
 
@@ -9,7 +8,7 @@ export default function Interactable({ children }: { children: (currentInteracti
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  const handleHover = (isHovering: boolean, e: React.UIEvent) => {
+  const handleHover = (isHovering: boolean) => {
     if (isHovering) {
       setHover(true);
     } else {
@@ -17,33 +16,32 @@ export default function Interactable({ children }: { children: (currentInteracti
       // Can't be active on an object if we aren't hovering over it
       setActive(false);
     }
-  }
-  
-  const handleTouch = (isTouching: boolean, e: React.UIEvent) => {
+  };
+
+  const handleTouch = (isTouching: boolean) => {
     setActive(isTouching);
-  }
+  };
 
   useEffect(() => {
     if (active) {
       setCurrentInteraction('active');
-    }
-    else if (hover) {
+    } else if (hover) {
       setCurrentInteraction('hover');
+    } else {
+      setCurrentInteraction('base');
     }
-    else { setCurrentInteraction('base'); }
-  }, [active, hover])
+  }, [active, hover]);
 
   return (
     <Box
-      onTouchStart={(e) => handleTouch(true, e)}
-      onMouseDown={(e) => handleTouch(true, e)}
-      onTouchEnd={(e) => handleTouch(false, e)}
-      onMouseUp={(e) => handleTouch(false, e)}
-      onMouseEnter={(e) => handleHover(true, e)}
-      onMouseLeave={(e) => handleHover(false, e)}
+      onTouchStart={() => handleTouch(true)}
+      onMouseDown={() => handleTouch(true)}
+      onTouchEnd={() => handleTouch(false)}
+      onMouseUp={() => handleTouch(false)}
+      onMouseEnter={() => handleHover(true)}
+      onMouseLeave={() => handleHover(false)}
     >
-      { children(currentInteraction) }
+      {children(currentInteraction)}
     </Box>
-  )
-
+  );
 }

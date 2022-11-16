@@ -62,7 +62,7 @@ export const Choice = helpers.defineMultiStyleConfig({
   },
 });
 
-export const animateBody = (theme: Record<string, any>, { colorScheme }: StyleFunctionProps) => {
+export const animateBody = (theme: Record<string, unknown>, { colorScheme }: StyleFunctionProps) => {
   // helper function to get the rgba from color level.
   const color = (level: number) => getToken('colors', `${colorScheme}.${level}`)(theme);
 
@@ -101,7 +101,7 @@ export const animateBody = (theme: Record<string, any>, { colorScheme }: StyleFu
   };
 };
 
-export const animateHeader = (theme: Record<string, any>, { colorScheme }: StyleFunctionProps) => {
+export const animateHeader = (theme: Record<string, unknown>, { colorScheme }: StyleFunctionProps) => {
   // helper function to get the rgba from color level.
   const color = (level: number) => getToken('colors', `${colorScheme}.${level}`)(theme);
 

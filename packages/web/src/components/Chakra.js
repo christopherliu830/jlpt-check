@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react"
 
 import { useEffect } from "react";
+import * as PropTypes from 'prop-types';
 
 import { theme } from './theme/theme';
 
@@ -34,6 +35,11 @@ export function Chakra({ cookies, children }) {
       {children}
     </ChakraProvider>
   )
+}
+
+Chakra.propTypes = {
+  cookies: PropTypes.any,
+  children: PropTypes.node
 }
 
 // also export a reusable function getServerSideProps

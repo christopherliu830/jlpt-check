@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Center, Container, Flex, SlideFade, Text } from '@chakra-ui/react';
+import { Button, Center, Container, Flex, Text } from '@chakra-ui/react';
 
 import { Logo } from '../Logo/Logo';
 import { FadeInView } from '../FadeInView/FadeInView';

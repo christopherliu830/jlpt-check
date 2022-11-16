@@ -1,9 +1,6 @@
-import React, { createElement } from 'react';
-import { SanitizedHTML } from '../SanitizedHTML/SanitizedHTML';
-import { Text } from '@chakra-ui/react';
+import React from 'react';
 import parse, { Element } from 'html-react-parser';
 import DOMPurify from 'dompurify';
-import { render } from 'react-dom';
 import { BlankSpace } from 'components/BlankSpace/BlankSpace';
 
 // Need this to make typescript select the correct overload.
@@ -39,5 +36,3 @@ export function ExerciseText({ children, fillBlanks }: { children: string; fillB
 
   return <>{html}</>;
 }
-
-// customElements.define('fill-space', FillSpace);
