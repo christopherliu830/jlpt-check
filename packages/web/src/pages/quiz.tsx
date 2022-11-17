@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 import { Container } from '@chakra-ui/react';
 import MultipleChoice from 'components/MultipleChoice/MultipleChoice';
 import { QuizResponse } from 'components/Quiz/QuizResponse';
-import { useQuery } from 'react-query';
 import { ExerciseProvider } from 'components/ExerciseProvider/ExerciseProvider';
 
-import { checkCorrect, fetchExercise, QuizHistory } from 'api/exercise';
+import { checkCorrect, QuizHistory } from 'api/exercise';
+import { Directive, Exercise, Prisma, prisma } from 'utils/prisma';
 
-function Question() {
+function Question({ exercises }: { exercises: Exercise[] }) {
   const [quizHistory, setQuizHistory] = useState<QuizHistory>([]);
-
-  const { data: exercises, refetch } = useQuery(['quiz'], () => fetchExercise(quizHistory), {
-    refetchOnWindowFocus: false,
-  });
+  const [exercise, setCurrentExercise] = useState<Exercise>(exercises[0]);
 
   if (!exercises?.[0]) {
     return <></>;
   }
 
-  const exercise = exercises[0];
+  const refetch = () => {
+    setCurrentExercise(exercises[Math.floor(Math.random() * exercises.length)]);
+    console.log(exercises);
+  };
 
   const getResult = () => {
     const lastAnswered = quizHistory[quizHistory.length - 1];
@@ -47,6 +47,33 @@ function Question() {
       </ExerciseProvider>
     </Container>
   );
+}
+
+export async function getStaticProps() {
+  const exercises = await prisma.$queryRaw<Exercise[]>`
+      SELECT *
+      FROM "public"."Exercise"
+      ORDER BY random()
+    `;
+
+  const directiveIds = Array.from(new Set(exercises.map((e) => e.directiveId)));
+  const directives = await prisma.$queryRaw<Directive[]>`
+      SELECT *
+      FROM "public"."Directive"
+      WHERE "public"."Directive"."id" IN (${Prisma.join(directiveIds)})
+    `;
+
+  exercises.forEach((exercise) => {
+    const d = directives.find((directive) => directive.id === exercise.directiveId);
+    if (!d) {
+      throw new Error('Directive not found');
+    }
+    exercise.directive = d;
+  });
+
+  return {
+    props: { exercises },
+  };
 }
 
 export default Question;

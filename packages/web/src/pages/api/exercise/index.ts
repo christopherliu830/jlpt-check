@@ -1,26 +1,37 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { prisma } from 'utils/prisma';
+import { Prisma, prisma, Exercise, Directive } from 'utils/prisma';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { questions } = req.body;
-    const seenQuestions = Object.keys(questions).map((q) => parseInt(q));
-    const count = await prisma.exercise.count();
-    const skip = Math.floor(Math.random() * count);
 
-    const exercise = await prisma.exercise.findMany({
-      take: 1,
-      skip,
-      where: { id: { notIn: seenQuestions } },
-      include: { directive: true },
+    const exercises = await prisma.$queryRaw<Exercise[]>`
+      SELECT *
+      FROM "public"."Exercise"
+      ORDER BY random()
+    `;
+
+    const directiveIds = Array.from(new Set(exercises.map((e) => e.directiveId)));
+    const directives = await prisma.$queryRaw<Directive[]>`
+      SELECT *
+      FROM "public"."Directive"
+      WHERE "public"."Directive"."id" IN (${Prisma.join(directiveIds)})
+    `;
+
+    exercises.forEach((exercise) => {
+      const d = directives.find((directive) => directive.id === exercise.directiveId);
+      if (!d) {
+        throw new Error('Directive not found');
+      }
+      exercise.directive = d;
     });
 
-    if (!exercise) {
+    if (!exercises) {
       res.status(500).send({});
       return;
     }
 
-    res.status(200).json(exercise);
+    res.status(200).json(exercises);
   } else {
     res.status(405).send({});
   }
