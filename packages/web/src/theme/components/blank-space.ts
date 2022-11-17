@@ -12,9 +12,7 @@ export const BlankSpace: ComponentStyleConfig = {
     m: 2,
     p: 1,
     minW: '80px',
-    minH: '2.333333333em',
-    textAlign: 'center',
-    d: 'inline-flex',
+    minH: '2.4em',
     verticalAlign: 'baseline',
   }),
 };

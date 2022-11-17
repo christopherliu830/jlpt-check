@@ -8,35 +8,23 @@ import { useTheme } from '@chakra-ui/react';
 
 export function BlankSpace({ index, fill }: { index: number; fill?: boolean }) {
   const { exercise, selected } = useExercise();
-  const theme = useTheme();
-  const ref = useRef(null);
-  const styles = useStyleConfig('BlankSpace');
 
   const controls = useAnimation();
+  const theme = useTheme();
+  const styles = useStyleConfig('BlankSpace');
+
+  const text = exercise?.choices[selected[index]];
 
   useEffect(() => {
-    if (ref.current) {
-      console.log(window.getComputedStyle(ref.current).fontSize);
-    }
-  }, [ref]);
-
-  useEffect(() => {
-    if (fill && selected[index] !== undefined) {
+    if (fill && text) {
       controls.start(animation(theme, theme.components.BlankSpace.defaultProps));
     }
   }, [selected[index]]);
 
   return (
-    <Box as={motion.div} ref={ref} animate={controls} __css={styles}>
-      {fill && selected[index] !== undefined ? ( // Needs !== undefined here as selected[index] could equal 0, i.e. falsy
-        <ExerciseText>{exercise?.choices[selected[index]] ?? ''}</ExerciseText>
-      ) : (
-        <Box display="inline" visibility="hidden">
-          <ruby>
-            _<rt>_</rt>
-          </ruby>
-        </Box>
-      )}
+    <Box initial={{ background: styles.background as string }} as={motion.div} animate={controls} __css={styles}>
+      {/* Needs a dummy element to align baseline with prompt, otherwise margin bottom is used */}
+      {fill && text ? <ExerciseText>{text}</ExerciseText> : <Box visibility="hidden">_</Box>}
     </Box>
   );
 }

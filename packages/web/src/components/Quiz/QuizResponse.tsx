@@ -19,7 +19,6 @@ export function QuizResponse({ response, onTimeout }: { response?: string; onTim
 
   useEffect(() => {
     const reset = () => {
-      onTimeout && onTimeout();
       setAnimation({ scale: 0, opacity: 0 });
       setShowSun(false);
     };
@@ -36,8 +35,13 @@ export function QuizResponse({ response, onTimeout }: { response?: string; onTim
         setColor('red');
       }
 
-      const routine = setTimeout(reset, 2000);
+      const routine = setTimeout(() => {
+        onTimeout?.();
+        reset();
+      }, 2000);
+
       setAnimation({ scale: 1, opacity: 1 });
+
       return () => {
         reset();
         clearTimeout(routine);

@@ -24,10 +24,8 @@ const sanitize = (dirty: string, options?: UntrustedConfig) => {
 
 export function ExerciseText({ children, fillBlanks }: { children: string; fillBlanks?: boolean }) {
   children = sanitize(children, { ...defaultOptions });
-  children = children.replaceAll('()', '<blank-space></blank-space>');
 
   let i = 0;
-
   const html = parse(children, {
     replace: (domNode) => {
       if (domNode instanceof Element && domNode.tagName === 'blank-space') {

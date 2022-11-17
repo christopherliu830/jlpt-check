@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, BoxProps } from '@chakra-ui/layout';
 import {
   Flex,
@@ -75,12 +75,14 @@ export function ChoiceHeader({ icon, children, ...props }: ChoiceHeaderProps): R
 }
 
 export function ChoiceBody(props: BoxProps): React.ReactElement {
-  const { __css, ...rest } = props;
+  const { __css, children, ...rest } = props;
   const theme = useTheme();
   const { variant, selected } = useChoice();
   const styles = useStyles();
+  const ref = useRef<HTMLDivElement>(null);
 
-  const animations = animateBody(theme, { ...theme.components.Choice.defaultProps, ...props });
+  const animationProps = { ...theme.components.Choice.defaultProps, ...props };
+  const animations = animateBody(theme, animationProps);
   const animation = `${selected ? 'selected' : 'unselected'}-${variant}`;
 
   const style = {
@@ -88,5 +90,9 @@ export function ChoiceBody(props: BoxProps): React.ReactElement {
     ...styles.body,
   };
 
-  return <Box as={motion.div} animate={animation} __css={style} {...rest} {...animations} />;
+  return (
+    <Box as={motion.div} ref={ref} animate={animation} __css={style} {...rest} {...animations}>
+      {children}
+    </Box>
+  );
 }

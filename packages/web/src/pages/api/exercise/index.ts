@@ -8,8 +8,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const count = await prisma.exercise.count();
     const skip = Math.floor(Math.random() * count);
 
-    console.log(questions);
-
     const exercise = await prisma.exercise.findMany({
       take: 1,
       skip,

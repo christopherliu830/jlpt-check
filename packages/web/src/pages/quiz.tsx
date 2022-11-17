@@ -39,23 +39,12 @@ function Question() {
     setQuizHistory((old) => [...old, { exercise, answers }]);
   };
 
-  const Page = React.useCallback(
-    () => (
+  return (
+    <Container maxW="4xl" centerContent pos="relative">
       <ExerciseProvider exercise={exercise}>
         <MultipleChoice onSubmit={handleSubmit} />
         <QuizResponse response={getResult()} onTimeout={refetch} />
       </ExerciseProvider>
-    ),
-    [exercise, getResult, handleSubmit, refetch]
-  );
-
-  if (!exercises) {
-    return <Container />;
-  }
-
-  return (
-    <Container maxW="4xl" centerContent pos="relative">
-      <Page />
     </Container>
   );
 }

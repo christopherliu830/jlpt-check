@@ -19,6 +19,7 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
   }
 
   const { choices, correct } = exercise;
+  console.log('c', exercise.id, selected[0]);
 
   const handleSelect = (item: number) => {
     setSelected((old) => {
@@ -54,7 +55,7 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
         </Box>
         {choices.map((choice, idx) => (
           <Choice
-            key={idx}
+            key={choice}
             selected={selected.indexOf(idx) !== -1}
             onClick={() => handleSelect(idx)}
             __css={styles.choice}
