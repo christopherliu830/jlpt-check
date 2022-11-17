@@ -1,9 +1,38 @@
 import { Exercise } from 'utils/prisma';
 
-export async function fetchExercise() {
+export type QuizState = {
+  questions: { [key: number]: { success: boolean } };
+};
+
+export type QuizEntry = {
+  exercise: Exercise;
+  answers: string[];
+};
+
+export type QuizHistory = QuizEntry[];
+
+export function checkCorrect({ exercise, answers }: QuizEntry) {
+  const corrects = exercise.correct.map((correctChoice) => exercise.choices[correctChoice]);
+  const result = corrects.every((correct, idx) => answers[idx] === correct);
+  return result;
+}
+
+export function prepare(history: QuizHistory) {
+  const state: QuizState = { questions: {} };
+  for (const entry of history) {
+    state.questions[entry.exercise.id] = { success: checkCorrect(entry) };
+  }
+  return state;
+}
+
+export async function fetchExercise(history: QuizHistory) {
   const response = await fetch('/api/exercise', {
     method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(prepare(history)),
   });
-  const data = (await response.json()) as Exercise[];
-  return data;
+  const data = await response.json();
+  return data as Exercise[];
 }

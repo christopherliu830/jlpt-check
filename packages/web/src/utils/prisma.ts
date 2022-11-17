@@ -1,5 +1,6 @@
-import { PrismaClient } from '@lletter/jlpt-prisma';
+import { DirectiveType, PrismaClient } from '@lletter/jlpt-prisma';
 import { Directive, Exercise as PrismaExercise } from '@lletter/jlpt-prisma';
+export { DirectiveType };
 
 export type Exercise = PrismaExercise & {
   directive: Directive;

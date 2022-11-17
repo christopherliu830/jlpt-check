@@ -1,35 +1,53 @@
 import React, { useState } from 'react';
 import { Container } from '@chakra-ui/react';
 import MultipleChoice from 'components/MultipleChoice/MultipleChoice';
-import { fetchExercise } from 'api/exercise';
 import { QuizResponse } from 'components/Quiz/QuizResponse';
 import { useQuery } from 'react-query';
 import { ExerciseProvider } from 'components/ExerciseProvider/ExerciseProvider';
 
+import { checkCorrect, fetchExercise, QuizHistory } from 'api/exercise';
+
 function Question() {
-  const [result, setResult] = useState<string | undefined>(undefined);
+  const [quizHistory, setQuizHistory] = useState<QuizHistory>([]);
 
-  const { data: exercises, refetch } = useQuery(['quiz'], fetchExercise, { refetchOnWindowFocus: false });
+  const { data: exercises, refetch } = useQuery(['quiz'], () => fetchExercise(quizHistory), {
+    refetchOnWindowFocus: false,
+  });
 
-  if (!(exercises && exercises[0])) {
+  if (!exercises?.[0]) {
     return <></>;
   }
 
   const exercise = exercises[0];
 
-  const handleRefetch = () => {
-    setResult(undefined);
-    refetch();
+  const getResult = () => {
+    const lastAnswered = quizHistory[quizHistory.length - 1];
+    // If the last answered question is the current question (i.e. user just answered the question)
+    if (lastAnswered?.exercise.id === exercise.id) {
+      return checkCorrect(lastAnswered) ? 'success' : 'fail';
+    } else {
+      return undefined;
+    }
   };
 
   const handleSubmit = (answers: string[]) => {
-    if (result) {
-      handleRefetch();
-    } else {
-      if (answers[0] === exercise.choices[exercise.correct[0]]) setResult('success');
-      else setResult('fail');
+    if (getResult()) {
+      refetch();
+      return;
     }
+
+    setQuizHistory((old) => [...old, { exercise, answers }]);
   };
+
+  const Page = React.useCallback(
+    () => (
+      <ExerciseProvider exercise={exercise}>
+        <MultipleChoice onSubmit={handleSubmit} />
+        <QuizResponse response={getResult()} onTimeout={refetch} />
+      </ExerciseProvider>
+    ),
+    [exercise, getResult, handleSubmit, refetch]
+  );
 
   if (!exercises) {
     return <Container />;
@@ -37,10 +55,7 @@ function Question() {
 
   return (
     <Container maxW="4xl" centerContent pos="relative">
-      <ExerciseProvider exercise={exercise}>
-        <MultipleChoice onSubmit={handleSubmit} />
-        <QuizResponse response={result} onTimeout={handleRefetch} />
-      </ExerciseProvider>
+      <Page />
     </Container>
   );
 }

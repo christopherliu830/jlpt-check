@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Button, Center, Container, Text, useMultiStyleConfig } from '@chakra-ui/react';
-import { Choice, ChoiceBody, ChoiceHeader } from 'components/Choice/Choice';
+import { Box, Button, Container, Text, useMultiStyleConfig } from '@chakra-ui/react';
+import { Choice, ChoiceBody } from 'components/Choice/Choice';
 
 import { ExerciseText } from 'components/ExerciseText/ExerciseText';
 import { useExercise } from 'components/ExerciseProvider/ExerciseProvider';
@@ -49,10 +49,8 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
             <ExerciseText>{exercise.directive.prompt}</ExerciseText>
           </Text>
         </Box>
-        <Box __css={styles.question}>
-          <Text as="div">
-            <ExerciseText fillBlanks>{exercise.prompt}</ExerciseText>
-          </Text>
+        <Box __css={exercise.prompt.includes('\n') ? styles.multiLineQuestion : styles.question}>
+          <ExerciseText fillBlanks>{exercise.prompt}</ExerciseText>
         </Box>
         {choices.map((choice, idx) => (
           <Choice
@@ -66,7 +64,7 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
             </ChoiceBody>
           </Choice>
         ))}
-        <Button margin="36px 0" width="full" onClick={handleSubmit}>
+        <Button margin="36px 0" width="full" onClick={handleSubmit} disabled={selected.length !== correct.length}>
           Submit
         </Button>
       </>

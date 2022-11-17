@@ -3,12 +3,17 @@ import { prisma } from 'utils/prisma';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
+    const { questions } = req.body;
+    const seenQuestions = Object.keys(questions).map((q) => parseInt(q));
     const count = await prisma.exercise.count();
     const skip = Math.floor(Math.random() * count);
+
+    console.log(questions);
 
     const exercise = await prisma.exercise.findMany({
       take: 1,
       skip,
+      where: { id: { notIn: seenQuestions } },
       include: { directive: true },
     });
 

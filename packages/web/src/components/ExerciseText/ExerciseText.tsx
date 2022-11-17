@@ -26,10 +26,12 @@ export function ExerciseText({ children, fillBlanks }: { children: string; fillB
   children = sanitize(children, { ...defaultOptions });
   children = children.replaceAll('()', '<blank-space></blank-space>');
 
+  let i = 0;
+
   const html = parse(children, {
     replace: (domNode) => {
       if (domNode instanceof Element && domNode.tagName === 'blank-space') {
-        return <BlankSpace fill={fillBlanks} />;
+        return <BlankSpace index={i++} fill={fillBlanks} />;
       }
     },
   });

@@ -1,27 +1,33 @@
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 
-const helpers = createMultiStyleConfigHelpers(['directive', 'question', 'choice']);
+const helpers = createMultiStyleConfigHelpers(['directive', 'question', 'choice', 'multiLineQuestion']);
 
 export const MultipleChoice = helpers.defineMultiStyleConfig({
-  baseStyle: ({ colorScheme: c }) => ({
+  baseStyle: {
     directive: {
-      test: `${console.log(c)}`,
       textAlign: 'center',
       fontWeight: 'bold',
     },
     question: {
+      fontSize: '2xl',
       textAlign: 'center',
-      fontSize: '3xl',
       margin: '32px',
       whiteSpace: 'pre-wrap',
-      background: `rgba(0, 0, 0, gray.100)`,
+      verticalAlign: 'baseline',
+    },
+    multiLineQuestion: {
+      fontSize: 'xl',
+      textAlign: 'left',
+      margin: '32px',
+      whiteSpace: 'pre-wrap',
     },
     choice: {
       marginLeft: 'auto',
       marginRight: 'auto',
       '& > *': {
-        justifyContent: 'center',
+        display: 'block',
+        textAlign: 'center',
       },
     },
-  }),
+  },
 });
