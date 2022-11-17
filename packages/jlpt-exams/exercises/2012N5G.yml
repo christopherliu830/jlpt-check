@@ -29,8 +29,8 @@
     - difficulty: 1
       prompt: |-
         （タクシーで）
-        A「つぎの かどを <ruby>右<rt>みぎ</rt></ruby><blank-space></blank-space>まがって ください。」
-        B「わかりました。」
+        Ａ「つぎの かどを <ruby>右<rt>みぎ</rt></ruby><blank-space></blank-space>まがって ください。」
+        Ｂ「わかりました。」
       choices:
       - が
       - や
@@ -75,8 +75,8 @@
       correct: 0
     - difficulty: 1
       prompt: |-
-        A「さようなら。」
-        B「さようなら。また<blank-space></blank-space>。」
+        Ａ「さようなら。」
+        Ｂ「さようなら。また<blank-space></blank-space>。」
       choices:
       - おととい
       - <ruby>今日<rt>きょう</rt></ruby>
@@ -103,8 +103,8 @@
       correct: 0
     - difficulty: 1
       prompt: |-
-        A「<ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>でも <ruby>雪<rt>ゆき</rt></ruby>が ふりますか。」
-        B「ええ、ふりますよ。でも、きょねんは あまり<blank-space></blank-space>。」
+        Ａ「<ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>でも <ruby>雪<rt>ゆき</rt></ruby>が ふりますか。」
+        Ｂ「ええ、ふりますよ。でも、きょねんは あまり<blank-space></blank-space>。」
       choices:
       - ふりませんでした
       - ふりません
@@ -114,8 +114,8 @@
     - difficulty: 1
       prompt: |-
         （<ruby>川<rt>かわ</rt></ruby>で）
-        A「<ruby>見<rt>み</rt></ruby>て ください。<ruby>小<rt>ちい</rt></ruby>さな <ruby>魚<rt>さかな</rt></ruby>が たくさん<blank-space></blank-space>よ。」
-        B「ほんとうですね。３０ぴきくらい いますね。」
+        Ａ「<ruby>見<rt>み</rt></ruby>て ください。<ruby>小<rt>ちい</rt></ruby>さな <ruby>魚<rt>さかな</rt></ruby>が たくさん<blank-space></blank-space>よ。」
+        Ｂ「ほんとうですね。３０ぴきくらい いますね。」
       choices:
       - およぎます
       - およぎません
@@ -168,8 +168,8 @@
     correct: [2, 0, 3, 1]
   - difficulty: 1
     prompt: |-
-      A「<ruby>山<rt>やま</rt>下<rt>した</rt></ruby>さんは？」
-      B「となりの へやで<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>しています。」
+      Ａ「<ruby>山<rt>やま</rt>下<rt>した</rt></ruby>さんは？」
+      Ｂ「となりの へやで<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>しています。」
     choices:
     - れんしゅう
     - の
@@ -178,8 +178,8 @@
     correct: [2, 1, 0, 3]
   - difficulty: 1
     prompt: |-
-      A「<ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><ruby>行<rt>い</rt></ruby>って いますか。」
-      B「わたしは あるいて <ruby>行<rt>い</rt></ruby>って います。」
+      Ａ「<ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><ruby>行<rt>い</rt></ruby>って いますか。」
+      Ｂ「わたしは あるいて <ruby>行<rt>い</rt></ruby>って います。」
     choices:
     - で
     - は

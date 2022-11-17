@@ -2,8 +2,8 @@
   exercises:
   - difficulty: 4
     prompt: |-
-      A「もう無理だよ、私には５キロなんて走れないよ。」
-      B「まだ５００メートルだよ。なんでそうやってすぐ、もうだめ<blank-space></blank-space>言うの。」
+      Ａ「もう無理だよ、私には５キロなんて走れないよ。」
+      Ｂ「まだ５００メートルだよ。なんでそうやってすぐ、もうだめ<blank-space></blank-space>言うの。」
     choices:
     - を
     - は
@@ -96,8 +96,8 @@
   - difficulty: 4
     prompt: |-
       （会社で）
-      A「あれ？あそこにいるの、山さんかな。」
-      B「山田きさんは出張中だよ。今ここに<blank-space></blank-space>。」
+      Ａ「あれ？あそこにいるの、山さんかな。」
+      Ｂ「山田きさんは出張中だよ。今ここに<blank-space></blank-space>。」
     choices:
       - いないわけじゃないよ 
       - いるわけないじゃない
@@ -106,8 +106,8 @@
     correct: 1
   - difficulty: 4
     prompt: |-
-      A「このタレント、最近よくテレビで見るね。」
-      B「ほんと。この人を見ない日はない<blank-space></blank-space>よね。」
+      Ａ「このタレント、最近よくテレビで見るね。」
+      Ｂ「ほんと。この人を見ない日はない<blank-space></blank-space>よね。」
     choices:
     - と言ってもいいぐらいだ
     - と言ったらいいだけだ

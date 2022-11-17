@@ -18,8 +18,8 @@
     correct: 1
   - difficulty: 3
     prompt: "
-      A「最近、<ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>さん元気ないね。」
-      B「うん。<ruby>将<rt>しょう</rt>来<rt>らい</rt></ruby>の<blank-space></blank-space><ruby>悩<rt>なや</rt></ruby>んでるらしいよ。」"
+      Ａ「最近、<ruby>山<rt>やま</rt>田<rt>だ</rt></ruby>さん元気ないね。」
+      Ｂ「うん。<ruby>将<rt>しょう</rt>来<rt>らい</rt></ruby>の<blank-space></blank-space><ruby>悩<rt>なや</rt></ruby>んでるらしいよ。」"
     choices:
     - ほうに
     - 場合に
@@ -28,8 +28,8 @@
     correct: 3
   - difficulty: 3
     prompt: |-
-      A「ねえ、<blank-space></blank-space>どんな人？」
-      B「とても親切でいい人だよ。」
+      Ａ「ねえ、<blank-space></blank-space>どんな人？」
+      Ｂ「とても親切でいい人だよ。」
     choices:
     - <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんが
     - <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんで
@@ -38,9 +38,9 @@
     correct: 2
   - difficulty: 3
     prompt: |-
-      A「<ruby>沖<rt>おき</rt>縄<rt>なわ</rt></ruby>旅行はどうだった？」
-      B「海が青くて、料理もおいしくて、最高だったよ。」
-      A「いいなあ。わたしも<blank-space></blank-space>一度いってみたいなあ。」
+      Ａ「<ruby>沖<rt>おき</rt>縄<rt>なわ</rt></ruby>旅行はどうだった？」
+      Ｂ「海が青くて、料理もおいしくて、最高だったよ。」
+      Ａ「いいなあ。わたしも<blank-space></blank-space>一度いってみたいなあ。」
     choices:
     - いつのまにか
     - いつ
@@ -87,8 +87,8 @@
     correct: 2
   - difficulty: 3
     prompt: |-
-      A「<ruby>昨<rt>き</rt>日<rt>のう</rt></ruby>からずっと頭が<ruby>痛<rt>いた</rt></ruby>んですが、どこかいい<ruby>病<rt>びょう</rt>院<rt>いん</rt></ruby>をしりませんか。」
-      B「そうですねえ、ABC<ruby>病<rt>びょう</rt>院<rt>いん</rt></ruby>にいって<blank-space></blank-space>。」
+      Ａ「<ruby>昨<rt>き</rt>日<rt>のう</rt></ruby>からずっと頭が<ruby>痛<rt>いた</rt></ruby>んですが、どこかいい<ruby>病<rt>びょう</rt>院<rt>いん</rt></ruby>をしりませんか。」
+      Ｂ「そうですねえ、ABC<ruby>病<rt>びょう</rt>院<rt>いん</rt></ruby>にいって<blank-space></blank-space>。」
     choices:
     - みさせてください
     - みてもいいでしょうか
@@ -108,9 +108,9 @@
     correct: 3
   - difficulty: 3.5
     prompt: "\
-      A「すみません、<ruby>山<rt>や</rt>田<rt>まだ</rt></ruby>さんはどこですか。」
+      Ａ「すみません、<ruby>山<rt>や</rt>田<rt>まだ</rt></ruby>さんはどこですか。」
 
-      B「<ruby>山<rt>や</rt>田<rt>まだ</rt></ruby>さんは<ruby>会<rt>かい</rt>議<rt>ぎ</rt>中<rt>ちゅう</rt></ruby>ですが、<ruby>会<rt>かい</rt>議<rt>ぎ</rt></ruby>\
+      Ｂ「<ruby>山<rt>や</rt>田<rt>まだ</rt></ruby>さんは<ruby>会<rt>かい</rt>議<rt>ぎ</rt>中<rt>ちゅう</rt></ruby>ですが、<ruby>会<rt>かい</rt>議<rt>ぎ</rt></ruby>\
       は１１時半<blank-space></blank-space>終わると思いますよ。」"
     choices:
     - までは
@@ -144,8 +144,8 @@
   exercises:
   - difficulty: 3
     prompt: |-
-      A「週末、試合<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>んですか。」
-      B「すみません。」
+      Ａ「週末、試合<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>んですか。」
+      Ｂ「すみません。」
     choices:
     - 何をやっていた
     - <ruby>練<rt>れん</rt>習<rt>しゅう</rt></ruby>
@@ -176,8 +176,8 @@
     correct: [0, 3, 1, 2]
   - difficulty: 3
     prompt: "\
-      A「今度のさよならパーティーで、みんなで歌う歌は、これでいいですか。」\
-      B「すみません。この歌は好きなんですが、少しむずかしいです\
+      Ａ「今度のさよならパーティーで、みんなで歌う歌は、これでいいですか。」\
+      Ｂ「すみません。この歌は好きなんですが、少しむずかしいです\
       <blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>\
       してほしいです。」"
     choices:

@@ -39,8 +39,8 @@
       correct: 1
     - difficulty: 2
       prompt: |-
-        A「<ruby>誕<rt>たん</rt>生<rt>じょう</rt>日<rt>び</rt></ruby>に <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんから 何を もらったんですか。」
-        B「<ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さん<blank-space></blank-space><ruby>腕<rt>うで</rt>時<rt>ど</rt>計<rt>けい</rt></ruby>を もらいました。」
+        Ａ「<ruby>誕<rt>たん</rt>生<rt>じょう</rt>日<rt>び</rt></ruby>に <ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんから 何を もらったんですか。」
+        Ｂ「<ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さん<blank-space></blank-space><ruby>腕<rt>うで</rt>時<rt>ど</rt>計<rt>けい</rt></ruby>を もらいました。」
       choices:
       - からが
       - からに
@@ -72,8 +72,8 @@
       correct: 0
     - difficulty: 2
       prompt: |-
-        A「あした いっしょに ドライブに いきませんか。」
-        B「<blank-space></blank-space>、ごめんなさい、あしたは アルバイトが あるんです。」
+        Ａ「あした いっしょに ドライブに いきませんか。」
+        Ｂ「<blank-space></blank-space>、ごめんなさい、あしたは アルバイトが あるんです。」
       choices:
       - 行きたいから
       - 行きたいけれど
@@ -83,7 +83,7 @@
     - difficulty: 2
       prompt: |-
         子ども「ねえ、ゲームを しても いい？」
-        <ruby>母<rt>はは</rt>親<rt>おや</rt></ruby>「しゅくだいを<blank-space></blank-space>
+        <ruby>母<rt>はは</rt>親<rt>おや</rt></ruby>「しゅくだいを<blank-space></blank-space>あとでね。」
       choices:
       - していた
       - したいる
@@ -100,8 +100,8 @@
       correct: 0
     - difficulty: 2
       prompt: |-
-        A「<ruby>誕<rt>たん</rt>生<rt>じょう</rt>日<rt>び</rt></ruby> おめでとうございます。これ、プレゼントです。どうぞ。」
-        B「ありがとうございます。<ruby>大<rt>たい</rt>切<rt>せつ</rt></ruby>に<blank-space></blank-space>。」
+        Ａ「<ruby>誕<rt>たん</rt>生<rt>じょう</rt>日<rt>び</rt></ruby> おめでとうございます。これ、プレゼントです。どうぞ。」
+        Ｂ「ありがとうございます。<ruby>大<rt>たい</rt>切<rt>せつ</rt></ruby>に<blank-space></blank-space>。」
       choices:
       - します
       - います
@@ -110,8 +110,8 @@
       correct: 0
     - difficulty: 2
       prompt: |-
-        A「きのうは ひっこしを<blank-space></blank-space>、どうも ありがとうございました。」
-        B「いいえ、どういたしまして。」
+        Ａ「きのうは ひっこしを<blank-space></blank-space>、どうも ありがとうございました。」
+        Ｂ「いいえ、どういたしまして。」
       choices:
       - <ruby>手<rt>て</rt>伝<rt>つだ</rt></ruby>って
       - <ruby>手<rt>て</rt>伝<rt>つだ</rt></ruby>ったので
@@ -139,8 +139,8 @@
   exercises:
   - difficulty: 2
     prompt: |-
-      A「コンサートには もう <ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わないですね。」
-      B「今すぐ<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>行こう。」
+      Ａ「コンサートには もう <ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わないですね。」
+      Ｂ「今すぐ<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>行こう。」
     choices:
     - タクシーに
     - タクシーで
@@ -159,8 +159,8 @@
     correct: [3, 2, 1, 0]
   - difficulty: 2
     prompt: |-
-      A「あたしは <ruby>大<rt>だい</rt>事<rt>じ</rt></ruby>な おきゃくさまに 会うから、<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>いけませんよ。」
-      B「わかりました。あしたは 新しい くつを はいて 来ます。」
+      Ａ「あたしは <ruby>大<rt>だい</rt>事<rt>じ</rt></ruby>な おきゃくさまに 会うから、<blank-space></blank-space><blank-space></blank-space><blank-space></blank-space><blank-space></blank-space>いけませんよ。」
+      Ｂ「わかりました。あしたは 新しい くつを はいて 来ます。」
     choices:
     - くつ
     - は
