@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Box, Button, Container, Text, useMultiStyleConfig } from '@chakra-ui/react';
 import { Choice, ChoiceBody } from 'components/Choice/Choice';
@@ -12,14 +12,18 @@ export type MultipleChoiceProps = {
 
 function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
   const { exercise, selected, setSelected } = useExercise();
+  const [submitted, setSubmitted] = useState(false);
   const styles = useMultiStyleConfig('MultipleChoice');
+
+  useEffect(() => {
+    setSubmitted(false);
+  }, [exercise]);
 
   if (!exercise) {
     return <></>;
   }
 
   const { choices, correct } = exercise;
-  console.log('c', exercise.id, selected[0]);
 
   const handleSelect = (item: number) => {
     setSelected((old) => {
@@ -39,6 +43,7 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
   };
 
   const handleSubmit = () => {
+    setSubmitted(true);
     onSubmit && onSubmit(Array.from(selected.values()).map((x) => choices[x]));
   };
 
@@ -65,8 +70,8 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
             </ChoiceBody>
           </Choice>
         ))}
-        <Button margin="36px 0" width="full" onClick={handleSubmit} disabled={selected.length !== correct.length}>
-          Submit
+        <Button sx={styles.button} width="full" onClick={handleSubmit} disabled={selected.length !== correct.length}>
+          {submitted ? 'Next' : 'Submit'}
         </Button>
       </>
     </Container>

@@ -34,7 +34,7 @@ export const Choice = helpers.defineMultiStyleConfig({
       alignItems: 'center',
       padding: '12px',
       bg: `${c}.25`,
-      color: `${c}.600`,
+      color: `${c}.800`,
       display: 'flex',
       flex: '2 1 100%',
       fontSize: 'xl',
