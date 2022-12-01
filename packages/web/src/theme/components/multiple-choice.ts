@@ -15,7 +15,7 @@ export const MultipleChoice = helpers.defineMultiStyleConfig({
       margin: 2,
       whiteSpace: 'pre-wrap',
       verticalAlign: 'baseline',
-      background: `${c}.50`,
+      background: `#fff5ec`,
     },
     multiLineQuestion: {
       fontSize: 'xl',
@@ -23,7 +23,7 @@ export const MultipleChoice = helpers.defineMultiStyleConfig({
       padding: 4,
       margin: 2,
       whiteSpace: 'pre-wrap',
-      background: `${c}.50`,
+      background: `#fff5ec`,
     },
     choice: {
       marginLeft: 'auto',
