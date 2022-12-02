@@ -1,34 +1,55 @@
-import { Box, Button, Container, Progress, Text } from '@chakra-ui/react';
+import { Box, Button, Container, getToken, Progress, Text, useTheme } from '@chakra-ui/react';
 import { FadeInView } from 'components/FadeInView/FadeInView';
-import { animate, useMotionValue } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
+import { animate, motion, useMotionValue } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-export function Results() {
-  const ref = useRef<HTMLDivElement>(null);
-  const level = useMotionValue(0);
-  const [animatedJlpt, setAnimatedJlpt] = useState(5);
+function ResultsBar({ value, delay }: { value: number; delay: number }) {
+  const [animatedValue, setAnimatedValue] = useState(0);
+  const theme = useTheme();
+  const background = getToken('colors', `${theme.components.Progress.defaultProps.colorScheme}.500`)(theme);
 
   useEffect(() => {
-    const bar = ref.current?.children[0] as HTMLDivElement;
-    if (bar.style) {
-      const unsub = level.onChange(() => {
-        bar.style.width = `${level.get()}%`;
-        const jlpt = Math.max(Math.ceil((100 - level.get()) / 20), 1);
-        if (jlpt !== animatedJlpt) setAnimatedJlpt(jlpt);
-      });
-      const controls = animate(level, 100, {
-        delay: 0.6,
-        duration: 2,
-      });
+    const handle = setTimeout(() => {
+      setAnimatedValue(value);
+    }, delay * 1000);
+    return () => clearTimeout(handle);
+  }, [delay, value]);
+  return (
+    <>
+      <Box bg="violet.50" height={4}>
+        <Box
+          my={2}
+          sx={{
+            width: '100%',
+            height: '100%',
+            transformOrigin: 'left',
+            transition: 'transform 2s',
+            transform: `scaleX(${animatedValue})`,
+            bg: background,
+          }}
+        ></Box>
+      </Box>
+      <Box textAlign="center">1/1 correct</Box>
+    </>
+  );
+}
 
-      return () => {
-        unsub();
-        controls.stop();
-      };
-    }
-  }, [ref]);
+export function Results() {
+  const jlptMotionValue = useMotionValue(0);
+  const [jlpt, setJlpt] = useState(5);
+
+  useEffect(() => {
+    const controls = animate(jlptMotionValue, 5, {
+      delay: 0.5,
+      duration: 2,
+      onUpdate: (v) => {
+        setJlpt(6 - Math.ceil(v));
+      },
+    });
+    return controls.stop;
+  }, []);
 
   return (
     <Container maxW="4xl" centerContent alignItems="stretch">
@@ -37,12 +58,24 @@ export function Results() {
       </Text>
       <FadeInView open delay={0.2}>
         <Text fontSize="6xl" fontWeight="bold" m={12} textAlign="center">
-          JLPT {animatedJlpt}
+          JLPT {jlpt}
         </Text>
         <FadeInView open delay={0.4}>
-          <Progress max={5} ref={ref} isAnimated size="lg" />
+          <ResultsBar value={1} delay={0.6} />
         </FadeInView>
-        <FadeInView open delay={2.2}>
+        <FadeInView open delay={0.6}>
+          <ResultsBar value={1} delay={0.8} />
+        </FadeInView>
+        <FadeInView open delay={0.8}>
+          <ResultsBar value={1} delay={1.0} />
+        </FadeInView>
+        <FadeInView open delay={1.2}>
+          <ResultsBar value={1} delay={1.2} />
+        </FadeInView>
+        <FadeInView open delay={1.4}>
+          <ResultsBar value={1} delay={1.4} />
+        </FadeInView>
+        <FadeInView open delay={1.6}>
           <Box fontSize="lg" textAlign="center" m={2}>
             {'12/15 questions correct'}
           </Box>
@@ -53,11 +86,6 @@ export function Results() {
           Congratulations on finishing the JLPTCheck quiz! Please note that this website only tests a portion of the
           true JLPT exam, which contains sections on reading comprehension as well as listening. The results should only
           be used as a starting point to guide your studies.
-        </section>
-        <section>
-          Would you like to see more question types? Better questions? Please feel free to leave any comments,
-          questions, inquiries, bug reports (and so on). As this is a solo hobby project any feedback is greatly
-          appreciated.
         </section>
       </Box>
       <Link href="https://gogonihon.com/en/blog/preparing-for-the-jlpt/">
