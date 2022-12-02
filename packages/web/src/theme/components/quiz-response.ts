@@ -20,7 +20,6 @@ export const QuizResponse = helpers.defineMultiStyleConfig({
       borderRadius: '50%',
     },
     iconbox: {
-      // color: 'green',
       stroke: 'white',
       filter: 'drop-shadow(0 0 1px rgba(0, 0, 0, 0.2)',
     },
