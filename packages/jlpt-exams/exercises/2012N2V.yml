@@ -149,7 +149,7 @@
       - 発明
       - 分析
       correct: 3
-    - difficulty: 3.5
+    - difficulty: 4
       prompt: "\
         <ruby>街<rt>まち</rt></ruby>を<blank-space></blank-space>していたら、\
         <ruby>山<rt>やま</rt>本<rt>もと</rt></ruby>\
