@@ -24,7 +24,7 @@
     - や
     - か
     correct: 1
-  - difficulty: 4.5
+  - difficulty: 5
     prompt:  プリンターの調子が悪くなり、製造会社に電話で問い合わせたら、向こうの担当者に、あれこれ質問に答え<blank-space></blank-space>あげく、対応できないと言われた。
     choices:
     - させた
@@ -51,7 +51,7 @@
     - お出しする以上
     - お出しするうえ
     correct: 2
-  - difficulty: 4.5
+  - difficulty: 5
     prompt: 留学するまで、私は自分が見ている世界がすべてだと思っていた。実はそれが世界のほんの小さな一部分<blank-space></blank-space>気付いていなかった。
     choices:
     - でないことにしか

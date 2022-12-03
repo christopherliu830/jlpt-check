@@ -99,7 +99,7 @@
     - 復旧
     - 復興
     correct: 1
-  - difficulty: 4.5
+  - difficulty: 4
     prompt: 経済だけでなく、法律にも詳しいのが彼の<blank-space></blank-space>だ。
     choices:
     - 深み
@@ -177,7 +177,7 @@
     - 審判の決定に<u>不服</u>を唱えることはできない。
     - この部署で、お客様からの<u>不服</u>を受け付けています。
     correct: 2
-  - difficulty: 4.5
+  - difficulty: 5
     prompt: かなう
     choices:
     - 苦労が<u>かない</u>、彼は俳優として成功をおさめた。
