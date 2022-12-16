@@ -1,5 +1,5 @@
 import { extendTheme, withDefaultColorScheme } from '@chakra-ui/react';
-import { violet } from './colors';
+import { green, salmon, violet, yellow } from './colors';
 
 // Component Extensions
 import { BlankSpace } from './components/blank-space';
@@ -13,6 +13,9 @@ export const theme = extendTheme(
   {
     colors: {
       violet,
+      salmon,
+      yellow,
+      green,
     },
     fonts: {
       body: `'Atkinson Hyperlegible', "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック", "MS Gothic", sans-serif`,

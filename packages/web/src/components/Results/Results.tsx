@@ -4,37 +4,7 @@ import { animate, motion, useMotionValue } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 import Link from 'next/link';
-
-function ResultsBar({ value, delay }: { value: number; delay: number }) {
-  const [animatedValue, setAnimatedValue] = useState(0);
-  const theme = useTheme();
-  const background = getToken('colors', `${theme.components.Progress.defaultProps.colorScheme}.500`)(theme);
-
-  useEffect(() => {
-    const handle = setTimeout(() => {
-      setAnimatedValue(value);
-    }, delay * 1000);
-    return () => clearTimeout(handle);
-  }, [delay, value]);
-  return (
-    <>
-      <Box bg="violet.50" height={4}>
-        <Box
-          my={2}
-          sx={{
-            width: '100%',
-            height: '100%',
-            transformOrigin: 'left',
-            transition: 'transform 2s',
-            transform: `scaleX(${animatedValue})`,
-            bg: background,
-          }}
-        ></Box>
-      </Box>
-      <Box textAlign="center">1/1 correct</Box>
-    </>
-  );
-}
+import { AnimatedProgressBar } from 'components/AnimatedProgress/AnimatedProgress';
 
 export function Results() {
   const jlptMotionValue = useMotionValue(0);
@@ -61,19 +31,24 @@ export function Results() {
           JLPT {jlpt}
         </Text>
         <FadeInView open delay={0.4}>
-          <ResultsBar value={1} delay={0.6} />
+          <AnimatedProgressBar my={2} value={1} delay={0.6} />
+          <Box>1/1 correct</Box>
         </FadeInView>
         <FadeInView open delay={0.6}>
-          <ResultsBar value={1} delay={0.8} />
+          <AnimatedProgressBar colorScheme="salmon" my={2} value={1} delay={0.8} />
+          <Box>1/1 correct</Box>
         </FadeInView>
         <FadeInView open delay={0.8}>
-          <ResultsBar value={1} delay={1.0} />
+          <AnimatedProgressBar colorScheme="yellow" my={2} value={1} delay={1.0} />
+          <Box>1/1 correct</Box>
         </FadeInView>
         <FadeInView open delay={1.2}>
-          <ResultsBar value={1} delay={1.2} />
+          <AnimatedProgressBar colorScheme="green" my={2} value={1} delay={1.2} />
+          <Box>1/1 correct</Box>
         </FadeInView>
         <FadeInView open delay={1.4}>
-          <ResultsBar value={1} delay={1.4} />
+          <AnimatedProgressBar colorScheme="gray" my={2} value={1} delay={1.4} />
+          <Box>1/1 correct</Box>
         </FadeInView>
         <FadeInView open delay={1.6}>
           <Box fontSize="lg" textAlign="center" m={2}>

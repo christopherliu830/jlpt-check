@@ -5,20 +5,22 @@ import { QuizResponse } from 'components/Quiz/QuizResponse';
 import { ExerciseProvider } from 'components/ExerciseProvider/ExerciseProvider';
 
 import { checkCorrect, QuizHistory } from 'api/exercise';
-import { Directive, Exercise, Prisma, prisma } from 'utils/prisma';
+import { DirectiveType, Exercise, prisma } from 'utils/prisma';
+import { AnimatedProgressBar } from 'components/AnimatedProgress/AnimatedProgress';
 
 function Question({ exercises }: { exercises: Exercise[] }) {
   const [quizHistory, setQuizHistory] = useState<QuizHistory>([]);
-  const [exercise, setCurrentExercise] = useState<Exercise>(exercises[0]);
+  const [exerciseIndex, setCurrentExerciseIndex] = useState(0);
 
-  if (!exercises?.[0]) {
+  if (!exercises[exerciseIndex]) {
     return <></>;
   }
 
   const refetch = () => {
-    setCurrentExercise(exercises[Math.floor(Math.random() * exercises.length)]);
-    console.log(exercises);
+    setCurrentExerciseIndex(exerciseIndex + 1);
   };
+
+  const exercise = exercises[exerciseIndex];
 
   const getResult = () => {
     const lastAnswered = quizHistory[quizHistory.length - 1];
@@ -40,36 +42,57 @@ function Question({ exercises }: { exercises: Exercise[] }) {
   };
 
   return (
-    <Container maxW="4xl" centerContent pos="relative">
-      <ExerciseProvider exercise={exercise}>
-        <MultipleChoice onSubmit={handleSubmit} />
-        <QuizResponse response={getResult()} onTimeout={refetch} />
-      </ExerciseProvider>
-    </Container>
+    <>
+      <AnimatedProgressBar colorScheme="green" w="100%" max={exercises.length} value={exerciseIndex} />
+      <Container maxW="4xl" centerContent pos="relative">
+        <ExerciseProvider exercise={exercise}>
+          <MultipleChoice onSubmit={handleSubmit} />
+          <QuizResponse response={getResult()} onTimeout={refetch} />
+        </ExerciseProvider>
+      </Container>
+    </>
   );
 }
 
 export async function getStaticProps() {
-  const exercises = await prisma.$queryRaw<Exercise[]>`
-      SELECT *
-      FROM "public"."Exercise"
-      ORDER BY random()
-    `;
+  type PrismaReturn = Exercise & {
+    directivePrompt: string;
+    directiveType: DirectiveType;
+  };
 
-  const directiveIds = Array.from(new Set(exercises.map((e) => e.directiveId)));
-  const directives = await prisma.$queryRaw<Directive[]>`
-      SELECT *
-      FROM "public"."Directive"
-      WHERE "public"."Directive"."id" IN (${Prisma.join(directiveIds)})
-    `;
-
-  exercises.forEach((exercise) => {
-    const d = directives.find((directive) => directive.id === exercise.directiveId);
-    if (!d) {
-      throw new Error('Directive not found');
-    }
-    exercise.directive = d;
-  });
+  // This difficult query is because we would like to order randomly the results
+  // returned, which is not supported by prisma. (12/3/2022)
+  // So the query is made and built randomly.
+  const exercises: Exercise[] = (
+    await prisma.$queryRaw<PrismaReturn[]>`
+    SELECT exercise.*,
+     directive.prompt as "directivePrompt",
+     directive.type as "directiveType"
+    FROM (
+      SELECT
+        ROW_NUMBER() OVER (PARTITION BY difficulty ORDER BY random()) AS r,
+        prompt,
+        *
+      FROM
+        "public"."Exercise"
+    ) exercise
+    INNER JOIN "public"."Directive" as directive
+    ON exercise."directiveId" = directive.id
+    WHERE exercise.r <= 1
+  `
+  ).map((e) => ({
+    id: e.id,
+    choices: e.choices,
+    correct: e.correct,
+    directiveId: e.directiveId,
+    difficulty: e.difficulty,
+    prompt: e.prompt,
+    directive: {
+      id: e.directiveId,
+      prompt: e.directivePrompt,
+      type: e.directiveType,
+    },
+  }));
 
   return {
     props: { exercises },
