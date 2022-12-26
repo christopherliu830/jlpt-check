@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, Spacer, Text } from '@chakra-ui/react';
 import { FadeInView } from 'components/FadeInView/FadeInView';
 import { animate, useMotionValue } from 'framer-motion';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -20,13 +20,12 @@ const config: Record<number, { color: string; delay: number }> = {
 };
 
 export function Results() {
-  // const { quizHistory } = useQuiz();
-  const quizHistory = mockData;
+  const { quizHistory } = useQuiz();
   const jlptMotionValue = useMotionValue(1);
   const [currentRating, setRating] = useState(1);
   const targetRating = getRating(quizHistory);
 
-  const ratingtoJlpt = (v: number) => clamp(6 - Math.round(v), 1, 5);
+  const ratingtoJlpt = (v: number) => clamp(6 - Math.floor(v), 1, 5);
 
   const results = useMemo(() => {
     const lookup = toLookup(quizHistory, (entry) => entry.exercise.difficulty);
@@ -63,12 +62,16 @@ export function Results() {
           JLPT N{ratingtoJlpt(currentRating)}
         </Text>
 
-        <Flex justifyContent="space-between">
-          <Text fontSize="2xl">N5</Text>
+        <Flex justifyContent="space-evenly" pos="relative">
+          <Text pos="absolute" fontSize="2xl" left="0">
+            N5
+          </Text>
           <Text fontSize="2xl">N4</Text>
           <Text fontSize="2xl">N3</Text>
           <Text fontSize="2xl">N2</Text>
-          <Text fontSize="2xl">N1</Text>
+          <Text pos="absolute" fontSize="2xl" right="0">
+            N1
+          </Text>
         </Flex>
 
         <AnimatedProgressBar
