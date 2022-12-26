@@ -8,7 +8,7 @@ export function Divisions({ count }: { count: number }) {
         .map((_, idx) => (
           <>
             <Box key={idx} flexGrow={1} />
-            <Box flexBasis="4px" background="rgba(0, 0, 0, 0.3)" />
+            <Box key={idx + count} flexBasis="4px" background="rgba(0, 0, 0, 0.3)" />
           </>
         ))}
       <Box flexGrow={1} />

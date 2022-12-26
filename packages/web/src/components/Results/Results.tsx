@@ -22,7 +22,7 @@ export function Results() {
   const { quizHistory } = useQuiz();
   const jlptMotionValue = useMotionValue(1);
   const [currentRating, setRating] = useState(1);
-  const targetRating = getRating(quizHistory);
+  const targetRating = clamp(getRating(quizHistory), 1, 5);
 
   const ratingtoJlpt = (v: number) => clamp(6 - Math.floor(v), 1, 5);
 

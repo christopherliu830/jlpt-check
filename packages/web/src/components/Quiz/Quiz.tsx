@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Container } from '@chakra-ui/react';
 
@@ -13,6 +13,7 @@ import { checkCorrect } from './util';
 
 import type { Exercise } from 'utils/prisma';
 import { useQuiz } from './QuizProvider';
+import { clamp } from 'utils/math';
 
 export function Quiz({ exercises }: { exercises: Record<number, Exercise[]> }) {
   const router = useRouter();
@@ -22,6 +23,10 @@ export function Quiz({ exercises }: { exercises: Record<number, Exercise[]> }) {
   const [answered, setAnswered] = useState<Record<number, number>>(
     Object.fromEntries(Object.keys(exercises).map((difficulty) => [difficulty, -1]))
   );
+
+  useEffect(() => {
+    setQuizHistory([]);
+  }, [exercises]);
 
   /**
    * Current estimated rating. (1 = easy, 5 = hard)
@@ -44,7 +49,7 @@ export function Quiz({ exercises }: { exercises: Record<number, Exercise[]> }) {
 
   const nextExercise = () => {
     const move = parseResult() === 'success' ? 1 : -1;
-    setRating(Math.max(Math.min(5, rating + move), 1));
+    setRating(clamp(rating + move, 1, 5));
 
     // Increment the answered difficulty so the next query will get the next exercise.
     setAnswered((old) => ({
