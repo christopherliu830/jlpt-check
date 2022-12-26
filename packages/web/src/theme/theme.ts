@@ -18,7 +18,7 @@ export const theme = extendTheme(
       green,
     },
     fonts: {
-      body: `'Atkinson Hyperlegible', "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック", "MS Gothic", sans-serif`,
+      body: `'Atkinson Hyperlegible', "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", sans-serif`,
     },
     components: {
       BlankSpace,

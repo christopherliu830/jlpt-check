@@ -1,60 +1,10 @@
-import React, { useState } from 'react';
-import { Container } from '@chakra-ui/react';
-import MultipleChoice from 'components/MultipleChoice/MultipleChoice';
-import { QuizResponse } from 'components/Quiz/QuizResponse';
-import { ExerciseProvider } from 'components/ExerciseProvider/ExerciseProvider';
-
-import { checkCorrect, QuizHistory } from 'api/exercise';
+import { toLookup } from 'utils/array';
 import { DirectiveType, Exercise, prisma } from 'utils/prisma';
-import { AnimatedProgressBar } from 'components/AnimatedProgress/AnimatedProgress';
 
-function Question({ exercises }: { exercises: Exercise[] }) {
-  const [quizHistory, setQuizHistory] = useState<QuizHistory>([]);
-  const [exerciseIndex, setCurrentExerciseIndex] = useState(0);
+export { Quiz as default } from 'components/Quiz/Quiz';
 
-  if (!exercises[exerciseIndex]) {
-    return <></>;
-  }
-
-  const refetch = () => {
-    setCurrentExerciseIndex(exerciseIndex + 1);
-  };
-
-  const exercise = exercises[exerciseIndex];
-
-  const getResult = () => {
-    const lastAnswered = quizHistory[quizHistory.length - 1];
-    // If the last answered question is the current question (i.e. user just answered the question)
-    if (lastAnswered?.exercise.id === exercise.id) {
-      return checkCorrect(lastAnswered) ? 'success' : 'fail';
-    } else {
-      return undefined;
-    }
-  };
-
-  const handleSubmit = (answers: string[]) => {
-    if (getResult()) {
-      refetch();
-      return;
-    }
-
-    setQuizHistory((old) => [...old, { exercise, answers }]);
-  };
-
-  return (
-    <>
-      <AnimatedProgressBar colorScheme="green" w="100%" max={exercises.length} value={exerciseIndex} />
-      <Container maxW="4xl" centerContent pos="relative">
-        <ExerciseProvider exercise={exercise}>
-          <MultipleChoice onSubmit={handleSubmit} />
-          <QuizResponse response={getResult()} onTimeout={refetch} />
-        </ExerciseProvider>
-      </Container>
-    </>
-  );
-}
-
-export async function getStaticProps() {
+export async function getServerSideProps() {
+  // Merged type returned by the query below. (I don't know how to make nested JSON returns)
   type PrismaReturn = Exercise & {
     directivePrompt: string;
     directiveType: DirectiveType;
@@ -63,6 +13,7 @@ export async function getStaticProps() {
   // This difficult query is because we would like to order randomly the results
   // returned, which is not supported by prisma. (12/3/2022)
   // So the query is made and built randomly.
+  // Returns N each questions of every difficulty where exercise.r <= N
   const exercises: Exercise[] = (
     await prisma.$queryRaw<PrismaReturn[]>`
     SELECT exercise.*,
@@ -78,25 +29,25 @@ export async function getStaticProps() {
     ) exercise
     INNER JOIN "public"."Directive" as directive
     ON exercise."directiveId" = directive.id
-    WHERE exercise.r <= 1
+    WHERE exercise.r <= 15
   `
-  ).map((e) => ({
-    id: e.id,
-    choices: e.choices,
-    correct: e.correct,
-    directiveId: e.directiveId,
-    difficulty: e.difficulty,
-    prompt: e.prompt,
-    directive: {
-      id: e.directiveId,
-      prompt: e.directivePrompt,
-      type: e.directiveType,
-    },
-  }));
+  )
+    // Remap the returned results to the correct type.
+    .map((e) => ({
+      id: e.id,
+      choices: e.choices,
+      correct: e.correct,
+      directiveId: e.directiveId,
+      difficulty: e.difficulty,
+      prompt: e.prompt,
+      directive: {
+        id: e.directiveId,
+        prompt: e.directivePrompt,
+        type: e.directiveType,
+      },
+    }));
 
   return {
-    props: { exercises },
+    props: { exercises: toLookup(exercises, (e) => e.difficulty) },
   };
 }
-
-export default Question;

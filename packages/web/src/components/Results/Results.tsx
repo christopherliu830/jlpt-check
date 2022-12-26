@@ -1,21 +1,53 @@
-import { Box, Button, Container, getToken, Progress, Text, useTheme } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, Text } from '@chakra-ui/react';
 import { FadeInView } from 'components/FadeInView/FadeInView';
-import { animate, motion, useMotionValue } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import { animate, useMotionValue } from 'framer-motion';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import Link from 'next/link';
 import { AnimatedProgressBar } from 'components/AnimatedProgress/AnimatedProgress';
+import { useQuiz } from 'components/Quiz/QuizProvider';
+import { toLookup } from 'utils/array';
+import { checkCorrect, getRating } from 'components/Quiz/util';
+import { mockData } from './Results.test';
+import { clamp } from 'utils/math';
+
+const config: Record<number, { color: string; delay: number }> = {
+  1: { color: 'violet', delay: 0.4 },
+  2: { color: 'salmon', delay: 0.6 },
+  3: { color: 'yellow', delay: 0.8 },
+  4: { color: 'green', delay: 1.0 },
+  5: { color: 'gray', delay: 1.2 },
+};
 
 export function Results() {
-  const jlptMotionValue = useMotionValue(0);
-  const [jlpt, setJlpt] = useState(5);
+  // const { quizHistory } = useQuiz();
+  const quizHistory = mockData;
+  const jlptMotionValue = useMotionValue(1);
+  const [currentRating, setRating] = useState(1);
+  const targetRating = getRating(quizHistory);
+
+  const ratingtoJlpt = (v: number) => clamp(6 - Math.round(v), 1, 5);
+
+  const results = useMemo(() => {
+    const lookup = toLookup(quizHistory, (entry) => entry.exercise.difficulty);
+    const bars = Object.entries(lookup).map(([difficulty, entries]) => [
+      parseInt(difficulty),
+      entries.filter(checkCorrect).length,
+      entries.length,
+    ]);
+
+    return {
+      bars,
+      total: [quizHistory.filter(checkCorrect).length, quizHistory.length],
+    };
+  }, [quizHistory]);
 
   useEffect(() => {
-    const controls = animate(jlptMotionValue, 5, {
+    const controls = animate(jlptMotionValue, targetRating, {
       delay: 0.5,
       duration: 2,
       onUpdate: (v) => {
-        setJlpt(6 - Math.ceil(v));
+        setRating(v);
       },
     });
     return controls.stop;
@@ -23,36 +55,54 @@ export function Results() {
 
   return (
     <Container maxW="4xl" centerContent alignItems="stretch">
-      <Text fontSize="4xl" fontWeight="bold" m={6} textAlign="center">
+      <Text fontSize="4xl" fontWeight="bold" m={3} textAlign="center">
         Results
       </Text>
       <FadeInView open delay={0.2}>
-        <Text fontSize="6xl" fontWeight="bold" m={12} textAlign="center">
-          JLPT {jlpt}
+        <Text fontSize="6xl" fontWeight="bold" mb={8} textAlign="center">
+          JLPT N{ratingtoJlpt(currentRating)}
         </Text>
-        <FadeInView open delay={0.4}>
-          <AnimatedProgressBar my={2} value={1} delay={0.6} />
-          <Box>1/1 correct</Box>
-        </FadeInView>
-        <FadeInView open delay={0.6}>
-          <AnimatedProgressBar colorScheme="salmon" my={2} value={1} delay={0.8} />
-          <Box>1/1 correct</Box>
-        </FadeInView>
-        <FadeInView open delay={0.8}>
-          <AnimatedProgressBar colorScheme="yellow" my={2} value={1} delay={1.0} />
-          <Box>1/1 correct</Box>
-        </FadeInView>
-        <FadeInView open delay={1.2}>
-          <AnimatedProgressBar colorScheme="green" my={2} value={1} delay={1.2} />
-          <Box>1/1 correct</Box>
-        </FadeInView>
-        <FadeInView open delay={1.4}>
-          <AnimatedProgressBar colorScheme="gray" my={2} value={1} delay={1.4} />
-          <Box>1/1 correct</Box>
-        </FadeInView>
+
+        <Flex justifyContent="space-between">
+          <Text fontSize="2xl">N5</Text>
+          <Text fontSize="2xl">N4</Text>
+          <Text fontSize="2xl">N3</Text>
+          <Text fontSize="2xl">N2</Text>
+          <Text fontSize="2xl">N1</Text>
+        </Flex>
+
+        <AnimatedProgressBar
+          animate={false} // Follow the currentRating
+          divisions={4}
+          mb={12}
+          colorScheme="gray"
+          value={(currentRating - 1) / 4}
+          delay={0.5}
+        ></AnimatedProgressBar>
+
+        {results.bars.map(([difficulty, correct, total]) => (
+          <FadeInView key={difficulty} open delay={config[difficulty].delay}>
+            <Flex justifyContent="space-between">
+              <span>
+                <b>N{ratingtoJlpt(difficulty)}</b>
+              </span>
+              <Text color="gray.500">
+                {correct}/{total}
+              </Text>
+            </Flex>
+            <AnimatedProgressBar
+              colorScheme={config[difficulty].color}
+              mb={2}
+              value={correct / total}
+              delay={config[difficulty].delay + 0.2}
+            ></AnimatedProgressBar>
+            <Box></Box>
+          </FadeInView>
+        ))}
+
         <FadeInView open delay={1.6}>
           <Box fontSize="lg" textAlign="center" m={2}>
-            {'12/15 questions correct'}
+            {results.total[0]} / {results.total[1]} Correct
           </Box>
         </FadeInView>
       </FadeInView>

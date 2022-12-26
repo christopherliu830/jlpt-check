@@ -148,9 +148,9 @@
       Ｂ「すみません。」
     choices:
     - 何をやっていた
-    - <ruby>練<rt>れん</rt>習<rt>しゅう</rt></ruby>
-    - によって
-    - が
+    - <ruby>練<rt>れん</rt>習<rt>しゅう</rt></ruby>に来ないで
+    - なのに
+    - ちっとも
     correct: [2, 3, 1, 0]
   - difficulty: 3
     prompt: "\
