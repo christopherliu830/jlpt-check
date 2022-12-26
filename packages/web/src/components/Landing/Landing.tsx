@@ -14,7 +14,7 @@ export function Landing(): React.ReactElement {
   };
 
   const handleAnimationDone = () => {
-    if (leaving) router.push('/quiz-setup');
+    if (leaving) router.push('/quiz');
   };
 
   return (

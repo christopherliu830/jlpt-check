@@ -1,4 +1,4 @@
-import { Box, BoxProps, Flex, getToken, useTheme } from '@chakra-ui/react';
+import { Box, BoxProps, getToken, useTheme } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { Divisions } from './Divisions';
 

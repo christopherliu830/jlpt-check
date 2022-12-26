@@ -1,5 +1,4 @@
 import { estimateAbility } from 'utils/irt';
-import { lerp } from 'utils/math';
 import { Exercise } from 'utils/prisma';
 
 export type QuizState = {

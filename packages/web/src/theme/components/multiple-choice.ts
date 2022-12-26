@@ -3,7 +3,7 @@ import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 const helpers = createMultiStyleConfigHelpers(['directive', 'question', 'choice', 'multiLineQuestion', 'button']);
 
 export const MultipleChoice = helpers.defineMultiStyleConfig({
-  baseStyle: ({ colorScheme: c }) => ({
+  baseStyle: {
     directive: {
       textAlign: 'center',
       fontWeight: 'bold',
@@ -40,5 +40,5 @@ export const MultipleChoice = helpers.defineMultiStyleConfig({
         boxShadow: 'inset 0px 8px 12px 0 rgba(0, 0, 0, 0.2)',
       },
     },
-  }),
+  },
 });

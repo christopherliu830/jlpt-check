@@ -1,5 +1,6 @@
 import { getToken } from '@chakra-ui/react';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const SunTheme = ({ colorScheme, theme }: { colorScheme: string; theme: Record<any, any> }) => {
   const color = getToken('colors', `${colorScheme}.700`)(theme);
   return {

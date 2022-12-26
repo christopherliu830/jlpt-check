@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Box, useStyleConfig } from '@chakra-ui/react';
 import { useExercise } from 'components/ExerciseProvider/ExerciseProvider';
 import { ExerciseText } from 'components/ExerciseText/ExerciseText';

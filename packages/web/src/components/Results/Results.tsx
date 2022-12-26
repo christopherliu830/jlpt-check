@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Spacer, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, Text } from '@chakra-ui/react';
 import { FadeInView } from 'components/FadeInView/FadeInView';
 import { animate, useMotionValue } from 'framer-motion';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -8,7 +8,6 @@ import { AnimatedProgressBar } from 'components/AnimatedProgress/AnimatedProgres
 import { useQuiz } from 'components/Quiz/QuizProvider';
 import { toLookup } from 'utils/array';
 import { checkCorrect, getRating } from 'components/Quiz/util';
-import { mockData } from './Results.test';
 import { clamp } from 'utils/math';
 
 const config: Record<number, { color: string; delay: number }> = {

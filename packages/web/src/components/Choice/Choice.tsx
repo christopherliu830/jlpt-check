@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Box, BoxProps } from '@chakra-ui/layout';
 import {
   Flex,
