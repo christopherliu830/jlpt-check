@@ -6,11 +6,13 @@
   "types": "dist/index.d.js",
   "scripts": {
     "generate": "yarn prisma generate",
+    "install": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy",
     "build": "tsc"
   },
   "dependencies": {
     "@lletter/jlpt-exams": "*",
-    "@prisma/client": "latest"
+    "@prisma/client": "^4.8.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.3",
