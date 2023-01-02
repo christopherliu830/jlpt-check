@@ -24,7 +24,7 @@ export function Landing(): React.ReactElement {
           <Logo fontSize="6xl" />
           <FadeInView>
             <Text fontSize="xl" color="gray.600">
-              A diagnostic quiz for Japanese learners.
+              A short JLPT placement assessment for Japanese learners.
             </Text>
           </FadeInView>
         </FadeInView>
