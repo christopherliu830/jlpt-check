@@ -7,7 +7,7 @@ function normal(mean: number, stdDev: number): Array<[number, number]> {
   }
   return distr;
 
-  function y(x) {
+  function y(x: any) {
     return (
       (1 / (Math.sqrt(2 * Math.PI) * stdDev)) *
       Math.exp(-Math.pow(x - mean, 2) / (2 * Math.pow(stdDev, 2)))
