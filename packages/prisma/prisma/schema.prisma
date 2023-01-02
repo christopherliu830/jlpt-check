@@ -29,6 +29,11 @@ model Logs {
   data      Json
 }
 
+model Feedback {
+  id        Int           @id @default(autoincrement())
+  feedback  String
+}
+
 enum DirectiveType {
   SELECT
   SELECT_OR_FILL
