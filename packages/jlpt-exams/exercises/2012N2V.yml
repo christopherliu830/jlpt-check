@@ -264,10 +264,10 @@
       - 先週のテストは自信がなかったが、<u>せめて</u>５０点は取れた。
       correct: 2
     - difficulty: 4
-      prompt: <ruby>利<rt>えき</rt>益<rt>り</rt></ruby>
+      prompt: <ruby>利<rt>り</rt>益<rt>えき</rt></ruby>
       choices:
       - ジョギングは健康の<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>になる。
-      - この値段で売ったら、店の<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>ははとんどない。
+      - この値段で売ったら、店の<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>はほとんどない。
       - かぜ薬を飲んだが、<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>が感じられない。
       - バスの<u><ruby>利<rt>り</rt>益<rt>えき</rt></ruby></u>は、新幹緻よりも料金が安いことだ。
       correct: 1
