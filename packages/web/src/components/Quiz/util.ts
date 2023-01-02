@@ -1,4 +1,4 @@
-import { estimateAbility } from 'utils/irt';
+import { estimateAbilityEAP } from 'utils/irt2';
 import { Exercise } from 'utils/prisma';
 
 export type QuizState = {
@@ -19,10 +19,20 @@ export function checkCorrect({ exercise, answers }: QuizEntry) {
 }
 
 export function getRating(quizHistory: QuizHistory) {
-  const theta = estimateAbility(
+  const theta = estimateAbilityEAP(
     quizHistory.map((e) => (checkCorrect(e) ? 1 : 0)),
-    quizHistory.map((e) => ({ a: 1, b: e.exercise.difficulty })),
-    10
+    quizHistory.map((e) => ({ a: 1, b: e.exercise.difficulty - 3, c: 0.25 })),
+  );
+  if (isFinite(theta)) {
+    return theta;
+  } else if (theta > 0) return 5;
+  else return 1;
+}
+
+export function mockRating(responses: (0 | 1)[], difficulty: number[]) {
+  const theta = estimateAbilityEAP(
+    responses,
+    difficulty.map((e) => ({ a: 1, b: e - 3, c: 0.25})),
   );
   if (isFinite(theta)) {
     return theta;

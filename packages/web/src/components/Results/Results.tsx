@@ -8,7 +8,7 @@ import { AnimatedProgressBar } from 'components/AnimatedProgress/AnimatedProgres
 import { useQuiz } from 'components/Quiz/QuizProvider';
 import { toLookup } from 'utils/array';
 import { checkCorrect, getRating } from 'components/Quiz/util';
-import { clamp } from 'utils/math';
+import { clamp, lerp } from 'utils/math';
 
 const config: Record<number, { color: string; delay: number }> = {
   1: { color: 'violet', delay: 0.4 },
@@ -22,7 +22,10 @@ export function Results() {
   const { quizHistory } = useQuiz();
   const jlptMotionValue = useMotionValue(1);
   const [currentRating, setRating] = useState(1);
-  const targetRating = clamp(getRating(quizHistory), 1, 5);
+
+  const rating = getRating(quizHistory);
+  // Funny math to rescale the rating from (-3, 3) to (1, 5)
+  const targetRating = clamp(lerp(1, 5, (rating / 6) + 0.5), 1, 5);
 
   const ratingtoJlpt = (v: number) => clamp(6 - Math.floor(v), 1, 5);
 
