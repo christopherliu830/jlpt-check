@@ -27,13 +27,15 @@ export function Results() {
   const ratingtoJlpt = (v: number) => clamp(6 - Math.floor(v), 1, 5);
 
   useEffect(() => {
-    fetch('/api/save', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(quizHistory.map(v => ({ exercise: v.exercise.id, answers: v.answers})))
-    })
+    if (quizHistory.length > 0) {
+      fetch('/api/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(quizHistory.map(v => ({ exercise: v.exercise.id, answers: v.answers})))
+      })
+    }
   }, [])
 
   const results = useMemo(() => {
