@@ -14,6 +14,7 @@ import { checkCorrect } from './util';
 import type { Exercise } from 'utils/prisma';
 import { useQuiz } from './QuizProvider';
 import { clamp } from 'utils/math';
+import Head from 'next/head';
 
 export function Quiz({ exercises }: { exercises: Record<number, Exercise[]> }) {
   const router = useRouter();
@@ -74,6 +75,7 @@ export function Quiz({ exercises }: { exercises: Record<number, Exercise[]> }) {
 
   return (
     <>
+      <Head><title>JLPTCheck Quiz</title></Head>
       <AnimatedProgressBar colorScheme="green" w="100%" max={exercises[1].length} value={quizHistory.length} />
       <Container maxW="4xl" centerContent pos="relative">
         <ExerciseProvider exercise={exercise}>

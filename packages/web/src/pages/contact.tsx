@@ -1,4 +1,5 @@
 import { Button, Container, Text, Textarea } from "@chakra-ui/react";
+import Head from "next/head";
 import { useState } from "react";
 
 export default function Contact() {
@@ -21,6 +22,7 @@ export default function Contact() {
   if (submitted) {
     return (
       <Container maxW="4xl" centerContent alignItems="stretch">
+        <Head><title>JLPTCheck Contact</title></Head>
         <Text fontSize="4xl" my={8}>Contact</Text>
         <Text>Thanks for the feedback!</Text>
       </Container>

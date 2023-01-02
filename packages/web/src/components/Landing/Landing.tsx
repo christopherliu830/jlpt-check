@@ -4,6 +4,7 @@ import { Button, Center, Container, Flex, Text } from '@chakra-ui/react';
 import { Logo } from '../Logo/Logo';
 import { FadeInView } from '../FadeInView/FadeInView';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 export function Landing(): React.ReactElement {
   const [leaving, setLeaving] = useState(false);
@@ -19,6 +20,9 @@ export function Landing(): React.ReactElement {
 
   return (
     <Container h="100%" display="flex" flexDirection="column" justifyContent="space-between">
+      <Head>
+        <title>JLPTCheck: Test your Japanese</title>
+      </Head>
       <Flex h="66.66%" direction="column" textAlign="center" alignItems="center" justifyContent="space-around">
         <FadeInView open={!leaving}>
           <Logo fontSize="6xl" />
