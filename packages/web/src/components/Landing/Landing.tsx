@@ -36,7 +36,7 @@ export function Landing(): React.ReactElement {
       </Flex>
       <Center margin="24px">
         <Text color="gray.400" marginTop="auto">
-          Christopher Liu
+          <a href="https://twitter.com/christopherliu_">Christopher Liu</a>
         </Text>
       </Center>
     </Container>
