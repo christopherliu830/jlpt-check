@@ -129,7 +129,7 @@
     - 未ませんか
     correct: 0
   - difficulty: 1
-    prompt: きのう たなかさんと <u>あいました</u.。
+    prompt: きのう たなかさんと <u>あいました</u>。
     choices:
     - 見いました
     - 書いました
@@ -144,6 +144,9 @@
     - 冋じ
     - 固じ
     correct: 0
+
+- directive: fill
+  exercises:
   - difficulty: 1
     prompt: わたしの へやは この <blank-space></blank-space>の ２かいです。 
     choices:

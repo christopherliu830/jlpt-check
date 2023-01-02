@@ -48,10 +48,10 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
   };
 
   return (
-    <Container maxW="100%">
+    <Container maxW="100%" m={0} p={0}>
       <>
         <Box __css={styles.directive}>
-          <Text as="div" fontSize="2xl" mt={12}>
+          <Text as="div" fontSize="xl" mt={12}>
             <ExerciseText>{exercise.directive.prompt}</ExerciseText>
           </Text>
         </Box>
@@ -66,7 +66,9 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
             __css={styles.choice}
           >
             <ChoiceBody>
-              <ExerciseText>{choice}</ExerciseText>
+              <div>
+                <ExerciseText>{choice}</ExerciseText>
+              </div>
             </ChoiceBody>
           </Choice>
         ))}

@@ -11,7 +11,7 @@ export const BlankSpace: ComponentStyleConfig = {
     background: `${c}.50`,
     m: 2,
     p: 1,
-    minW: '80px',
+    minW: '3.5em',
     minH: '2.4em',
     verticalAlign: 'baseline',
   }),

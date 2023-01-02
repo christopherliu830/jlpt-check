@@ -31,7 +31,7 @@ export const Choice = helpers.defineMultiStyleConfig({
       padding: '12px',
     },
     body: {
-      alignItems: 'center',
+      alignItems: 'baseline',
       padding: '12px',
       bg: `${c}.25`,
       color: `${c}.800`,
