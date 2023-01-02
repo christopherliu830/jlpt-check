@@ -21,7 +21,7 @@ export function checkCorrect({ exercise, answers }: QuizEntry) {
 export function getRating(quizHistory: QuizHistory) {
   const theta = estimateAbilityEAP(
     quizHistory.map((e) => (checkCorrect(e) ? 1 : 0)),
-    quizHistory.map((e) => ({ a: 1, b: e.exercise.difficulty - 3, c: 0.25 })),
+    quizHistory.map((e) => ({ a: 1, b: e.exercise.difficulty - 3, c: 0 })),
   );
   if (isFinite(theta)) {
     return theta;
@@ -32,7 +32,7 @@ export function getRating(quizHistory: QuizHistory) {
 export function mockRating(responses: (0 | 1)[], difficulty: number[]) {
   const theta = estimateAbilityEAP(
     responses,
-    difficulty.map((e) => ({ a: 1, b: e - 3, c: 0.25})),
+    difficulty.map((e) => ({ a: 1, b: e - 3, c: 0})),
   );
   if (isFinite(theta)) {
     return theta;
