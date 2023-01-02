@@ -9,6 +9,7 @@ import { useQuiz } from 'components/Quiz/QuizProvider';
 import { toLookup } from 'utils/array';
 import { checkCorrect, getRating } from 'components/Quiz/util';
 import { clamp, lerp } from 'utils/math';
+import Head from 'next/head';
 
 const config: Record<number, { color: string; delay: number }> = {
   1: { color: 'violet', delay: 0.4 },
@@ -68,6 +69,7 @@ export function Results() {
 
   return (
     <Container maxW="4xl" centerContent alignItems="stretch">
+      <Head><title>JLPTCheck Results</title></Head>
       <Text fontSize="4xl" fontWeight="bold" m={3} textAlign="center">
         Results
       </Text>
@@ -136,7 +138,7 @@ export function Results() {
         </Button>
       </Link>
       <Link href="/contact">
-        <Button size="lg" mt={4}>
+        <Button size="lg" my={4}>
           Leave feedback
         </Button>
       </Link>

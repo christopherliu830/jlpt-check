@@ -47,7 +47,9 @@ export async function getServerSideProps() {
       },
     }));
 
+  const lookup = toLookup(exercises, (e) => e.difficulty);
+
   return {
-    props: { exercises: toLookup(exercises, (e) => e.difficulty) },
+    props: { exercises: lookup },
   };
 }

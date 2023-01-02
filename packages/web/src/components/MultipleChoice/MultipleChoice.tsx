@@ -8,9 +8,10 @@ import { useExercise } from 'components/ExerciseProvider/ExerciseProvider';
 
 export type MultipleChoiceProps = {
   onSubmit: (selected: string[]) => void;
+  disabled?: boolean
 };
 
-function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
+function MultipleChoice({ onSubmit, disabled }: MultipleChoiceProps) {
   const { exercise, selected, setSelected } = useExercise();
   const [submitted, setSubmitted] = useState(false);
   const styles = useMultiStyleConfig('MultipleChoice');
@@ -72,7 +73,12 @@ function MultipleChoice({ onSubmit }: MultipleChoiceProps) {
             </ChoiceBody>
           </Choice>
         ))}
-        <Button sx={styles.button} width="full" onClick={handleSubmit} disabled={selected.length !== correct.length}>
+        <Button
+          sx={styles.button}
+          width="full"
+          onClick={handleSubmit}
+          disabled={disabled || selected.length !== correct.length}
+        >
           {submitted ? 'Next' : 'Submit'}
         </Button>
       </>
