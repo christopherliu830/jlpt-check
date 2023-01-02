@@ -7,11 +7,11 @@ import Link from 'next/link';
 import { AnimatedProgressBar } from 'components/AnimatedProgress/AnimatedProgress';
 import { useQuiz } from 'components/Quiz/QuizProvider';
 import { toLookup } from 'utils/array';
-import { checkCorrect, getRating } from 'components/Quiz/util';
+import { checkCorrect, getRating, mockRating } from 'components/Quiz/util';
 import { clamp, lerp } from 'utils/math';
 import Head from 'next/head';
 
-const config: Record<number, { color: string; delay: number }> = {
+const colors: Record<number, { color: string; delay: number }> = {
   1: { color: 'violet', delay: 0.4 },
   2: { color: 'salmon', delay: 0.6 },
   3: { color: 'yellow', delay: 0.8 },
@@ -19,16 +19,60 @@ const config: Record<number, { color: string; delay: number }> = {
   5: { color: 'gray', delay: 1.2 },
 };
 
+const config: { thresholds: number[], fills: { [key: number]: string }} = {
+  thresholds: [ -2, -1, 0, 1, 2 ],
+  fills: {
+    5: '#006f51',
+    4: '#008f68',
+    3: '#00c08b',
+    2: '#0ccf99',
+    1: '#38d1a7',
+  }
+}
+
+
+
 export function Results() {
   const { quizHistory } = useQuiz();
-  const jlptMotionValue = useMotionValue(1);
-  const [currentRating, setRating] = useState(1);
 
-  const rating = getRating(quizHistory);
-  // Funny math to rescale the rating from (-3, 3) to (1, 5)
-  const targetRating = clamp(lerp(1, 5, (rating / 6) + 0.5), 1, 5);
+  // The displayed value (rises during animations, etc.)
+  const [animatedRating, setRating] = useState(1);
 
-  const ratingtoJlpt = (v: number) => clamp(6 - Math.floor(v), 1, 5);
+  // Used in framer animation, this sets animatedRating on update.
+  const jlptMotionValue = useMotionValue(0);
+
+  /**
+   * Ratings come back on a scale from [-3, 3].
+   * We want to rescale to [0,1] for bar display and [5, 1] integer for JLPT
+   */
+  const thresholds = config.thresholds.map((t) => (t + 3) / 6);
+
+  useEffect(() => {
+    const rating = getRating(quizHistory);
+    const normalizedRating = clamp((rating + 3) / 6, 0, 1);
+
+    const controls = animate(jlptMotionValue, normalizedRating, {
+      delay: 0.5,
+      duration: 2,
+      onUpdate: (v) => {
+        setRating(v);
+      },
+    });
+    return controls.stop;
+  }, [quizHistory]);
+
+  const ratingtoJlpt = (v: number) => Math.ceil(clamp(lerp(6, 0, v), 1, 5));
+  const difficultyToJlpt = (v: number) => [0, 5, 4, 3, 2, 1][v];
+
+  function JLPTBarLabel({ level, label }: { level: number; label: string }) {
+    return (
+      <>
+        <Box position="absolute" left={`${thresholds[level] * 100}%`} w="0" h="100%" overflow="visible">
+          <Box transform="translateX(-50%)" width="fit-content">{label}</Box>
+        </Box>
+      </>
+    );
+  }
 
   useEffect(() => {
     if (quizHistory.length > 0) {
@@ -37,10 +81,10 @@ export function Results() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(quizHistory.map(v => ({ exercise: v.exercise.id, answers: v.answers})))
-      })
+        body: JSON.stringify(quizHistory.map((v) => ({ exercise: v.exercise.id, answers: v.answers }))),
+      });
     }
-  }, [])
+  }, []);
 
   const results = useMemo(() => {
     const lookup = toLookup(quizHistory, (entry) => entry.exercise.difficulty);
@@ -56,64 +100,53 @@ export function Results() {
     };
   }, [quizHistory]);
 
-  useEffect(() => {
-    const controls = animate(jlptMotionValue, targetRating, {
-      delay: 0.5,
-      duration: 2,
-      onUpdate: (v) => {
-        setRating(v);
-      },
-    });
-    return controls.stop;
-  }, []);
 
   return (
     <Container maxW="4xl" centerContent alignItems="stretch">
-      <Head><title>JLPTCheck Results</title></Head>
+      <Head>
+        <title>JLPTCheck Results</title>
+      </Head>
       <Text fontSize="4xl" fontWeight="bold" m={3} textAlign="center">
         Results
       </Text>
       <FadeInView open delay={0.2}>
         <Text fontSize="6xl" fontWeight="bold" mb={8} textAlign="center">
-          JLPT N{ratingtoJlpt(currentRating)}
+          JLPT N{ratingtoJlpt(animatedRating)}
         </Text>
 
-        <Flex justifyContent="space-evenly" pos="relative">
-          <Text pos="absolute" fontSize="2xl" left="0">
-            N5
-          </Text>
-          <Text fontSize="2xl">N4</Text>
-          <Text fontSize="2xl">N3</Text>
-          <Text fontSize="2xl">N2</Text>
-          <Text pos="absolute" fontSize="2xl" right="0">
-            N1
-          </Text>
-        </Flex>
+        <Box pos="relative" height="1.5em">
+          <JLPTBarLabel level={0} label="N5" />
+          <JLPTBarLabel level={1} label="N4" />
+          <JLPTBarLabel level={2} label="N3" />
+          <JLPTBarLabel level={3} label="N2" />
+          <JLPTBarLabel level={4} label="N1" />
+          <Box flexGrow={1} />
+        </Box>
 
         <AnimatedProgressBar
-          animate={false} // Follow the currentRating
-          divisions={4}
+          animate={false} // Follow the animatedRating
+          bars={thresholds}
           mb={12}
-          colorScheme="gray"
-          value={(currentRating - 1) / 4}
+          fill={config.fills[ratingtoJlpt(animatedRating)]}
+          value={animatedRating}
           delay={0.5}
         ></AnimatedProgressBar>
 
         {results.bars.map(([difficulty, correct, total]) => (
-          <FadeInView key={difficulty} open delay={config[difficulty].delay}>
+          <FadeInView key={difficulty} open delay={colors[difficulty].delay}>
             <Flex justifyContent="space-between">
               <span>
-                <b>N{ratingtoJlpt(difficulty)}</b>
+                <b>N{difficultyToJlpt(difficulty)}</b>
               </span>
               <Text color="gray.500">
                 {correct}/{total}
               </Text>
             </Flex>
             <AnimatedProgressBar
-              colorScheme={config[difficulty].color}
+              colorScheme={colors[difficulty].color}
               mb={2}
               value={correct / total}
-              delay={config[difficulty].delay + 0.2}
+              delay={colors[difficulty].delay + 0.2}
             ></AnimatedProgressBar>
             <Box></Box>
           </FadeInView>

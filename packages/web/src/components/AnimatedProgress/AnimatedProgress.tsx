@@ -5,28 +5,30 @@ import { Divisions } from './Divisions';
 export type AnimatedProgressBarProps = BoxProps & {
   value: number;
   animate?: boolean;
+  colorScheme?: string;
+  fill?: string;
   delay?: number;
   max?: number;
-  divisions?: number;
+  bars?: number | number[];
   time?: string;
-  colorScheme?: string;
 };
 
 export function AnimatedProgressBar({
   value,
   animate = true,
   colorScheme,
+  fill: fillProp,
   delay = 0,
   max = 1,
   time = '2s',
-  divisions,
+  bars,
   ...rest
 }: AnimatedProgressBarProps) {
   const [animatedValue, setAnimatedValue] = useState(0);
   const theme = useTheme();
   const color = colorScheme ?? theme.components.Progress.defaultProps.colorScheme;
 
-  const fill = getToken('colors', `${color}.500`)(theme);
+  const fill = fillProp ?? getToken('colors', `${color}.500`)(theme);
   const background = getToken('colors', `${color}.50`)(theme);
 
   useEffect(() => {
@@ -43,16 +45,16 @@ export function AnimatedProgressBar({
   return (
     <>
       <Box position="relative" bg={background} height={4} borderRadius={4} {...rest}>
-        {divisions && divisions > 1 ? <Divisions count={divisions} /> : null}
+        {bars && <Divisions bars={bars} />}
         <Box
           borderRadius={4}
           sx={{
             width: '100%',
             height: '100%',
             transformOrigin: 'left',
-            transition: animate ? `transform ${time}` : undefined,
+            transition: animate ? `background-color .4s, transform ${time}` : `background-color .4s`,
             transform: `scaleX(${currentValue / max})`,
-            bg: fill,
+            backgroundColor: fill,
           }}
         ></Box>
       </Box>
