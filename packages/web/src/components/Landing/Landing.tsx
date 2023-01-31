@@ -30,6 +30,12 @@ export function Landing(): React.ReactElement {
             <Text fontSize="xl" color="gray.600">
               A short JLPT placement assessment for Japanese learners.
             </Text>
+            <Text fontSize="xl" my={8}>
+              Want to start studying for the JLPT but aren&rsquo;t sure of your
+              level? Take a short 5-10 minute quiz that adjusts its difficulty
+              to your performance and, at the end, gives an estimate of your
+              Japanese ability. Free and no sign ups required!
+            </Text>
           </FadeInView>
         </FadeInView>
         <FadeInView open={!leaving} onAnimationComplete={handleAnimationDone} delay={0.2}>
